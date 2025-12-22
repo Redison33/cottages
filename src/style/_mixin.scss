@@ -1,4 +1,105 @@
-@import './_vars.scss';
+@import "./_vars.scss";
 
 @mixin base-button {
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: $button-background-primary;
+  border: 2px solid $button-background-primary;
+  font-size: $font-size-button;
+  line-height: 100%;
+  font-weight: $font-weight-medium;
+  color: $button-text-primary;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $button-background-hover;
+    border-color: $button-background-hover;
+  }
+
+  &:focus-within {
+    background-color: $button-background-focus;
+  }
+}
+
+@mixin dark-button {
+  @include base-button;
+  background-color: $button-background-secondary;
+  border-color: $button-background-secondary;
+}
+
+@mixin base-button-disabled {
+  @include base-button;
+  background-color: $button-background-disabled;
+  border-color: $button-background-disabled;
+  color: $button-text-disable;
+
+  &:hover {
+    background-color: $button-background-disabled;
+    border-color: $button-background-disabled;
+    color: $button-text-disable;
+  }
+
+  &:focus-within {
+    background-color: $button-background-disabled;
+    border-color: $button-background-disabled;
+    color: $button-text-disable;
+  }
+}
+
+@mixin small-button {
+  border-radius: 5px;
+  border: 1px solid $button-small-border;
+  background-color: transparent;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-weight: $font-weight-medium;
+  font-size: $font-size-button-small;
+  line-height: 14px;
+  color: $button-small-text;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $button-small-border-hover;
+  }
+
+  &:focus-within {
+    background-color: transparent;
+    border-color: $button-small-border-focus;
+    outline: 1px solid $button-small-border-focus;
+  }
+}
+
+@mixin small-button-disabled {
+  @include small-button;
+  border-color: $button-text-disabled;
+  color: $button-text-disabled;
+
+  &:hover {
+    border-color: $button-text-disabled;
+    color: $button-text-disabled;
+  }
+
+  &:focus-within {
+    border-color: $button-text-disabled;
+    color: $button-text-disabled;
+  }
+}
+
+@mixin small-button-active {
+  background-color: $button-small-border-active;
+  border-color: $button-small-border-active;
+  color: $button-small-text-active;
+}
+
+@mixin tab-button-img {
+  font-size: $font-size-tag;
+  line-height: 12px;
+  font-weight: $font-weight-medium;
 }

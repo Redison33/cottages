@@ -21,18 +21,29 @@ $button-background-hover: #000101;
 $button-background-focus: #91866f66;
 $button-background-disabled: #454545;
 
+$button-small-border: #0000001c;
+$button-small-border-hover: #000000;
+$button-small-border-focus: #00000066;
+$button-small-border-active: #b1a489;
+$button-small-text: #000000;
+$button-small-text-active: #ffffff;
+
+$button-tag-text: #28282c;
+
 $actions-text: #454545;
 $primary-text: #000101;
 $secondary-text: #000000;
 
 //font
+$font-size-h1: 70px;
+$font-size-h2: 56px;
+$font-size-h3: 32px;
+$font-size-text: 20px;
+$font-size-tag: 16px;
+$font-size-input: 18px;
 $font-size-button: 18px;
-
-$line-height-button: 100%;
+$font-size-button-small: 15px;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
-
-//spacing
-// $spacing-xs:
