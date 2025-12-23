@@ -40,6 +40,7 @@ img {
 body {
   min-width: 320px;
   font-family: "Noah";
+  background-color: #f8f8f8;
 }
 
 input {
@@ -61,7 +62,13 @@ input:active {
   border-color: #000000;
 }
 
-.container {
+.header {
   max-width: 1600px;
   margin: 0 auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.header__container {
+  padding: 28px 46px;
+  display: flex;
 }/*# sourceMappingURL=style-general.css.map */
