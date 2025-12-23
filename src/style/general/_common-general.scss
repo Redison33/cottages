@@ -1,2 +1,31 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: "Noah";
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Noah";
+}
+
+input {
+  @include base-input;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}

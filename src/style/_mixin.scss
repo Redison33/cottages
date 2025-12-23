@@ -11,14 +11,16 @@
   color: $button-text-primary;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $button-background-hover;
     border-color: $button-background-hover;
   }
 
-  &:focus-within {
-    background-color: $button-background-focus;
+  &:focus-visible {
+    border-color: $button-background-focus;
   }
 }
 
@@ -26,6 +28,40 @@
   @include base-button;
   background-color: $button-background-secondary;
   border-color: $button-background-secondary;
+}
+
+@mixin glare-button {
+  @include base-button;
+  overflow: hidden;
+  position: relative;
+  place-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      -45deg,
+      hsla(0, 0%, 0%, 0) 60%,
+      rgba(255, 255, 255, 0.4) 70%,
+      hsla(0, 0%, 0%, 0),
+      hsla(0, 0%, 0%, 0) 100%
+    );
+    transition: 1.1s ease;
+    background-size: 450% 450%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: -100% -100%, 0 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $button-background-primary;
+    border: 2px solid $button-background-primary;
+  }
+
+  &:hover::before {
+    background-position: 100% 100%, 0 0;
+  }
 }
 
 @mixin base-button-disabled {
@@ -40,7 +76,7 @@
     color: $button-text-disable;
   }
 
-  &:focus-within {
+  &:focus-visible {
     background-color: $button-background-disabled;
     border-color: $button-background-disabled;
     color: $button-text-disable;
@@ -62,17 +98,16 @@
   line-height: 14px;
   color: $button-small-text;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+    border 0.3s ease-in-out;
 
   &:hover {
     background-color: transparent;
     border-color: $button-small-border-hover;
   }
 
-  &:focus-within {
+  &:focus-visible {
     background-color: transparent;
-    border-color: $button-small-border-focus;
-    outline: 1px solid $button-small-border-focus;
+    border: 3px solid $button-small-border-focus;
   }
 }
 
@@ -86,20 +121,171 @@
     color: $button-text-disabled;
   }
 
-  &:focus-within {
+  &:focus-visible {
     border-color: $button-text-disabled;
     color: $button-text-disabled;
   }
 }
 
 @mixin small-button-active {
+  @include small-button;
   background-color: $button-small-border-active;
   border-color: $button-small-border-active;
   color: $button-small-text-active;
+
+  &:hover {
+    background-color: $button-small-border-active;
+    border-color: $button-small-border-active;
+    color: $button-small-text-active;
+  }
+
+  &:focus-visible {
+    background-color: $button-small-border-active;
+    border-color: $button-small-border-active;
+    color: $button-small-text-active;
+  }
 }
 
 @mixin tab-button-img {
   font-size: $font-size-tag;
   line-height: 12px;
   font-weight: $font-weight-medium;
+  width: 133px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 16px;
+  color: $button-tag-text;
+  border: 1px solid $button-tag-border;
+  border-radius: 10px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $button-tag-border-hover;
+  }
+
+  &:focus-visible {
+    border: 3px solid $button-tag-border-focus;
+  }
+}
+
+@mixin tab-button-img-disabled {
+  @include tab-button-img;
+  border-color: $button-text-disabled;
+  color: $button-text-disabled;
+
+  &:hover {
+    border-color: $button-text-disabled;
+    color: $button-text-disabled;
+  }
+
+  &:focus-visible {
+    border-color: $button-text-disabled;
+    color: $button-text-disabled;
+  }
+}
+
+@mixin tab-button-img-active {
+  background-color: $button-tag-background-active;
+  border-color: $button-tag-border-active;
+  color: $button-tag-text-active;
+
+  svg {
+    path {
+      fill: $button-tag-text-active;
+    }
+  }
+
+  &:hover {
+    background-color: $button-tag-background-active;
+    border-color: $button-tag-border-active;
+    color: $button-tag-text-active;
+  }
+
+  &:focus-visible {
+    background-color: $button-tag-background-active;
+    border-color: $button-tag-border-active;
+    color: $button-tag-text-active;
+  }
+}
+
+@mixin link-base {
+  font-size: $font-size-link;
+  font-weight: $font-weight-medium;
+  line-height: 100%;
+  color: $link-text-primary;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+@mixin link-black {
+  @include link-base;
+  color: $link-text-secondary;
+}
+
+@mixin base-input {
+  padding: 16px 26px;
+  background-color: $input-background;
+  border: 1px solid $input-border;
+  color: $input-text;
+  border-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus-visible {
+    border-color: $input-border-focus;
+    outline: 2px solid $input-border-focus;
+  }
+
+  &:active {
+    border-color: $input-border-active;
+  }
+}
+
+@mixin error-input {
+  @include base-input;
+  border-color: $error-color;
+
+  &:hover {
+    border-color: $error-color;
+  }
+
+  &:focus-visible {
+    border-color: $error-color;
+  }
+
+  &:active {
+    border-color: $error-color;
+  }
+}
+
+@mixin title1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-medium;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@mixin title2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-regular;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@mixin title3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-medium;
+  line-height: 100%;
+  text-transform: uppercase;
 }
