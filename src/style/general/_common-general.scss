@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 html {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: "Noah";
+  font-family: 'Noah';
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 body {
   min-width: 320px;
-  font-family: "Noah";
+  font-family: 'Noah';
   background-color: $site-background;
 }
 
@@ -27,19 +27,25 @@ input {
 }
 
 .header {
-  @include container;
+  width: 1600px;
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 15px;
   background-color: $primary-background;
 
   &__container {
     padding: 28px 46px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 48px;
 
     .nav {
       &__list {
         display: flex;
+        align-items: center;
         gap: 44px;
 
         .list__item {
@@ -54,55 +60,116 @@ input {
             font-weight: $font-weight-bold;
             line-height: 100%;
             color: $primary-text;
+            transition: color 0.3s ease-in-out;
+
+            span {
+              position: relative;
+
+              &::after {
+                position: absolute;
+                content: '';
+                top: 100%;
+                width: 100%;
+                left: 0;
+                height: 2px;
+                background-color: $primary-text;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+              }
+            }
 
             svg {
               min-width: 20px;
               transition: transform 0.3s ease-in-out;
+
+              path {
+                transition: fill 0.3s ease-in-out;
+              }
             }
 
             &:hover {
-            }
-          }
+              color: $link-text-hover;
 
-          .nested__wrap {
-            background-color: $nested-list-background;
-            border: 1px solid $nested-list-border;
-            padding: 20px 50px;
-            transform-origin: 0 0;
-            opacity: 0;
-            position: absolute;
-            left: -50px;
-            top: 65px;
-            transform: scaleY(0);
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            display: flex;
-            gap: 36px;
-            border-radius: 0 0 20px 20px;
+              span {
+                &::after {
+                  background-color: $link-text-hover;
+                }
+              }
 
-            .nested__list {
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-
-              li {
-                a {
-                  font-size: $font-size-nested-list;
-                  line-height: 24px;
-                  font-weight: $font-weight-medium;
-                  color: $secondary-text;
+              svg {
+                path {
+                  fill: $link-text-hover;
                 }
               }
             }
           }
 
+          .nested {
+            transform-origin: 0 0;
+            opacity: 0;
+            position: absolute;
+            left: -50px;
+            top: 20px;
+            transform: scaleY(0);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+            &__menu {
+              margin-top: 45px;
+              background-color: $nested-list-background;
+              border: 1px solid $nested-list-border;
+              padding: 20px 50px;
+              display: flex;
+              gap: 36px;
+              border-radius: 0 0 20px 20px;
+
+              .nested__wrap {
+                min-width: 225px;
+
+                h3 {
+                  font-size: 14px;
+                  line-height: 24px;
+                  font-weight: $font-weight-bold;
+                  margin-bottom: 18px;
+                }
+
+                .nested__list {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+
+                  li {
+                    a {
+                      font-size: $font-size-nested-list;
+                      line-height: 24px;
+                      font-weight: $font-weight-medium;
+                      color: $secondary-text;
+
+                      &::after {
+                        display: none;
+                      }
+
+                      &:hover {
+                        color: $link-text-hover;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
           &:hover {
             a {
+              span {
+                &::after {
+                  transform: scaleX(1);
+                }
+              }
               svg {
                 transform: rotate(180deg);
               }
             }
 
-            .nested__wrap {
+            .nested {
               opacity: 1;
               transform: scaleY(1);
             }
