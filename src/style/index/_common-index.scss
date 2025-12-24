@@ -1,0 +1,102 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.banner {
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+  img {
+    z-index: 10;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    filter: brightness(60%);
+  }
+
+  &__container {
+    @include container;
+    padding-top: 110px;
+    position: relative;
+    z-index: 20;
+
+    h1 {
+      @include title1;
+      line-height: 120%;
+      max-width: 1200px;
+      color: $primary-title;
+      margin-bottom: 48px;
+    }
+
+    .banner__wrap {
+      display: flex;
+      align-items: start;
+      gap: 38px;
+
+      button {
+        @include glare-button;
+      }
+
+      .banner__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          color: #ffffff;
+          font-size: $font-size-text;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  background-color: $secondary-background;
+  border-radius: 0 0 15px 15px;
+
+  &__container {
+    padding: 60px 0;
+    @include container;
+
+    h2 {
+      @include title2;
+      color: $primary-title;
+      margin-bottom: 60px;
+    }
+
+    .filter__form {
+      display: flex;
+      gap: 15px;
+
+      .form__wrap {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+
+        .choices {
+          @include base-select;
+        }
+      }
+
+      button {
+        @include base-button;
+
+        text-wrap: nowrap;
+      }
+    }
+  }
+}

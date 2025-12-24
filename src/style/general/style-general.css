@@ -50,6 +50,8 @@ input {
   color: #454545;
   border-radius: 10px;
   transition: border-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
 }
 input:hover {
   border-color: #000000;
@@ -63,6 +65,7 @@ input:active {
 }
 
 .header {
+  z-index: 1000;
   width: 1600px;
   position: absolute;
   top: 42px;
