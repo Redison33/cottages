@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 html {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: 'Noah';
+  font-family: "Noah";
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 body {
   min-width: 320px;
-  font-family: 'Noah';
+  font-family: "Noah";
   background-color: $site-background;
 }
 
@@ -34,5 +34,152 @@ input {
   &__container {
     padding: 28px 46px;
     display: flex;
+    align-items: center;
+    gap: 48px;
+
+    .nav {
+      &__list {
+        display: flex;
+        gap: 44px;
+
+        .list__item {
+          position: relative;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            text-transform: uppercase;
+            font-size: $font-size-nav;
+            font-weight: $font-weight-bold;
+            line-height: 100%;
+            color: $primary-text;
+
+            svg {
+              min-width: 20px;
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover {
+            }
+          }
+
+          .nested__wrap {
+            background-color: $nested-list-background;
+            border: 1px solid $nested-list-border;
+            padding: 20px 50px;
+            transform-origin: 0 0;
+            opacity: 0;
+            position: absolute;
+            left: -50px;
+            top: 65px;
+            transform: scaleY(0);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            display: flex;
+            gap: 36px;
+            border-radius: 0 0 20px 20px;
+
+            .nested__list {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              li {
+                a {
+                  font-size: $font-size-nested-list;
+                  line-height: 24px;
+                  font-weight: $font-weight-medium;
+                  color: $secondary-text;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            a {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+
+            .nested__wrap {
+              opacity: 1;
+              transform: scaleY(1);
+            }
+          }
+        }
+      }
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .header__logos {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .header__phone {
+        font-size: $font-size-link;
+        font-weight: $font-weight-medium;
+        color: $primary-text;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $link-text-hover;
+        }
+      }
+
+      .header__feedback {
+        @include base-button;
+      }
+    }
+
+    .header__links {
+      display: flex;
+      gap: 30px;
+
+      a,
+      button {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        transition: border-color 0.3s ease-in-out;
+
+        svg {
+          path {
+            transition: fill 0.3s ease-in-out;
+          }
+        }
+
+        &:hover {
+          border-color: $link-text-hover;
+
+          svg {
+            path {
+              fill: $link-text-hover;
+            }
+          }
+        }
+
+        .link--active {
+          background-color: $link-text-hover;
+          border: 3px solid transparent;
+
+          svg {
+            path {
+              fill: $link-text-hover;
+            }
+          }
+        }
+      }
+    }
   }
 }
