@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  allSelect = document.querySelectorAll('select');
+  const allSelect = document.querySelectorAll('select');
 
   for (const select of allSelect) {
-    const choices = new Choices(select);
+    select.selectedIndex = -1;
+
+    const choices = new Choices(select, {
+      searchEnabled: false,
+      placeholder: true,
+      placeholderValue: select.getAttribute('data-placeholder'),
+      itemSelectText: '',
+      noChoicesText: 'Отсутсвует элементов',
+    });
   }
 });

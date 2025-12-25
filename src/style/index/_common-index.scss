@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .banner {
   position: relative;
@@ -89,7 +89,7 @@
         gap: 15px;
 
         .choices {
-          @include base-select;
+          @include filter-select;
         }
       }
 

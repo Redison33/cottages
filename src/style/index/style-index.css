@@ -168,6 +168,25 @@
   font-size: 18px;
   font-weight: 400;
 }
+.filter__container .filter__form .form__wrap .choices__list--dropdown {
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 20px;
+}
+.filter__container .filter__form .form__wrap .choices__item--choice {
+  padding: 5px 20px;
+}
+.filter__container .filter__form .form__wrap .choices__item--choice[aria-selected=true] {
+  position: relative;
+  background-color: #777777;
+  color: #ffffff;
+  font-weight: 700;
+}
+.filter__container .filter__form .form__wrap .choices__item--choice:first-child {
+  display: none;
+}
 .filter__container .filter__form .form__wrap .choices::after {
   width: 13px;
   height: 13px;
@@ -179,6 +198,20 @@
 .filter__container .filter__form .form__wrap .choices.is-open::after {
   transform: translateY(-50%) rotate(180deg);
   transform-origin: center;
+}
+.filter__container .filter__form .form__wrap .choices.is-open .choices__inner {
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+.filter__container .filter__form .form__wrap .choices__list--dropdown {
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.0705882353);
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+.filter__container .filter__form .form__wrap .choices.is-open .choices__inner {
+  border-radius: 10px;
 }
 .filter__container .filter__form button {
   border-radius: 10px;
