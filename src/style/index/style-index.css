@@ -45,7 +45,8 @@
 }
 .banner__container {
   max-width: 1600px;
-  margin: 0 160px;
+  margin: 0 auto;
+  width: 100%;
   padding-top: 110px;
   position: relative;
   z-index: 20;
@@ -127,7 +128,7 @@
 .filter__container {
   padding: 60px 0;
   max-width: 1600px;
-  margin: 0 160px;
+  margin: 0 auto;
 }
 .filter__container h2 {
   font-size: 56px;
