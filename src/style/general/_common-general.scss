@@ -19,7 +19,7 @@ img {
 body {
   min-width: 320px;
   font-family: 'Noah';
-  background-color: $site-background;
+  background-color: $primary-background;
 }
 
 input {
@@ -41,13 +41,14 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 48px;
+    gap: 24px;
+    justify-content: space-between;
 
     .nav {
       &__list {
         display: flex;
         align-items: center;
-        gap: 44px;
+        gap: 40px;
 
         .list__item {
           position: relative;
@@ -208,7 +209,7 @@ input {
 
     .header__links {
       display: flex;
-      gap: 30px;
+      gap: 20px;
 
       a,
       button {

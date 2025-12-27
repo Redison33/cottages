@@ -40,7 +40,7 @@ img {
 body {
   min-width: 320px;
   font-family: "Noah";
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 input {
@@ -79,12 +79,13 @@ input:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
+  gap: 24px;
+  justify-content: space-between;
 }
 .header__container .nav__list {
   display: flex;
   align-items: center;
-  gap: 44px;
+  gap: 40px;
 }
 .header__container .nav__list .list__item {
   position: relative;
@@ -225,7 +226,7 @@ input:active {
 }
 .header__container .header__links {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .header__container .header__links a,
 .header__container .header__links button {

@@ -392,3 +392,15 @@
   line-height: 100%;
   text-transform: uppercase;
 }
+
+@mixin tag {
+  width: 235px;
+  display: flex;
+  justify-content: center;
+  background-color: $primary-background;
+  border-radius: 100px;
+  font-size: $font-size-tag;
+  font-weight: $font-weight-medium;
+  color: $primary-text;
+  padding: 9px 0;
+}

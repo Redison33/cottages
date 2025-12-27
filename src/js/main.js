@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
       noChoicesText: 'Отсутсвует элементов',
     });
   }
+
+  if (document.querySelector('#bx-panel')) {
+    document.querySelector('.header').style.top = 42 + document.querySelector('#bx-panel').scrollHeight + 'px';
+  }
 });
