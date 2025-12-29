@@ -331,9 +331,12 @@
   &__container {
     @include container;
 
-    h2 {
-      @include title2;
+    .achievement__info {
       margin-bottom: 60px;
+
+      h2 {
+        @include title2;
+      }
     }
 
     .achievement__content {
@@ -546,6 +549,19 @@
             }
           }
 
+          .raiting {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+              font-size: $font-size-text;
+            }
+          }
+
           &::after {
             content: url("../../assets/img/reviews-decor.svg");
             position: absolute;
@@ -573,6 +589,61 @@
 
     .reviews__link {
       @include base-button;
+    }
+  }
+}
+
+.social {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    .social__info {
+      margin-bottom: 40px;
+
+      h2 {
+        @include title2;
+      }
+    }
+
+    .social__content {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.contactForm {
+  background-color: $secondary-background;
+  padding: 100px 0;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+
+    .contactForm__info {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      h2 {
+        @include title2;
+        color: $primary-title;
+      }
+
+      p {
+        font-size: $font-size-text;
+        color: $primary-title;
+      }
+
+      .personal {
+      }
     }
   }
 }

@@ -629,7 +629,9 @@
 
       <section class="achievement">
         <div class="achievement__container">
-          <h2>ГК "Строй Коттедж" это:</h2>
+          <div class="achievement__info">
+            <h2>ГК "Строй Коттедж" это:</h2>
+          </div>
 
           <div class="achievement__content">
             <div class="achievement__card card card--active">
@@ -798,8 +800,80 @@
 
           <div class="reviews__content">
             <div class="reviews__wrap">
+              <!-- Циклом карточки фигачь, там все с кайфом должно быть -->
               <article class="rewiews__card card">
                 <a href="">Название проекта</a>
+
+                <div class="card__raiting raiting">
+                  <div class="raiting__wrap">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.55957 0L10.792 6.25665L17.1191 6.56434L12.1717 10.7388L13.8496 17.1857L8.55957 13.509L3.2695 17.1857L4.94746 10.7388L6.19888e-05 6.56434L6.32716 6.25665L8.55957 0Z"
+                        fill="#ECAD0F"
+                      />
+                    </svg>
+
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.55957 0L10.792 6.25665L17.1191 6.56434L12.1717 10.7388L13.8496 17.1857L8.55957 13.509L3.2695 17.1857L4.94746 10.7388L6.19888e-05 6.56434L6.32716 6.25665L8.55957 0Z"
+                        fill="#ECAD0F"
+                      />
+                    </svg>
+
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.55957 0L10.792 6.25665L17.1191 6.56434L12.1717 10.7388L13.8496 17.1857L8.55957 13.509L3.2695 17.1857L4.94746 10.7388L6.19888e-05 6.56434L6.32716 6.25665L8.55957 0Z"
+                        fill="#ECAD0F"
+                      />
+                    </svg>
+
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.55957 0L10.792 6.25665L17.1191 6.56434L12.1717 10.7388L13.8496 17.1857L8.55957 13.509L3.2695 17.1857L4.94746 10.7388L6.19888e-05 6.56434L6.32716 6.25665L8.55957 0Z"
+                        fill="#ECAD0F"
+                      />
+                    </svg>
+
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.55957 0L10.792 6.25665L17.1191 6.56434L12.1717 10.7388L13.8496 17.1857L8.55957 13.509L3.2695 17.1857L4.94746 10.7388L6.19888e-05 6.56434L6.32716 6.25665L8.55957 0Z"
+                        fill="#b9b9b9"
+                      />
+                    </svg>
+                  </div>
+
+                  <span>(4.0)</span>
+                </div>
 
                 <p>
                   Команда взяла на себя абсолютно всё: от проекта до сдачи дома
@@ -825,6 +899,65 @@
           </div>
 
           <a class="reviews__link" href="">Смотреть все отзывы</a>
+        </div>
+      </section>
+
+      <section class="social">
+        <div class="social__container">
+          <div class="social__info">
+            <h2>Подписывайтесь на наш Телеграм канал!</h2>
+          </div>
+
+          <!-- Затычка, ну хоть что-то -->
+          <div class="social__content">
+            <img src="./src/assets/img/telegram-zatichka.webp" alt="rofl" />
+          </div>
+        </div>
+      </section>
+
+      <section class="contactForm">
+        <div class="contactForm__container">
+          <div class="contactForm__info">
+            <h2>Готовы обсудить свой проект?</h2>
+
+            <p>
+              Оставьте заявку, наш специалист свяжется с вами и пришлет ТОП-3
+              готовых проекта под ваши пожелания!
+            </p>
+
+            <div class="contactForm__personal personal">
+              <img src="" alt="" />
+              <div class="personal__wrap">
+                <h4>Специалист по строительству</h4>
+
+                <h5>Кирилл Чернев</h5>
+
+                <p>8 (495) 800-78-78</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contactForm__form form">
+            <input type="text" required />
+
+            <input type="tel" name="" id="" required />
+
+            <!-- <input type="checkbox" name="" id="" /> -->
+
+            <div class="form__required">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+
+              <p>
+                Нажимая кнопку «Отправить», я соглашаюсь с
+                <a href="">политикой конфиденциальности</a>
+              </p>
+            </div>
+
+            <button>Отправить</button>
+          </form>
         </div>
       </section>
     </main>
