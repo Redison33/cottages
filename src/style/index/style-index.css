@@ -40,6 +40,7 @@
   top: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
   height: 100%;
   filter: brightness(60%);
 }
@@ -113,12 +114,16 @@
   gap: 20px;
 }
 .banner__container .banner__wrap .banner__list li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  position: relative;
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
+  padding-left: 34px;
+}
+.banner__container .banner__wrap .banner__list li::after {
+  content: url("../../assets/img/banner-list.svg");
+  position: absolute;
+  left: 0;
 }
 
 .filter {
@@ -480,4 +485,258 @@
   opacity: 1;
   transform: translateY(0);
   filter: brightness(100%);
+}
+
+.achievement {
+  margin-bottom: 100px;
+}
+.achievement__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.achievement__container h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.achievement__container .achievement__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.achievement__container .achievement__content .card {
+  padding: 75px 40px;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease-in-out;
+}
+.achievement__container .achievement__content .card h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 24px;
+  transition: color 0.3s ease-in-out;
+}
+.achievement__container .achievement__content .card p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  transition: color 0.3s ease-in-out;
+}
+.achievement__container .achievement__content .card--active {
+  background-color: #28282c;
+}
+.achievement__container .achievement__content .card--active h3,
+.achievement__container .achievement__content .card--active p {
+  color: #ffffff;
+}
+
+.possibilities {
+  padding-top: 100px;
+  background-color: #f8f8f8;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+.possibilities__container .possibilities__info {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.possibilities__container .possibilities__info h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.possibilities__container .possibilities__info p {
+  max-width: 900px;
+  color: #454545;
+  font-size: 20px;
+}
+.possibilities__container .possibilities__content {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  aspect-ratio: 1/1;
+}
+.possibilities__container .possibilities__content .card {
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.possibilities__container .possibilities__content .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.possibilities__container .possibilities__content .card h3 {
+  max-width: 390px;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000000;
+}
+.possibilities__container .possibilities__content .card p {
+  max-width: 390px;
+  color: #454545;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.possibilities__container .possibilities__content .card:first-child {
+  aspect-ratio: 2/1;
+  grid-column: span 2;
+  border-bottom-right-radius: 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(4) {
+  border-radius: 15px;
+  background-color: #f8f8f8;
+}
+.possibilities__container .possibilities__content .card:nth-child(5) {
+  border-radius: 15px 0 0 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(6) {
+  border-bottom-left-radius: 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(7) {
+  background-color: #b1a489;
+  border-radius: 0 15px 15px 0;
+  position: relative;
+}
+.possibilities__container .possibilities__content .card:nth-child(7)::before {
+  position: absolute;
+  bottom: -74px;
+  right: -155px;
+  content: url("../../assets/img/possibilities-decor.svg");
+  opacity: 0.45;
+}
+.possibilities__container .possibilities__content .card:nth-child(7) h3,
+.possibilities__container .possibilities__content .card:nth-child(7) p {
+  color: #ffffff;
+}
+
+.reviews {
+  margin-bottom: 100px;
+}
+.reviews__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.reviews__container .reviews__info {
+  margin-bottom: 60px;
+  max-width: 960px;
+}
+.reviews__container .reviews__info h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.reviews__container .reviews__info p {
+  color: #454545;
+  font-size: 20px;
+}
+.reviews__container .reviews__content {
+  padding: 40px 80px 60px 40px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+.reviews__container .reviews__content .reviews__wrap {
+  max-height: 800px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.reviews__container .reviews__content .reviews__wrap .card {
+  position: relative;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.reviews__container .reviews__content .reviews__wrap .card a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  color: #000101;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.reviews__container .reviews__content .reviews__wrap .card a:hover {
+  color: #b1a489;
+}
+.reviews__container .reviews__content .reviews__wrap .card p {
+  font-size: 20px;
+  color: #454545;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+.reviews__container .reviews__content .reviews__wrap .card__gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.reviews__container .reviews__content .reviews__wrap .card__gallery img {
+  border-radius: 10px;
+  width: 190px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reviews__container .reviews__content .reviews__wrap .card::after {
+  content: url("../../assets/img/reviews-decor.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.reviews__container .reviews__content .reviews__wrap::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 18px;
+}
+.reviews__container .reviews__content .reviews__wrap::-webkit-scrollbar-track {
+  background-color: rgba(148, 148, 148, 0.1411764706);
+  border-radius: 18px;
+}
+.reviews__container .reviews__content .reviews__wrap::-webkit-scrollbar-thumb {
+  background-color: #28282c;
+  border-radius: 18px;
+}
+.reviews__container .reviews__link {
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.reviews__container .reviews__link:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.reviews__container .reviews__link:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
 }/*# sourceMappingURL=style-index.css.map */

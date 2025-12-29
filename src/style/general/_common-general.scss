@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 html {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: 'Noah';
+  font-family: "Noah";
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 body {
   min-width: 320px;
-  font-family: 'Noah';
+  font-family: "Noah";
   background-color: $primary-background;
 }
 
@@ -69,14 +69,15 @@ input {
 
               &::after {
                 position: absolute;
-                content: '';
+                content: "";
                 top: 100%;
                 width: 100%;
                 left: 0;
                 height: 2px;
                 background-color: $primary-text;
                 transform: scaleX(0);
-                transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out,
+                  background-color 0.3s ease-in-out;
               }
             }
 
