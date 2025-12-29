@@ -416,6 +416,9 @@
 }
 
 @mixin base-checkbox {
+  display: block;
+  position: relative;
+  height: 30px;
   padding-left: 30px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -439,6 +442,7 @@
     width: 30px;
     border: 1px solid $input-border;
     background-color: #ffffff;
+    border-radius: 8px;
 
     &::after {
       content: "";

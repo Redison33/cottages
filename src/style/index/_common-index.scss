@@ -623,6 +623,7 @@
 
   &__container {
     @include container;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
@@ -643,6 +644,59 @@
       }
 
       .personal {
+        display: flex;
+        gap: 30px;
+
+        img {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          background-color: #fff;
+        }
+
+        &__wrap {
+          h4 {
+            font-size: $font-size-text;
+            color: $primary-title;
+            font-weight: $font-weight-medium;
+            margin-bottom: 4px;
+          }
+
+          h5 {
+            font-size: 18px;
+            color: $primary-title;
+            font-weight: $font-weight-regular;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: $font-size-link;
+            font-weight: $font-weight-regular;
+          }
+        }
+      }
+    }
+
+    .contactForm__form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .input {
+        @include base-input;
+      }
+
+      .form__required {
+        display: flex;
+        gap: 25px;
+
+        .checkbox {
+          @include base-checkbox;
+        }
+
+        p {
+        }
       }
     }
   }
