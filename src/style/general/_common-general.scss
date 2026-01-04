@@ -3,6 +3,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -19,7 +20,7 @@ img {
 body {
   min-width: 320px;
   font-family: "Noah";
-  background-color: $primary-background;
+  background-color: $base-background-body;
 }
 
 input {
@@ -27,12 +28,8 @@ input {
 }
 
 .header {
-  z-index: 1000;
-  width: 1600px;
-  position: absolute;
-  top: 42px;
-  left: 50%;
-  transform: translateX(-50%);
+  @include container;
+  margin-top: 42px;
   border-radius: 15px;
   background-color: $primary-background;
 
@@ -247,6 +244,172 @@ input {
             path {
               fill: $link-text-hover;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  @include container;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  ol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      a {
+        @include link-black;
+        color: $actions-text;
+        text-decoration: none;
+        font-size: $font-size-tag;
+        font-weight: $font-weight-regular;
+      }
+
+      &:not(:last-child)::after {
+        content: "-";
+      }
+    }
+  }
+}
+
+.footer {
+  border-radius: 15px 15px 0 0;
+  background-color: $secondary-background;
+
+  &__container {
+    @include container;
+    padding: 70px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Montserrat";
+      font-weight: $font-weight-medium;
+      font-size: 18px;
+      color: $primary-title;
+      margin-bottom: 30px;
+    }
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 200px;
+      grid-row-gap: 40px;
+
+      &__wrap {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            a {
+              @include link-base;
+              text-transform: lowercase;
+              text-decoration: none;
+              font-size: $font-size-tag;
+              font-weight: $font-weight-regular;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          grid-row: span 2;
+        }
+
+        &:nth-child(2) {
+          grid-row: span 2;
+        }
+      }
+    }
+
+    .contacts {
+      &__wrap {
+        display: flex;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        a {
+          @include link-base;
+          text-decoration: none;
+        }
+      }
+
+      &__email {
+        position: relative;
+        padding-left: 50px;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: url("../../assets/img/mail.svg");
+        }
+      }
+
+      &__map {
+        position: relative;
+        padding-left: 50px;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: url("../../assets/img/location.svg");
+        }
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        p,
+        a {
+          @include link-base;
+          line-height: 122%;
+          letter-spacing: 0;
+        }
+
+        p {
+          text-decoration: none;
+
+          &:hover {
+            color: $link-text-primary;
+          }
+        }
+      }
+
+      button {
+        @include base-button;
+        margin-bottom: 30px;
+      }
+
+      &__links {
+        display: flex;
+        gap: 40px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 26px;
+          height: 26px;
+          background-color: $actions-text;
+          border-radius: 50%;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $button-background-hover;
           }
         }
       }

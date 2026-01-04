@@ -3,6 +3,10 @@
 @mixin container {
   max-width: 1600px;
   margin: 0 auto;
+
+  @media (max-width: 1640px) {
+    margin: 0 20px;
+  }
 }
 
 @mixin base-button {
@@ -404,7 +408,7 @@
 }
 
 @mixin tag {
-  width: 235px;
+  min-width: 235px;
   display: flex;
   justify-content: center;
   background-color: $primary-background;
@@ -412,7 +416,26 @@
   font-size: $font-size-tag;
   font-weight: $font-weight-medium;
   color: $primary-text;
-  padding: 9px 0;
+  padding: 9px 15px;
+}
+
+@mixin base-tab {
+  padding: 9px 18px;
+  background-color: $primary-background;
+  color: $actions-text;
+  font-size: $font-size-link;
+  line-height: 12px;
+  font-weight: $font-weight-medium;
+  border-radius: 50px;
+  border: 1px solid #0001011c;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $secondary-background;
+    border-color: $secondary-background;
+    color: $button-tag-text-active;
+  }
 }
 
 @mixin base-checkbox {

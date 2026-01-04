@@ -22,6 +22,20 @@
   font-weight: 500;
   font-style: normal;
 }
+body {
+  background-color: #ffffff;
+}
+
+.header {
+  z-index: 1000;
+  width: 1600px;
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+}
+
 .banner {
   position: relative;
   height: 100vh;
@@ -51,6 +65,11 @@
   padding-top: 110px;
   position: relative;
   z-index: 20;
+}
+@media (max-width: 1640px) {
+  .banner__container {
+    margin: 0 20px;
+  }
 }
 .banner__container h1 {
   font-size: 70px;
@@ -135,6 +154,11 @@
   padding: 60px 0;
   max-width: 1600px;
   margin: 0 auto;
+}
+@media (max-width: 1640px) {
+  .filter__container {
+    margin: 0 20px;
+  }
 }
 .filter__container h2 {
   font-size: 56px;
@@ -253,6 +277,11 @@
   gap: 40px;
   margin-bottom: 100px;
 }
+@media (max-width: 1640px) {
+  .projects__container .projects__info {
+    margin: 0 20px;
+  }
+}
 .projects__container .projects__info .projects__wrap h2 {
   font-size: 56px;
   font-weight: 400;
@@ -310,7 +339,7 @@
 .projects__container .projects__content .card__tag {
   z-index: 1;
   position: absolute;
-  width: 235px;
+  min-width: 235px;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
@@ -318,7 +347,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #000101;
-  padding: 9px 0;
+  padding: 9px 15px;
   left: 30px;
   bottom: 20px;
 }
@@ -332,6 +361,11 @@
 .services__container {
   max-width: 1600px;
   margin: 0 auto;
+}
+@media (max-width: 1640px) {
+  .services__container {
+    margin: 0 20px;
+  }
 }
 .services__container .services__info {
   display: flex;
@@ -494,6 +528,11 @@
   max-width: 1600px;
   margin: 0 auto;
 }
+@media (max-width: 1640px) {
+  .achievement__container {
+    margin: 0 20px;
+  }
+}
 .achievement__container .achievement__info {
   margin-bottom: 60px;
 }
@@ -545,6 +584,11 @@
   max-width: 1600px;
   margin: 0 auto;
   margin-bottom: 100px;
+}
+@media (max-width: 1640px) {
+  .possibilities__container .possibilities__info {
+    margin: 0 20px;
+  }
 }
 .possibilities__container .possibilities__info h2 {
   font-size: 56px;
@@ -636,6 +680,11 @@
 .reviews__container {
   max-width: 1600px;
   margin: 0 auto;
+}
+@media (max-width: 1640px) {
+  .reviews__container {
+    margin: 0 20px;
+  }
 }
 .reviews__container .reviews__info {
   margin-bottom: 60px;
@@ -761,6 +810,11 @@
   max-width: 1600px;
   margin: 0 auto;
 }
+@media (max-width: 1640px) {
+  .social__container {
+    margin: 0 20px;
+  }
+}
 .social__container .social__info {
   margin-bottom: 40px;
 }
@@ -789,6 +843,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
+}
+@media (max-width: 1640px) {
+  .contactForm__container {
+    margin: 0 20px;
+  }
 }
 .contactForm__container .contactForm__info {
   display: flex;

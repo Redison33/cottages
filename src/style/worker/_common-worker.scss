@@ -1,0 +1,70 @@
+@import "../_vars.scss";
+@import "../_mixin.scss";
+
+.workers {
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .workers__links {
+      margin-bottom: 60px;
+
+      ul {
+        display: flex;
+        gap: 20px;
+
+        li {
+          a {
+            @include base-tab;
+          }
+        }
+      }
+    }
+
+    .group {
+      margin-bottom: 100px;
+
+      h2 {
+        @include title2;
+        margin-bottom: 50px;
+      }
+
+      .group__cards {
+        display: flex;
+        gap: 60px;
+        overflow-x: auto;
+
+        .card {
+          min-width: 350px;
+          max-width: 350px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            height: 490px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+          }
+
+          h3 {
+            color: $actions-text;
+            font-size: $font-size-text;
+            font-weight: $font-weight-bold;
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: $actions-text;
+            font-size: $font-size-text;
+            font-weight: $font-weight-regular;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
