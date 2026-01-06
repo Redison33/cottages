@@ -392,6 +392,10 @@
   font-weight: $font-weight-medium;
   line-height: 100%;
   text-transform: uppercase;
+
+  @media (max-width: 960px) {
+    font-size: 60px;
+  }
 }
 
 @mixin title2 {
@@ -430,6 +434,7 @@
   border: 1px solid #0001011c;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
+  text-wrap: nowrap;
 
   &:hover {
     background-color: $secondary-background;
@@ -473,8 +478,8 @@
       display: none;
       left: 9px;
       top: 5px;
-      width: 5px;
-      height: 10px;
+      width: 10px;
+      height: 15px;
       border: solid white;
       border-width: 0 3px 3px 0;
       -webkit-transform: rotate(45deg);
@@ -483,12 +488,12 @@
     }
   }
 
-  &:hover input ~ .checkmark {
-    background-color: aqua;
-  }
+  // &:hover input ~ .checkmark {
+  //   background-color: aqua;
+  // }
 
   & input:checked ~ .checkmark {
-    background-color: #2196f3;
+    background-color: $actions-background-secondary;
   }
 
   & input:checked ~ .checkmark:after {

@@ -1,2 +1,116 @@
-// @media (max-width: 1000px) {
-// }
+@media (max-width: 960px) {
+  .header {
+    &__container {
+      gap: 75px;
+
+      .header__logo {
+        margin-right: auto;
+      }
+      .nav {
+        &__list {
+          .list__item {
+            a {
+            }
+
+            .nested {
+              &__menu {
+                .nested__wrap {
+                  h3 {
+                  }
+
+                  .nested__list {
+                    li {
+                      a {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header__actions {
+        display: none;
+
+        .header__logos {
+          display: none;
+        }
+
+        .header__phone {
+          display: none;
+        }
+
+        .header__feedback {
+        }
+      }
+
+      .header__links {
+        gap: 30px;
+
+        a,
+        button {
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      grid-column-gap: 100px;
+      grid-row-gap: 40px;
+      h3 {
+      }
+
+      .nav {
+        &__wrap {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            //   grid-row: span 2;
+          }
+
+          &:nth-child(2) {
+            //   grid-row: span 2;
+          }
+        }
+      }
+
+      .contacts {
+        &__wrap {
+          a {
+          }
+        }
+
+        &__email {
+        }
+
+        &__map {
+        }
+
+        &__link {
+          p,
+          a {
+          }
+
+          p {
+          }
+        }
+
+        button {
+        }
+
+        &__links {
+          a {
+          }
+        }
+      }
+    }
+  }
+}

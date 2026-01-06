@@ -63,6 +63,7 @@ input {
 
             span {
               position: relative;
+              text-wrap: nowrap;
 
               &::after {
                 position: absolute;
@@ -202,6 +203,7 @@ input {
 
       .header__feedback {
         @include base-button;
+        padding: 14px 12px;
       }
     }
 
@@ -248,6 +250,61 @@ input {
         }
       }
     }
+
+    .header__burger {
+      background-color: $button-background-primary;
+      border-radius: 10px;
+      padding: 16px;
+      width: 50px;
+      height: 50px;
+      display: none;
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+
+      span {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+
+        &:nth-child(1) {
+          top: 16px;
+        }
+
+        &:nth-child(2) {
+          top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+          bottom: 16px;
+        }
+      }
+
+      &--active {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+          }
+
+          &:nth-child(2) {
+            transform: scaleX(0);
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 50%;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $button-background-hover;
+      }
+    }
   }
 }
 
@@ -291,6 +348,7 @@ input {
     padding: 70px 0 50px 0;
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 
     h3 {
       font-family: "Montserrat";
@@ -304,9 +362,11 @@ input {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 200px;
-      grid-row-gap: 40px;
-
       &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
         ul {
           display: flex;
           flex-direction: column;
@@ -320,15 +380,17 @@ input {
               font-size: $font-size-tag;
               font-weight: $font-weight-regular;
             }
+
+            &:first-child {
+              a {
+                text-transform: none;
+                font-family: "Montserrat";
+                font-weight: $font-weight-regular;
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+            }
           }
-        }
-
-        &:nth-child(1) {
-          grid-row: span 2;
-        }
-
-        &:nth-child(2) {
-          grid-row: span 2;
         }
       }
     }

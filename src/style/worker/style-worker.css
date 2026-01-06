@@ -44,6 +44,7 @@
 .workers__container .workers__links ul {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .workers__container .workers__links ul li a {
   padding: 9px 18px;
@@ -55,6 +56,7 @@
   border-radius: 50px;
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-wrap: nowrap;
 }
 .workers__container .workers__links ul li a:hover {
   background-color: #28282c;

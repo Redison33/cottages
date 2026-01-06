@@ -1,2 +1,266 @@
-// @media (max-width: 1440px) {
-// }
+@media (max-width: 1640px) {
+  .header {
+    &__container {
+      padding: 28px 24px;
+      .nav {
+        &__list {
+          gap: 18px;
+
+          .list__item {
+            a {
+            }
+
+            .nested {
+              &__menu {
+                .nested__wrap {
+                  h3 {
+                  }
+
+                  .nested__list {
+                    li {
+                      a {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header__actions {
+        gap: 14px;
+
+        .header__logos {
+          gap: 14px;
+        }
+
+        .header__phone {
+        }
+
+        .header__feedback {
+        }
+      }
+
+      .header__links {
+        gap: 14px;
+
+        a,
+        button {
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      h3 {
+      }
+
+      .nav {
+        grid-column-gap: 150px;
+        grid-row-gap: 40px;
+
+        &__wrap {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            //   grid-row: span 2;
+          }
+
+          &:nth-child(2) {
+            //   grid-row: span 2;
+          }
+        }
+      }
+
+      .contacts {
+        &__wrap {
+          a {
+          }
+        }
+
+        &__email {
+        }
+
+        &__map {
+        }
+
+        &__link {
+          p,
+          a {
+          }
+
+          p {
+          }
+        }
+
+        button {
+        }
+
+        &__links {
+          a {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .header {
+    &__container {
+      padding: 28px 32px;
+
+      .nav {
+        width: 400px;
+        max-height: calc(100vh - 90px - 84px);
+        overflow-y: auto;
+        border-radius: 0 0 15px 15px;
+        z-index: 1;
+        position: absolute;
+        top: 110px;
+        right: 0;
+        padding: 32px;
+        background-color: $primary-background;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: transform 0.3s ease-in-out;
+
+        &__list {
+          width: 100%;
+          flex-direction: column;
+          gap: 18px;
+          align-items: start;
+
+          .list__item {
+            width: 100%;
+            overflow: hidden;
+            a {
+              justify-content: space-between;
+            }
+
+            .nested {
+              position: static;
+              height: 0;
+              opacity: 1;
+              transform: none;
+              transition: height 0.3s ease-in-out;
+
+              &__menu {
+                flex-direction: column;
+                margin-top: 0;
+                background-color: transparent;
+                border-top: none;
+                border-right: none;
+                border-radius: 0 0 0 15px;
+                padding: 20px;
+                padding-bottom: 10px;
+                display: flex;
+                gap: 20px;
+                .nested__wrap {
+                  h3 {
+                    margin-bottom: 6px;
+                  }
+
+                  .nested__list {
+                    li {
+                      a {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header__actions {
+        gap: 22px;
+
+        .header__logos {
+          gap: 22px;
+        }
+
+        .header__phone {
+        }
+
+        .header__feedback {
+        }
+      }
+
+      .header__links {
+        gap: 22px;
+
+        a,
+        button {
+        }
+      }
+
+      .header__burger {
+        z-index: 10;
+        display: block;
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 150px;
+      grid-row-gap: 80px;
+      h3 {
+      }
+
+      .nav {
+        display: contents;
+        &__wrap {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+      }
+
+      .contacts {
+        &__wrap {
+          a {
+          }
+        }
+
+        &__email {
+        }
+
+        &__map {
+        }
+
+        &__link {
+          p,
+          a {
+          }
+
+          p {
+          }
+        }
+
+        button {
+        }
+
+        &__links {
+          a {
+          }
+        }
+      }
+    }
+  }
+}

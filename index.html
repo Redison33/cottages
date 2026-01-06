@@ -22,11 +22,11 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="">
+        <a class="header__logo" href="">
           <img src="./src/assets/img/Frame.svg" alt="Логотип" />
         </a>
 
-        <nav aria-label="Main navigation" class="header_nav nav">
+        <nav aria-label="Main navigation" class="header__nav nav">
           <ul class="nav__list list">
             <li class="list__item item">
               <a href="">
@@ -337,6 +337,12 @@
             </svg>
           </button>
         </div>
+
+        <button class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -908,9 +914,43 @@
             <h2>Подписывайтесь на наш Телеграм канал!</h2>
           </div>
 
-          <!-- Затычка, ну хоть что-то -->
           <div class="social__content">
-            <img src="./src/assets/img/telegram-zatichka.webp" alt="rofl" />
+            <div class="telegram">
+              <div class="telegram__header">
+                <img
+                  src="./src/assets/img/telegaGroup.webp"
+                  alt="аватарка группы"
+                />
+                <div class="telegram__name">
+                  <h3>Строй Коттедж Строительная Компания</h3>
+                  <a href="t.me/stroykotedj">@stroykotedj</a>
+                </div>
+              </div>
+
+              <div class="telegram__content">
+                <p>
+                  🏠Строим из дерева и камня с 2008 года
+                  <br />
+                  🔥Более 380 построенных домов
+                  <br />
+                  🎁Более 250 готовых к строительству проектов!
+                  <br />
+                  🌐
+                  <a href="https://www.stroy-kotedj.ru"
+                    >https://www.stroy-kotedj.ru</a
+                  >
+                  <br />
+                  📩Написать эксперту👉
+                  <br />
+                  <a href="t.me/Stroykotedj_telegram"> @Stroykotedj_telegram</a>
+                </p>
+
+                <button>
+                  <img src="./src/assets/img/footer-telegram.svg" alt="" />
+                  Download Telegram
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -926,7 +966,10 @@
             </p>
 
             <div class="contactForm__personal personal">
-              <img src="" alt="" />
+              <img
+                src="./src/assets/img/architecturally1.webp"
+                alt="Кирилл Чернев"
+              />
               <div class="personal__wrap">
                 <h4>Специалист по строительству</h4>
 
@@ -937,32 +980,120 @@
             </div>
           </div>
 
-          <form class="contactForm__form form">
-            <input class="input" type="text" required placeholder="Имя" />
-
+          <form
+            name="SIMPLE_FORM_1"
+            action="/"
+            method="POST"
+            enctype="multipart/form-data"
+          >
             <input
-              class="input"
-              type="tel"
-              name=""
-              id=""
-              required
-              placeholder="Телефон"
-            />
+              type="hidden"
+              name="sessid"
+              id="sessid"
+              value="de87c0b6d68d4e004f6c48195cfb89be"
+            /><input type="hidden" name="WEB_FORM_ID" value="1" />
+            <table class="form-table data-table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      class="input"
+                      type="text"
+                      name="form_text_1"
+                      required=""
+                      placeholder="Имя"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      class="input"
+                      type="tel"
+                      name="form_text_2"
+                      required=""
+                      placeholder="Телефон"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>
+                    <div class="form__required">
+                      <label class="checkbox">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
 
-            <div class="form__required">
-              <label class="checkbox">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-
-              <p>
-                Нажимая кнопку «Отправить», я соглашаюсь с
-                <a href="">политикой конфиденциальности</a>
-              </p>
-            </div>
-
-            <button>Отправить</button>
+                      <p>
+                        Нажимая кнопку «Отправить», я соглашаюсь с
+                        <a href="">политикой конфиденциальности</a>
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <input
+                      type="submit"
+                      name="web_form_submit"
+                      value="Сохранить"
+                    />
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
           </form>
+        </div>
+
+        <img src="./src/assets/img/comfort-bg.webp" alt="красивый задник" />
+      </section>
+
+      <section class="comfort">
+        <div class="comfort__container">
+          <div class="comfort__info">
+            <h2>Проекты продуманные до мелочей</h2>
+          </div>
+
+          <div class="comfort__content">
+            <p>
+              Мы создаем не просто архитектурные объекты, а тщательно
+              спроектированные пространства для жизни. Наша философия строится
+              на принципе: настоящий комфорт складывается из мелочей, которые
+              большинство подрядчиков упускают из виду.
+              <br />
+              Наша цель — создать дом, в котором вам не придется подстраиваться
+              под неудобства, мириться с плохой акустикой или страдать от
+              недостатка места для хранения. Мы проектируем пространства, где
+              каждая деталь служит вашему комфорту сегодня и завтра.
+              <br />
+              <br />
+              Результат нашей работы — дом, в котором приятно находиться,
+              которым удобно пользоваться и где хочется возвращаться снова и
+              снова.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="also">
+        <div class="also__container">
+          <div class="also__info">
+            <h2>Смотрите также</h2>
+          </div>
+
+          <div class="also__content">
+            <nav aria-label="tags" class="also__links">
+              <ul>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </section>
     </main>
@@ -971,9 +1102,9 @@
       <div class="footer__container container">
         <nav aria-label="Footer navigation" class="footer__nav nav">
           <div class="nav__wrap">
-            <h3>Проекты</h3>
-
             <ul class="nav__list list">
+              <li class="list__item"><a href="">Проекты</a></li>
+
               <li class="list__item"><a href="">ИЗ КЛЕЕНОГО БРУСА</a></li>
 
               <li class="list__item"><a href="">ИЗ ГАЗБЕТОНА</a></li>
@@ -995,9 +1126,9 @@
           </div>
 
           <div class="nav__wrap">
-            <h3>Портфолио</h3>
-
             <ul class="nav__list list">
+              <li class="list__item"><a href="">Портфолио</a></li>
+
               <li class="list__item"><a href="">ПРОЕКТИРОВАНИЕ</a></li>
 
               <li class="list__item"><a href="">ДОМА</a></li>
@@ -1013,9 +1144,9 @@
           </div>
 
           <div class="nav__wrap">
-            <h3>О нас</h3>
-
             <ul class="nav__list list">
+              <li class="list__item"><a href="">О нас</a></li>
+
               <li class="list__item"><a href="">ИСТОРИЯ КОМПАНИИ</a></li>
 
               <li class="list__item"><a href="">СЕРТИФИКАТЫ</a></li>
@@ -1026,12 +1157,10 @@
                 <a href="">Политика конфеденциальности </a>
               </li>
             </ul>
-          </div>
-
-          <div class="nav__wrap">
-            <h3>Полезное</h3>
 
             <ul class="nav__list list">
+              <li class="list__item"><a href="">Полезное</a></li>
+
               <li class="list__item"><a href="">ЗАДАВАЕМЫЕ ВОПРОСЫ</a></li>
 
               <li class="list__item"><a href="">БЛОГ</a></li>

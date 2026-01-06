@@ -1,2 +1,409 @@
-// @media (max-width: 1000px) {
-// }
+@media (max-width: 960px) {
+  .banner {
+    img {
+    }
+
+    &__container {
+      h1 {
+      }
+
+      .banner__wrap {
+        flex-direction: column;
+        gap: 28px;
+        button {
+        }
+
+        .banner__list {
+          li {
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    margin-bottom: 60px;
+    &__container {
+      h2 {
+      }
+
+      .filter__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        .form__wrap {
+          display: contents;
+          .choices {
+          }
+        }
+
+        button {
+          grid-area: 3 / 2 / 4 / 3;
+        }
+      }
+    }
+  }
+
+  .projects {
+    margin-bottom: 60px;
+    &__container {
+      .projects__info {
+        margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+
+        .projects__wrap {
+          h2 {
+          }
+
+          p {
+          }
+        }
+
+        a {
+        }
+      }
+
+      .projects__content {
+        grid-template-columns: repeat(2, 1fr);
+        .card {
+          height: 290px;
+          img {
+          }
+
+          &__tag {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    margin-bottom: 60px;
+    &__container {
+      .services__info {
+        margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+
+        .services__wrap {
+          h2 {
+          }
+
+          p {
+          }
+        }
+
+        a {
+        }
+      }
+
+      .services__content {
+        display: flex;
+        flex-direction: column;
+
+        .services__tabs {
+          min-width: unset;
+
+          .tab {
+            padding: 24px 40px;
+            span {
+            }
+          }
+        }
+
+        .services__imgs {
+          height: 500px;
+          overflow: hidden;
+          .tab-content {
+          }
+        }
+      }
+    }
+  }
+
+  .achievement {
+    margin-bottom: 60px;
+    &__container {
+      @include container;
+
+      .achievement__info {
+        h2 {
+        }
+      }
+
+      .achievement__content {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card {
+          padding: 50px 30px;
+
+          h3 {
+          }
+
+          p {
+          }
+        }
+      }
+    }
+  }
+
+  .possibilities {
+    padding-bottom: 0;
+    margin-bottom: 60px;
+    &__container {
+      .possibilities__info {
+        h2 {
+        }
+
+        p {
+        }
+      }
+
+      .possibilities__content {
+        aspect-ratio: unset;
+        display: flex;
+        flex-direction: column;
+
+        .card {
+          aspect-ratio: unset !important;
+          grid-column: unset !important;
+          border-radius: unset !important;
+          max-height: 480px;
+          min-height: 250px;
+
+          img {
+          }
+
+          h3 {
+            max-width: unset;
+            padding: 0 20px;
+            margin-top: 40px;
+          }
+
+          p {
+            max-width: unset;
+            padding: 0 20px;
+            margin-bottom: 40px;
+          }
+
+          &:first-child {
+            order: 1;
+          }
+
+          &:nth-child(2) {
+            order: 2;
+          }
+
+          &:nth-child(3) {
+            order: 4;
+          }
+
+          &:nth-child(4) {
+            order: 5;
+          }
+
+          &:nth-child(5) {
+            order: 3;
+          }
+
+          &:nth-child(6) {
+            order: 6;
+          }
+
+          &:nth-child(7) {
+            order: 7;
+          }
+
+          &:nth-child(8) {
+            order: 8;
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    margin-bottom: 60px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .reviews__info {
+        h2 {
+        }
+
+        p {
+        }
+      }
+
+      .reviews__content {
+        .reviews__wrap {
+          .card {
+            padding: 0;
+            a {
+            }
+
+            p {
+            }
+
+            &__gallery {
+              img {
+              }
+            }
+
+            .raiting {
+              span {
+              }
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .reviews__link {
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 60px;
+
+    &__container {
+      .social__info {
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          a {
+          }
+
+          &__header {
+            img {
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    padding-top: 60px;
+
+    &__container {
+      padding: 0;
+      margin-bottom: 60px;
+      display: block;
+
+      .contactForm__info {
+        margin-bottom: 40px;
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type="submit"] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+    }
+  }
+
+  .comfort {
+    padding: 60px 0;
+
+    &__container {
+      .comfort__info {
+        h2 {
+        }
+      }
+
+      .comfort__content {
+        p {
+        }
+      }
+    }
+  }
+
+  .also {
+    margin: 60px 0;
+
+    &__container {
+      .also__info {
+        h2 {
+        }
+      }
+
+      .also__content {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
+}
