@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 body {
   background-color: $primary-background;
@@ -82,7 +82,7 @@ body {
           padding-left: 34px;
 
           &::after {
-            content: url("../../assets/img/banner-list.svg");
+            content: url('../../assets/img/banner-list.svg');
             position: absolute;
             left: 0;
           }
@@ -135,6 +135,13 @@ body {
   margin-bottom: 100px;
 
   &__container {
+    .projects__link {
+      @include dark-button;
+      width: 270px;
+      text-align: center;
+      display: none;
+    }
+
     .projects__info {
       @include container;
       display: flex;
@@ -157,9 +164,7 @@ body {
       }
 
       a {
-        @include dark-button;
-        width: 270px;
-        text-align: center;
+        display: block;
       }
     }
 
@@ -207,6 +212,13 @@ body {
   &__container {
     @include container;
 
+    .services__link {
+      @include dark-button;
+      width: 270px;
+      text-align: center;
+      display: none;
+    }
+
     .services__info {
       display: flex;
       justify-content: space-between;
@@ -228,9 +240,7 @@ body {
       }
 
       a {
-        @include dark-button;
-        width: 270px;
-        text-align: center;
+        display: block;
       }
     }
 
@@ -264,7 +274,7 @@ body {
             position: relative;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0;
               right: 0;
               bottom: -4px;
@@ -318,7 +328,7 @@ body {
         position: relative;
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
@@ -337,8 +347,7 @@ body {
           height: 100%;
           transform: translateY(-100%);
           filter: brightness(50%);
-          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
-            filter 0.5s ease-in-out;
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 
           &--active {
             opacity: 1;
@@ -495,7 +504,7 @@ body {
             position: absolute;
             bottom: -74px;
             right: -155px;
-            content: url("../../assets/img/possibilities-decor.svg");
+            content: url('../../assets/img/possibilities-decor.svg');
             opacity: 0.45;
           }
 
@@ -589,7 +598,7 @@ body {
           }
 
           &::after {
-            content: url("../../assets/img/reviews-decor.svg");
+            content: url('../../assets/img/reviews-decor.svg');
             position: absolute;
             left: 0;
             top: 0;
@@ -807,7 +816,7 @@ body {
           }
         }
 
-        input[type="submit"] {
+        input[type='submit'] {
           @include base-button;
         }
       }
@@ -821,6 +830,7 @@ body {
   }
 
   img {
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
 }
@@ -873,6 +883,7 @@ body {
         li {
           a {
             @include base-tab;
+            display: block;
           }
         }
       }

@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .workers {
   &__container {
@@ -21,6 +21,7 @@
         li {
           a {
             @include base-tab;
+            display: block;
           }
         }
       }
@@ -37,7 +38,7 @@
       .group__cards {
         display: flex;
         gap: 60px;
-        overflow-x: auto;
+        flex-wrap: wrap;
 
         .card {
           min-width: 350px;

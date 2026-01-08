@@ -406,6 +406,10 @@ input:active {
 .footer__container .nav__wrap ul li a:hover {
   color: #b1a489;
 }
+.footer__container .nav__wrap ul li svg {
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
 .footer__container .nav__wrap ul li:first-child a {
   text-transform: none;
   font-family: "Montserrat";
@@ -519,6 +523,9 @@ input:active {
 }
 
 @media (max-width: 1640px) {
+  .header {
+    margin-top: 42px;
+  }
   .header__container {
     padding: 28px 24px;
   }
@@ -533,6 +540,10 @@ input:active {
   }
   .header__container .header__links {
     gap: 14px;
+  }
+  .breadcrumbs {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .footer__container .nav {
     grid-column-gap: 150px;
@@ -638,5 +649,81 @@ input:active {
   .footer__container {
     grid-column-gap: 100px;
     grid-row-gap: 40px;
+  }
+}
+@media (max-width: 580px) {
+  .header__container {
+    padding: 28px 20px;
+    gap: 25px;
+  }
+  .header__container .header__logo {
+    margin-right: auto;
+  }
+  .header__container .nav {
+    width: unset;
+    left: 0;
+    right: 0;
+  }
+  .header__container .header__actions {
+    display: none;
+  }
+  .header__container .header__actions .header__logos {
+    display: none;
+  }
+  .header__container .header__actions .header__phone {
+    display: none;
+  }
+  .header__container .header__links {
+    gap: 20px;
+  }
+  .footer__container {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 50px 0;
+  }
+  .footer__container .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer__container .nav__wrap {
+    gap: 0;
+  }
+  .footer__container .nav__wrap ul {
+    height: 64px;
+    overflow: hidden;
+    border-bottom: 1px solid #535356;
+    transition: height 0.3s ease-in-out;
+  }
+  .footer__container .nav__wrap ul li a {
+    width: 100%;
+  }
+  .footer__container .nav__wrap ul li:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__container .nav__wrap ul li:first-child a {
+    margin-bottom: 0;
+    padding: 23px 0;
+    width: unset;
+  }
+  .footer__container .nav__wrap ul li:first-child svg {
+    display: block;
+  }
+  .footer__container .nav__wrap ul li:last-child {
+    margin-bottom: 23px;
+  }
+  .footer__container .contacts h3 {
+    display: none;
+  }
+  .footer__container .contacts button {
+    width: 100%;
+  }
+  .footer__container .contacts__links {
+    justify-content: center;
   }
 }/*# sourceMappingURL=style-general.css.map */

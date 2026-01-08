@@ -1,2 +1,423 @@
-@media (max-width: 740px) {
+@media (max-width: 580px) {
+  .banner {
+    height: unset;
+    img {
+    }
+
+    &__container {
+      padding: 205px 0 45px 0;
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      .banner__wrap {
+        flex-direction: column;
+        gap: 28px;
+
+        button {
+          font-size: 16px;
+          width: 100%;
+        }
+
+        .banner__list {
+          li {
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    margin-bottom: 3ch;
+    &__container {
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .filter__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .form__wrap {
+          .choices {
+          }
+        }
+
+        button {
+          margin-top: 5px;
+          grid-area: 3 / 2 / 4 / 3;
+        }
+      }
+    }
+  }
+
+  .projects {
+    margin-bottom: 42px;
+
+    .projects__link {
+      display: block;
+      width: calc(100% - 40px);
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+
+      .projects__info {
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+
+        .projects__wrap {
+          h2 {
+            margin-bottom: 10px;
+          }
+
+          p {
+          }
+        }
+
+        a {
+          display: none;
+        }
+      }
+
+      .projects__content {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        border-radius: 0;
+
+        .card {
+          border-radius: 15px;
+          height: unset;
+          max-height: 250px;
+          overflow: hidden;
+          img {
+          }
+
+          &__tag {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    margin-bottom: 30px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+
+      .services__link {
+        display: block;
+        width: 100%;
+      }
+
+      .services__info {
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+
+        .services__wrap {
+          h2 {
+          }
+
+          p {
+          }
+        }
+
+        a {
+          display: none;
+        }
+      }
+
+      .services__content {
+        display: flex;
+        flex-direction: column;
+
+        .services__tabs {
+          min-width: unset;
+
+          .tab {
+            padding: 24px 30px;
+            span {
+            }
+
+            svg {
+              display: none;
+            }
+          }
+        }
+
+        .services__imgs {
+          height: 300px;
+          overflow: hidden;
+          .tab-content {
+          }
+        }
+      }
+    }
+  }
+
+  .achievement {
+    margin-bottom: 30px;
+    &__container {
+      .achievement__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+      }
+
+      .achievement__content {
+        grid-template-columns: repeat(1, 1fr);
+
+        .card {
+          padding: 40px 20px;
+
+          h3 {
+          }
+
+          p {
+          }
+        }
+      }
+    }
+  }
+
+  .possibilities {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    padding-top: 45px;
+    &__container {
+      .possibilities__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+
+        p {
+        }
+      }
+
+      .possibilities__content {
+        .card {
+          img {
+          }
+
+          h3 {
+            margin-top: 30px;
+          }
+
+          p {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    margin-bottom: 30px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .reviews__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+
+        p {
+        }
+      }
+
+      .reviews__content {
+        padding: 30px 45px 30px 30px;
+        margin-bottom: 20px;
+        .reviews__wrap {
+          max-height: 600px;
+
+          .card {
+            padding: 0;
+            a {
+              margin-bottom: 15px;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+
+            p {
+              margin: 0;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+
+            &__gallery {
+              display: none;
+              img {
+              }
+            }
+
+            .raiting {
+              position: static;
+              margin-bottom: 25px;
+
+              span {
+              }
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .reviews__link {
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 30px;
+
+    &__container {
+      .social__info {
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          max-width: 300px;
+          a {
+          }
+
+          &__header {
+            img {
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    &__container {
+      .contactForm__info {
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          img {
+            min-width: 100px;
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+      height: 300px;
+    }
+  }
+
+  .comfort {
+    padding: 30px 0;
+
+    &__container {
+      .comfort__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+      }
+
+      .comfort__content {
+        p {
+        }
+      }
+    }
+  }
+
+  .also {
+    margin: 30px 0;
+
+    &__container {
+      .also__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+      }
+
+      .also__content {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,60 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.certificates {
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .certificates__links {
+      margin-bottom: 60px;
+
+      ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        li {
+          a {
+            @include base-tab;
+            display: block;
+          }
+        }
+      }
+    }
+
+    .certificates__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 80px;
+
+      .card {
+        img {
+          width: 100%;
+          object-fit: cover;
+          max-height: 490px;
+          border-radius: 10px;
+          margin-bottom: 25px;
+          cursor: zoom-in;
+        }
+
+        h3 {
+          color: $actions-text;
+          font-size: $font-size-text;
+          font-weight: $font-weight-bold;
+        }
+
+        p {
+          color: $actions-text;
+          font-size: $font-size-text;
+          font-weight: $font-weight-regular;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

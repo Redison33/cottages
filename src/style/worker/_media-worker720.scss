@@ -1,2 +1,47 @@
-// @media (max-width: 1000px) {
-// }
+@media (max-width: 960px) {
+  .workers {
+    &__container {
+      h1 {
+      }
+
+      .workers__links {
+        margin-bottom: 40px;
+
+        ul {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+
+          li {
+            a {
+              @include base-tab;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .group {
+        margin-bottom: 100px;
+
+        h2 {
+          margin-bottom: 30px;
+        }
+
+        .group__cards {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 60px;
+
+          .card {
+            min-width: unset;
+
+            img {
+              height: 440px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
