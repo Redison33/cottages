@@ -1,4 +1,10 @@
 @media (max-width: 960px) {
+  .header {
+    margin: 0;
+    left: 40px;
+    right: 40px;
+  }
+
   .banner {
     img {
     }
@@ -356,7 +362,7 @@
             }
           }
 
-          input[type="submit"] {
+          input[type='submit'] {
           }
         }
 

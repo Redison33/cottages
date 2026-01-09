@@ -2,6 +2,8 @@
 @import '../_mixin.scss';
 
 .certificates {
+  margin-bottom: 100px;
+
   &__container {
     @include container;
 

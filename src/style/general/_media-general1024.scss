@@ -1,11 +1,12 @@
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
   .header {
     margin-top: 42px;
     &__container {
+      gap: 18px;
       padding: 28px 24px;
       .nav {
         &__list {
-          gap: 18px;
+          gap: 14px;
 
           .list__item {
             a {
@@ -45,7 +46,7 @@
       }
 
       .header__links {
-        gap: 14px;
+        gap: 12px;
 
         a,
         button {

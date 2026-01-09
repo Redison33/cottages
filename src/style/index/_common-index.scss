@@ -13,14 +13,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 0;
-
-  @media (max-width: 1640px) {
-    margin: 0;
-    left: 20px;
-    right: 20px;
-    width: unset;
-    transform: none;
-  }
 }
 
 .banner {

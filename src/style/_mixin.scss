@@ -4,7 +4,19 @@
   max-width: 1600px;
   margin: 0 auto;
 
-  @media (max-width: 1640px) {
+  @media (max-width: 1760px) {
+    margin: 0 80px;
+  }
+
+  @media (max-width: 1360px) {
+    margin: 0 60px;
+  }
+
+  @media (max-width: 960px) {
+    margin: 0 40px;
+  }
+
+  @media (max-width: 700px) {
     margin: 0 20px;
   }
 }
@@ -36,6 +48,11 @@
   @include base-button;
   background-color: $button-background-secondary;
   border-color: $button-background-secondary;
+
+  &:hover {
+    background-color: $button-background-primary;
+    border-color: $button-background-primary;
+  }
 }
 
 @mixin glare-button {
@@ -48,7 +65,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(-45deg, hsla(0, 0%, 0%, 0) 60%, rgba(255, 255, 255, 0.4) 70%, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(-45deg, hsla(0, 0%, 0%, 0) 60%, rgba(255, 255, 255, 0.7) 70%, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0) 100%);
     transition: 1.1s ease;
     background-size: 450% 450%, 100% 100%;
     background-repeat: no-repeat;
@@ -57,8 +74,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: $button-background-primary;
-    border: 2px solid $button-background-primary;
+    // border: 2px solid $button-background-primary;
   }
 
   &:hover::before {

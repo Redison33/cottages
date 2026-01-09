@@ -40,6 +40,7 @@ input {
     align-items: center;
     gap: 24px;
     justify-content: space-between;
+    position: relative;
 
     .nav {
       &__list {
@@ -193,6 +194,7 @@ input {
         font-size: $font-size-link;
         font-weight: $font-weight-medium;
         color: $primary-text;
+        text-wrap: nowrap;
         transition: color 0.3s ease-in-out;
 
         &:hover {

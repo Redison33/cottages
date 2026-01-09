@@ -21,6 +21,7 @@
     <!-- Индивидуалка -->
     <script src="./src/js/worker.js" defer></script>
   </head>
+
   <body>
     <header class="header">
       <div class="header__container">
@@ -311,171 +312,13 @@
       <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ol>
           <li><a href="index.html">Главная</a></li>
-          <li aria-current="page"><a href="worker.html">Сотрудники</a></li>
+          <li aria-current="page"><a href="worker.html">Контакты</a></li>
         </ol>
       </nav>
 
-      <section class="workers">
-        <div class="workers__container">
-          <h1>Сотрудники</h1>
-
-          <nav aria-label="workers" class="workers__links">
-            <ul>
-              <!-- Смотри, тут в целом по СЕО лучше нормальные ID в ссылке пихать, 
-               а не просто work1, work2. Насколько я знаю, ботяу может цеплять эти ссылки, 
-               ведь якорные ссылке храняться в ссылке. Крч, смотри сам) -->
-
-              <!-- <li><a href="#all">Весь коллектив</a></li> -->
-
-              <li><a href="#management">Руководство</a></li>
-              <li><a href="#sales">Отдел продаж</a></li>
-              <li><a href="#construction">Строительный</a></li>
-              <li>
-                <a href="#architecturally">Архитектурно - конструкторский</a>
-              </li>
-              <li><a href="#hr">HR</a></li>
-              <li><a href="#accounting">Бухгалтерия</a></li>
-              <li><a href="#legal">Юридический</a></li>
-            </ul>
-          </nav>
-
-          <section class="workers__group group" id="management">
-            <h2>Руководство</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/management1.webp" alt="Леван Соломонович Миделашвили" />
-
-                <h3>Генеральный директор</h3>
-
-                <p>Леван Соломонович Миделашвили</p>
-              </div>
-
-              <div class="card">
-                <img src="./src/assets/img/management2.webp" alt="Юлия Мерабовна Миделашвили" />
-
-                <h3>Зам. генерального директора</h3>
-
-                <p>Юлия Мерабовна Миделашвили</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="sales">
-            <h2>Отдел продаж</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/sales1.webp" alt="Андрей Мирошниченко" />
-
-                <h3>Менеджер отдела продаж</h3>
-
-                <p>Андрей Мирошниченко</p>
-              </div>
-
-              <div class="card">
-                <img src="./src/assets/img/sales2.webp" alt="Кирилл Чернев" />
-
-                <h3>Руководитель отдела продаж</h3>
-
-                <p>Кирилл Чернев</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="construction">
-            <h2>СТРОИТЕЛЬНЫЙ ОТДЕЛ</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/construction1.webp" alt="Коробков Василий" />
-
-                <h3>Начальник строительного отдела</h3>
-
-                <p>Коробков Василий</p>
-              </div>
-
-              <div class="card">
-                <img src="./src/assets/img/construction2.webp" alt="Александр Федоров" />
-
-                <h3>Руководитель строительных работ</h3>
-
-                <p>Александр Федоров</p>
-              </div>
-
-              <div class="card">
-                <img src="./src/assets/img/construction3.webp" alt="Дмитрий Краснянский" />
-
-                <h3>Производитель работ</h3>
-
-                <p>Дмитрий Краснянский</p>
-              </div>
-
-              <div class="card">
-                <img src="./src/assets/img/construction4.webp" alt="Кирилл Черваков" />
-
-                <h3>Менеджер проектов</h3>
-
-                <p>Кирилл Черваков</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="architecturally">
-            <h2>АРХИТЕКТУРНО-КОНСТРУКТОРСКИЙ ОТДЕЛ</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/architecturally1.webp" alt="Михаил Юханов" />
-
-                <h3>Архитектор</h3>
-
-                <p>Михаил Юханов</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="accounting">
-            <h2>БУХГАЛТЕРИЯ</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/accounting1.webp" alt="Лариса Фатеева" />
-
-                <h3>Бухгалтер</h3>
-
-                <p>Лариса Фатеева</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="legal">
-            <h2>ЮРИДИЧЕСКИЙ ОТДЕЛ</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/legal1.webp" alt="Юлия Мелкозерова" />
-
-                <h3>Юрист</h3>
-
-                <p>Юлия Мелкозерова</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="workers__group group" id="hr">
-            <h2>HR-отдел</h2>
-
-            <div class="group__cards">
-              <div class="card">
-                <img src="./src/assets/img/hr1.webp" alt="Юлия Трекова" />
-
-                <h3>HR-администратор</h3>
-
-                <p>Юлия Трекова</p>
-              </div>
-            </div>
-          </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <h1>Контакты</h1>
         </div>
       </section>
     </main>

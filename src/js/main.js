@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   Fancybox.bind('[data-fancybox]', {});
 
+  const getScrollWidth = () => {
+    let div = document.createElement('div');
+
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+
+    document.body.append(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+
+    div.remove();
+
+    return scrollWidth;
+  };
+
   const allSelect = document.querySelectorAll('select');
 
   for (const select of allSelect) {
@@ -36,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.header').style.borderRadius = '15px 15px 0 15px';
       }
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = getScrollWidth() + 'px';
     }
   });
 
@@ -51,21 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
       link.dataset.inited = 'true';
 
       link.addEventListener('click', (e) => {
-        console.log('click');
-
         const nested = link.querySelector('.nested');
-        if (!nested) return;
+        if (!nested || e.target.classList.contains('nested__link') || e.target.tagName === 'SPAN') return;
 
-        if (e.target.tagName !== 'SPAN') {
-          e.preventDefault();
+        e.preventDefault();
 
-          if (nested.style.height) {
-            nested.style.height = '';
-            link.querySelector('svg')?.removeAttribute('style');
-          } else {
-            nested.style.height = nested.scrollHeight + 'px';
-            link.querySelector('svg')?.style.setProperty('transform', 'rotate(180deg)');
-          }
+        const nestedEl = link.querySelector('.nested');
+        const svg = link.querySelector('svg');
+
+        if (nestedEl.style.height) {
+          nestedEl.style.height = '';
+          svg.style.transform = '';
+        } else {
+          nestedEl.style.height = nestedEl.scrollHeight + 'px';
+          svg.style.transform = 'rotate(180deg)';
         }
       });
     }

@@ -72,7 +72,22 @@ input:active {
   border-radius: 15px;
   background-color: #ffffff;
 }
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
+  .header {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .header {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .header {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
   .header {
     margin: 0 20px;
   }
@@ -84,6 +99,7 @@ input:active {
   align-items: center;
   gap: 24px;
   justify-content: space-between;
+  position: relative;
 }
 .header__container .nav__list {
   display: flex;
@@ -203,6 +219,7 @@ input:active {
   font-size: 18px;
   font-weight: 500;
   color: #000101;
+  text-wrap: nowrap;
   transition: color 0.3s ease-in-out;
 }
 .header__container .header__actions .header__phone:hover {
@@ -314,7 +331,22 @@ input:active {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
+  .breadcrumbs {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .breadcrumbs {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .breadcrumbs {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
   .breadcrumbs {
     margin: 0 20px;
   }
@@ -363,7 +395,22 @@ input:active {
   justify-content: space-between;
   gap: 40px;
 }
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
+  .footer__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .footer__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .footer__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
   .footer__container {
     margin: 0 20px;
   }
@@ -522,15 +569,16 @@ input:active {
   background-color: #000101;
 }
 
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
   .header {
     margin-top: 42px;
   }
   .header__container {
+    gap: 18px;
     padding: 28px 24px;
   }
   .header__container .nav__list {
-    gap: 18px;
+    gap: 14px;
   }
   .header__container .header__actions {
     gap: 14px;
@@ -539,7 +587,7 @@ input:active {
     gap: 14px;
   }
   .header__container .header__links {
-    gap: 14px;
+    gap: 12px;
   }
   .breadcrumbs {
     margin-top: 40px;

@@ -26,7 +26,22 @@
   max-width: 1600px;
   margin: 0 auto;
 }
-@media (max-width: 1640px) {
+@media (max-width: 1760px) {
+  .workers__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .workers__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .workers__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
   .workers__container {
     margin: 0 20px;
   }
