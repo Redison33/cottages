@@ -779,6 +779,7 @@ body {
 
     form {
       .form-table {
+        width: 100%;
         .input {
           @include base-input;
           width: 100%;
@@ -824,6 +825,7 @@ body {
   img {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
+    width: 100%;
   }
 }
 

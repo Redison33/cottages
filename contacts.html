@@ -11,15 +11,23 @@
     <!-- Общий -->
     <link rel="stylesheet" href="./src/libs/fancybox.css" />
     <!-- Общий -->
+    <link rel="stylesheet" href="./src/libs/slick.css" />
+    <!-- Общий -->
     <link rel="stylesheet" href="./src/style/general/style-general.css" />
     <!-- Индивидуалка -->
-    <link rel="stylesheet" href="./src/style/worker/style-worker.css" />
-    <!-- Общий -->
-    <script src="./src/js/main.js" defer></script>
+    <link rel="stylesheet" href="./src/style/contacts/style-contacts.css" />
     <!-- Общий -->
     <script src="./src/libs/fancybox.umd.js" defer></script>
+    <!-- Общий -->
+    <script src="./src/libs/jquery-3.6.4.min.js" defer></script>
+    <!-- Общий -->
+    <script src="./src/libs/slick.min.js" defer></script>
+    <!-- Общий -->
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c4982825-5b20-422a-ab62-80d44c75a065"></script>
+    <!-- Общий -->
+    <script src="./src/js/main.js" defer></script>
     <!-- Индивидуалка -->
-    <script src="./src/js/worker.js" defer></script>
+    <script src="./src/js/contacts.js" defer></script>
   </head>
 
   <body>
@@ -319,6 +327,210 @@
       <section class="contacts">
         <div class="contacts__container">
           <h1>Контакты</h1>
+
+          <div class="contacts__wrap">
+            <div class="contacts__cards">
+              <div class="card">
+                <h3>Наш офис по адресу</h3>
+                <p>
+                  Бизнес-центр SMOLA (Смола)
+                  <br />
+                  г. Москва, ул. Смольная, д. 2, Офис 511, 5 этаж
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Многоканальный телефон</h3>
+                <p>
+                  8 (964) 500-97-36
+                  <br />
+                  8 (964) 500-97-36
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Отдел по работе с клиентами</h3>
+                <p>stroy@stroy-kottedj.ru</p>
+              </div>
+
+              <div class="card">
+                <h3>Отдел по работе с партнерами</h3>
+                <p>s2@stroy-kottedj.ru</p>
+              </div>
+            </div>
+
+            <div id="map"></div>
+          </div>
+
+          <div class="contacts__slider slider">
+            <div class="contacts__slide">
+              <img src="./src/assets/img/contacts-slider.webp" alt="Крутой слайд" />
+            </div>
+
+            <div class="contacts__slide">
+              <img src="./src/assets/img/contacts-slider.webp" alt="Крутой слайд" />
+            </div>
+          </div>
+
+          <div class="contacts__info">
+            <h2>Реквизиты</h2>
+            <div class="contacts__content">
+              <p>
+                ООО " Дома Де Люкс "
+                <br />
+                ИНН: 5029191163; КПП: 502901001
+                <br />
+                ОГРН: 1145029012688
+              </p>
+
+              <p>
+                Юридический адрес: 141018, МО, г.Мытищи, пр-кт
+                <br />
+                Новомытищинский, д.39, пом 1, офис 31М
+                <br />
+                Банковские реквизиты: ПАО Сбербанк г.Москва
+              </p>
+
+              <p>
+                БИК: 044525225
+                <br />
+                к/с: 30101810400000000225
+                <br />
+                р/с: 40702810340000038616
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social">
+        <div class="social__container">
+          <div class="social__info">
+            <h2>Подписывайтесь на наш Телеграм канал!</h2>
+          </div>
+
+          <div class="social__content">
+            <div class="telegram">
+              <div class="telegram__header">
+                <img src="./src/assets/img/telegaGroup.webp" alt="аватарка группы" />
+                <div class="telegram__name">
+                  <h3>Строй Коттедж Строительная Компания</h3>
+                  <a href="t.me/stroykotedj">@stroykotedj</a>
+                </div>
+              </div>
+
+              <div class="telegram__content">
+                <p>
+                  🏠Строим из дерева и камня с 2008 года
+                  <br />
+                  🔥Более 380 построенных домов
+                  <br />
+                  🎁Более 250 готовых к строительству проектов!
+                  <br />
+                  🌐
+                  <a href="https://www.stroy-kotedj.ru">https://www.stroy-kotedj.ru</a>
+                  <br />
+                  📩Написать эксперту👉
+                  <br />
+                  <a href="t.me/Stroykotedj_telegram"> @Stroykotedj_telegram</a>
+                </p>
+
+                <button>
+                  <img src="./src/assets/img/footer-telegram.svg" alt="" />
+                  Download Telegram
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contactForm">
+        <div class="contactForm__container">
+          <div class="contactForm__info">
+            <h2>Задать вопрос Генеральному директору</h2>
+
+            <p>Напишите ваш вопрос напрямую нашему руководителю</p>
+
+            <div class="contactForm__personal personal">
+              <img src="./src/assets/img/architecturally1.webp" alt="Леван Миделашвили" />
+              <div class="personal__wrap">
+                <h4>Генеральный директор</h4>
+
+                <h5>Леван Миделашвили</h5>
+              </div>
+            </div>
+          </div>
+
+          <form name="SIMPLE_FORM_1" action="/" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="sessid" id="sessid" value="de87c0b6d68d4e004f6c48195cfb89be" /><input
+              type="hidden"
+              name="WEB_FORM_ID"
+              value="1"
+            />
+            <table class="form-table data-table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input class="input" type="text" name="form_text_1" required="" placeholder="Имя" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="input" type="tel" name="form_text_2" required="" placeholder="Телефон" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <!-- rows="4" для всех textarea в атрибутах-->
+                    <textarea class="textarea" name="form_text_3" required="" placeholder="Ваш вопрос" rows="4"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>
+                    <div class="form__required">
+                      <label class="checkbox">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+
+                      <p>
+                        Нажимая кнопку «Отправить», я соглашаюсь с
+                        <a href="">политикой конфиденциальности</a>
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <input type="submit" name="web_form_submit" value="Сохранить" />
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+          </form>
+        </div>
+      </section>
+
+      <section class="also">
+        <div class="also__container">
+          <div class="also__info">
+            <h2>Смотрите также</h2>
+          </div>
+
+          <div class="also__content">
+            <nav aria-label="tags" class="also__links">
+              <ul>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+                <li><a href="">Каменые дома</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </section>
     </main>

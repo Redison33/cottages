@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   Fancybox.bind('[data-fancybox]', {});
 
+  ymaps.ready(init);
+  function init() {
+    // Создание карты.
+    var myMap = new ymaps.Map(
+      'map',
+      {
+        center: [55.844619, 37.501093],
+        zoom: 16,
+        controls: [],
+      },
+      { suppressMapOpenBlock: true },
+    );
+
+    let myPlacemark = new ymaps.Placemark([55.844619, 37.501093], {
+      iconCaption: ' Smola',
+      hintContent: 'г. Москва, ул. Смольная, д. 2, Офис 511, 5 этаж',
+      balloonContent: 'г. Москва, ул. Смольная, д. 2, Офис 511, 5 этаж',
+    });
+    // let myPlacemark = new ymaps.Placemark('г. Москва, ул. Смольная, д. 2', {});
+    myMap.geoObjects.add(myPlacemark);
+  }
+
   const getScrollWidth = () => {
     let div = document.createElement('div');
 

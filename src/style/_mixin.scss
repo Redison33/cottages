@@ -249,6 +249,32 @@
 }
 
 @mixin base-input {
+  width: 100%;
+  padding: 16px 26px;
+  background-color: $input-background;
+  border: 1px solid $input-border;
+  color: $input-text;
+  border-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+  font-size: $font-size-input;
+  font-weight: $font-weight-regular;
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus-visible {
+    border-color: $input-border-focus;
+    outline: 2px solid $input-border-focus;
+  }
+
+  &:active {
+    border-color: $input-border-active;
+  }
+}
+
+@mixin base-textarea {
+  width: 100%;
   padding: 16px 26px;
   background-color: $input-background;
   border: 1px solid $input-border;

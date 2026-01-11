@@ -45,6 +45,7 @@ body {
 }
 
 input {
+  width: 100%;
   padding: 16px 26px;
   background-color: #f9f9f9;
   border: 1px solid rgba(0, 0, 0, 0.0509803922);
@@ -62,6 +63,28 @@ input:focus-visible {
   outline: 2px solid rgba(0, 0, 0, 0.4);
 }
 input:active {
+  border-color: #000000;
+}
+
+textarea {
+  width: 100%;
+  padding: 16px 26px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  color: #454545;
+  border-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
+}
+textarea:hover {
+  border-color: #000000;
+}
+textarea:focus-visible {
+  border-color: rgba(0, 0, 0, 0.4);
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+}
+textarea:active {
   border-color: #000000;
 }
 
@@ -323,6 +346,29 @@ input:active {
 }
 .header__container .header__burger:hover {
   background-color: #000101;
+}
+
+.slider {
+  position: relative;
+}
+.slider .slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.slider .slick-prev {
+  left: 35px;
+}
+.slider .slick-next {
+  right: 35px;
 }
 
 .breadcrumbs {
