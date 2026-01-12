@@ -445,6 +445,24 @@ textarea:active {
   content: "-";
 }
 
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+}
+.pagination ul li {
+  list-style: none;
+}
+.pagination ul li a {
+  color: #000101;
+  font-size: 16px;
+  font-weight: 500;
+}
+.pagination ul li .pagination--active {
+  color: #b1a489;
+}
+
 .footer {
   border-radius: 15px 15px 0 0;
   background-color: #28282c;

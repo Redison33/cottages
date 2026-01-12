@@ -2,8 +2,6 @@
 @import "../_mixin.scss";
 
 .feedback {
-  margin-bottom: 100px;
-
   &__container {
     @include container;
 
@@ -16,6 +14,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
+      margin-bottom: 60px;
 
       .card {
         position: relative;
@@ -82,4 +81,8 @@
       }
     }
   }
+}
+
+.pagination {
+  margin-bottom: 80px;
 }
