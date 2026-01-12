@@ -1,2 +1,170 @@
-// @media (max-width: 1440px) {
-// }
+@media (max-width: 1360px) {
+  .contacts {
+    margin-bottom: 70px;
+    &__container {
+      h1 {
+      }
+
+      .contacts__wrap {
+        grid-template-columns: 450px minmax(20%, 100%);
+
+        .contacts__cards {
+          gap: 10px;
+
+          .card {
+            padding: 30px;
+
+            h3 {
+            }
+
+            p {
+            }
+          }
+        }
+
+        #map {
+        }
+      }
+
+      .contacts__slider {
+        .slick-list {
+        }
+
+        .contacts__slide {
+          img {
+          }
+        }
+      }
+
+      .contacts__info {
+        padding: 30px;
+
+        h2 {
+        }
+
+        .contacts__content {
+          flex-wrap: wrap;
+
+          p {
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 70px;
+
+    &__container {
+      .social__info {
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          a {
+          }
+
+          &__header {
+            img {
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    padding-top: 70px 0;
+
+    &__container {
+      padding: 0;
+
+      .contactForm__info {
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type="submit"] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+    }
+  }
+
+  .also {
+    margin: 70px 0;
+
+    &__container {
+      .also__info {
+        h2 {
+        }
+      }
+
+      .also__content {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
+}

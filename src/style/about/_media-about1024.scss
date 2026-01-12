@@ -1,0 +1,53 @@
+@media (max-width: 1760px) {
+}
+
+@media (max-width: 1480px) {
+  .about {
+    &__container {
+      h1 {
+      }
+
+      .about__wrap {
+        img {
+        }
+
+        .aboout__content {
+          h3 {
+          }
+
+          ul {
+          }
+
+          p,
+          li {
+          }
+
+          a,
+          button {
+          }
+        }
+
+        &:nth-child(2n + 4) {
+        }
+      }
+
+      .about__cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card {
+          h3 {
+          }
+
+          p {
+          }
+
+          a {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+}

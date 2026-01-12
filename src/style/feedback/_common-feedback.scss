@@ -1,0 +1,85 @@
+@import "../_vars.scss";
+@import "../_mixin.scss";
+
+.feedback {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .feedback__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+
+      .card {
+        position: relative;
+        padding: 60px 80px;
+        background-color: $primary-background;
+        border: 1px solid #0000001c;
+        border-radius: 15px;
+
+        .card__header {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          margin-bottom: 20px;
+
+          a {
+            @include link-black;
+            font-size: 26px;
+            font-weight: $font-weight-medium;
+          }
+
+          .raiting {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+              font-size: $font-size-text;
+            }
+
+            &__wrap {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+            }
+          }
+        }
+
+        p {
+          font-size: $font-size-text;
+          color: $actions-text;
+          line-height: 100%;
+          margin-bottom: 50px;
+        }
+
+        &__gallery {
+          display: flex;
+          gap: 10px;
+          overflow-x: auto;
+
+          img {
+            border-radius: 10px;
+            width: 190px;
+            height: 150px;
+            object-fit: cover;
+          }
+        }
+
+        &::after {
+          content: url("../../assets/img/reviews-decor.svg");
+          position: absolute;
+          left: 40px;
+          top: 40px;
+        }
+      }
+    }
+  }
+}

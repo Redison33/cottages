@@ -1,44 +1,158 @@
 @media (max-width: 580px) {
-  .workers {
+  .contacts {
+    margin-bottom: 30px;
     &__container {
-      //   h1 {
-      //   }
+      h1 {
+      }
 
-      //   .workers__links {
-      //     margin-bottom: 40px;
+      .contacts__wrap {
+        .contacts__cards {
+          .card {
+            h3 {
+            }
 
-      //     ul {
-      //       display: flex;
-      //       gap: 20px;
-      //       flex-wrap: wrap;
-
-      //       li {
-      //         a {
-      //           @include base-tab;
-      //           display: block;
-      //         }
-      //       }
-      //     }
-      //   }
-
-      .group {
-        margin-bottom: 100px;
-
-        h2 {
-          margin-bottom: 30px;
+            p {
+            }
+          }
         }
 
-        .group__cards {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          align-items: center;
+        #map {
+        }
+      }
 
-          .card {
-            max-width: 375px;
+      .contacts__slider {
+        .slick-list {
+        }
 
+        .contacts__slide {
+          height: 300px;
+          img {
+          }
+        }
+      }
+
+      .contacts__info {
+        h2 {
+        }
+
+        .contacts__content {
+          p {
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 30px;
+
+    &__container {
+      .social__info {
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          max-width: 300px;
+          a {
+          }
+
+          &__header {
             img {
-              height: 490px;
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    &__container {
+      .contactForm__info {
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          img {
+            min-width: 100px;
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type="submit"] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+      height: 300px;
+    }
+  }
+
+  .also {
+    margin: 30px 0;
+
+    &__container {
+      .also__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+      }
+
+      .also__content {
+        ul {
+          li {
+            a {
             }
           }
         }

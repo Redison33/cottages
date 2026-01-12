@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 .workers {
   &__container {
@@ -17,8 +17,10 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+        padding: 0;
 
         li {
+          list-style: none;
           a {
             @include base-tab;
             display: block;

@@ -1,0 +1,51 @@
+@media (max-width: 960px) {
+  .about {
+    &__container {
+      h1 {
+      }
+
+      .about__wrap {
+        flex-direction: column !important;
+        align-items: unset;
+
+        img {
+          width: 100%;
+        }
+
+        .aboout__content {
+          h3 {
+          }
+
+          ul {
+          }
+
+          p,
+          li {
+          }
+
+          a,
+          button {
+          }
+        }
+
+        &:nth-child(2n + 4) {
+        }
+      }
+
+      .about__cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card {
+          h3 {
+          }
+
+          p {
+          }
+
+          a {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Regular"), local("Noah Regular"), url("../../assets/fonts/Noah-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Medium"), local("Noah Medium"), url("../../assets/fonts/Noah-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Bold"), local("Noah Bold"), url("../../assets/fonts/Noah-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Medium"), local("Montserrat Medium"), url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+.feedback {
+  margin-bottom: 100px;
+}
+.feedback__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .feedback__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .feedback__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .feedback__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .feedback__container {
+    margin: 0 20px;
+  }
+}
+.feedback__container h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media (max-width: 580px) {
+  .feedback__container h1 {
+    font-size: 38px;
+  }
+}
+.feedback__container .feedback__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.feedback__container .feedback__content .card {
+  position: relative;
+  padding: 60px 80px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+  border-radius: 15px;
+}
+.feedback__container .feedback__content .card .card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.feedback__container .feedback__content .card .card__header a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  color: #000101;
+  font-size: 26px;
+  font-weight: 500;
+}
+.feedback__container .feedback__content .card .card__header a:hover {
+  color: #b1a489;
+}
+.feedback__container .feedback__content .card .card__header .raiting {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.feedback__container .feedback__content .card .card__header .raiting span {
+  font-size: 20px;
+}
+.feedback__container .feedback__content .card .card__header .raiting__wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.feedback__container .feedback__content .card p {
+  font-size: 20px;
+  color: #454545;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+.feedback__container .feedback__content .card__gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.feedback__container .feedback__content .card__gallery img {
+  border-radius: 10px;
+  width: 190px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feedback__container .feedback__content .card::after {
+  content: url("../../assets/img/reviews-decor.svg");
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}/*# sourceMappingURL=style-feedback.css.map */

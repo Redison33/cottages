@@ -61,6 +61,21 @@
     }
   }
 
+  .slider {
+    position: relative;
+
+    .slick-arrow {
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+  }
+
   .footer {
     &__container {
       grid-column-gap: 40px;

@@ -23,7 +23,7 @@
   font-style: normal;
 }
 body {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .header {
@@ -882,7 +882,13 @@ body {
   padding-left: 40px;
   padding-top: 20px;
 }
-.reviews__container .reviews__content .reviews__wrap .card a {
+.reviews__container .reviews__content .reviews__wrap .card .card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.reviews__container .reviews__content .reviews__wrap .card .card__header a {
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -893,10 +899,22 @@ body {
   color: #000101;
   font-size: 26px;
   font-weight: 500;
-  margin-bottom: 20px;
 }
-.reviews__container .reviews__content .reviews__wrap .card a:hover {
+.reviews__container .reviews__content .reviews__wrap .card .card__header a:hover {
   color: #b1a489;
+}
+.reviews__container .reviews__content .reviews__wrap .card .card__header .raiting {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.reviews__container .reviews__content .reviews__wrap .card .card__header .raiting span {
+  font-size: 20px;
+}
+.reviews__container .reviews__content .reviews__wrap .card .card__header .raiting__wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .reviews__container .reviews__content .reviews__wrap .card p {
   font-size: 20px;
@@ -915,17 +933,6 @@ body {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.reviews__container .reviews__content .reviews__wrap .card .raiting {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.reviews__container .reviews__content .reviews__wrap .card .raiting span {
-  font-size: 20px;
 }
 .reviews__container .reviews__content .reviews__wrap .card::after {
   content: url("../../assets/img/reviews-decor.svg");
@@ -1374,6 +1381,10 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 0;
+}
+.also__container .also__content ul li {
+  list-style: none;
 }
 .also__container .also__content ul li a {
   padding: 10px 18px;
@@ -1945,8 +1956,10 @@ body {
   .reviews__container .reviews__content .reviews__wrap .card {
     padding: 0;
   }
-  .reviews__container .reviews__content .reviews__wrap .card a {
-    margin-bottom: 15px;
+  .reviews__container .reviews__content .reviews__wrap .card__header {
+    flex-direction: column;
+  }
+  .reviews__container .reviews__content .reviews__wrap .card__header a {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -1961,10 +1974,6 @@ body {
   }
   .reviews__container .reviews__content .reviews__wrap .card__gallery {
     display: none;
-  }
-  .reviews__container .reviews__content .reviews__wrap .card .raiting {
-    position: static;
-    margin-bottom: 25px;
   }
   .reviews__container .reviews__content .reviews__wrap .card::after {
     display: none;

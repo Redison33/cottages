@@ -253,12 +253,15 @@
 
           .card {
             padding: 0;
-            a {
-              margin-bottom: 15px;
-              display: -webkit-box;
-              -webkit-line-clamp: 1;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
+            &__header {
+              flex-direction: column;
+
+              a {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
             }
 
             p {
@@ -272,14 +275,6 @@
             &__gallery {
               display: none;
               img {
-              }
-            }
-
-            .raiting {
-              position: static;
-              margin-bottom: 25px;
-
-              span {
               }
             }
 
@@ -375,7 +370,7 @@
             }
           }
 
-          input[type='submit'] {
+          input[type="submit"] {
           }
         }
 

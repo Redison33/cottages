@@ -65,6 +65,10 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 0;
+}
+.workers__container .workers__links ul li {
+  list-style: none;
 }
 .workers__container .workers__links ul li a {
   padding: 10px 18px;
