@@ -517,9 +517,13 @@ body {
   overflow: hidden;
 }
 .services__container .services__content .services__tabs {
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-width: 480px;
+}
+.services__container .services__content .services__tabs li {
+  list-style: none;
 }
 .services__container .services__content .services__tabs .tab {
   border-radius: 10px;

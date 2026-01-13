@@ -242,9 +242,14 @@ body {
       overflow: hidden;
 
       .services__tabs {
+        padding: 0;
         display: flex;
         flex-direction: column;
         min-width: 480px;
+
+        li {
+          list-style: none;
+        }
 
         .tab {
           @include base-button;

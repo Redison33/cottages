@@ -352,6 +352,11 @@ textarea {
   .slick-next {
     right: 35px;
   }
+
+  .slick-disabled {
+    background-color: #b6b6b6;
+    cursor: not-allowed;
+  }
 }
 
 .breadcrumbs {
@@ -403,6 +408,136 @@ textarea {
 
       .pagination--active {
         color: #b1a489;
+      }
+    }
+  }
+}
+
+.popular {
+  margin-bottom: 100px;
+  &__container {
+    @include container;
+
+    h2 {
+      @include title3;
+      margin-bottom: 50px;
+    }
+
+    .popular__slider {
+      .slick-track {
+        margin: 0;
+      }
+
+      .slide {
+        margin: 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        .add-comparison {
+          border: none;
+          width: 34px;
+          height: 34px;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $primary-background;
+          border-radius: 50%;
+
+          svg {
+            path {
+              transition: fill 0.3s ease-in-out;
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                fill: $primary-background;
+              }
+            }
+          }
+
+          &--active {
+            background-color: #b1a489;
+
+            svg {
+              path {
+                fill: $primary-background;
+              }
+            }
+          }
+        }
+
+        img {
+          height: 380px;
+          border-radius: 10px;
+          object-fit: cover;
+          width: 100%;
+        }
+
+        &__wrap {
+          display: flex;
+          text-align: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          h3 {
+            font-size: $font-size-text;
+            font-weight: $font-weight-bold;
+            color: $actions-text;
+          }
+
+          p {
+            font-size: $font-size-text;
+            font-weight: $font-weight-regular;
+            color: $actions-text;
+          }
+        }
+
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 15px 30px;
+          border-radius: 15px;
+          background-color: $primary-background;
+          border: 1px solid #0000001c;
+
+          &-wrap {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+              width: unset;
+              height: unset;
+            }
+
+            p {
+              font-size: $font-size-tag;
+              font-weight: $font-weight-bold;
+              color: $actions-text;
+            }
+          }
+        }
+
+        button {
+          @include base-button;
+        }
+      }
+
+      .slick-prev {
+        left: -50px;
+      }
+
+      .slick-next {
+        right: -50px;
       }
     }
   }
