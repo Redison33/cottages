@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 body {
   background-color: $primary-background !important;
@@ -76,7 +76,7 @@ body {
           padding-left: 34px;
 
           &::after {
-            content: url("../../assets/img/banner-list.svg");
+            content: url('../../assets/img/banner-list.svg');
             position: absolute;
             left: 0;
           }
@@ -273,7 +273,7 @@ body {
             position: relative;
             &::after {
               position: absolute;
-              content: "";
+              content: '';
               left: 0;
               right: 0;
               bottom: -4px;
@@ -327,7 +327,7 @@ body {
         position: relative;
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
@@ -346,8 +346,7 @@ body {
           height: 100%;
           transform: translateY(-100%);
           filter: brightness(50%);
-          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
-            filter 0.5s ease-in-out;
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 
           &--active {
             opacity: 1;
@@ -504,7 +503,7 @@ body {
             position: absolute;
             bottom: -74px;
             right: -155px;
-            content: url("../../assets/img/possibilities-decor.svg");
+            content: url('../../assets/img/possibilities-decor.svg');
             opacity: 0.45;
           }
 
@@ -607,7 +606,7 @@ body {
           }
 
           &::after {
-            content: url("../../assets/img/reviews-decor.svg");
+            content: url('../../assets/img/reviews-decor.svg');
             position: absolute;
             left: 0;
             top: 0;
@@ -826,7 +825,7 @@ body {
           }
         }
 
-        input[type="submit"] {
+        input[type='submit'] {
           @include base-button;
         }
       }
@@ -866,39 +865,6 @@ body {
         color: $actions-text;
         font-size: $font-size-text;
         font-weight: $font-weight-regular;
-      }
-    }
-  }
-}
-
-.also {
-  margin: 70px 0 100px 0;
-
-  &__container {
-    @include container;
-
-    .also__info {
-      margin-bottom: 40px;
-
-      h2 {
-        @include title2;
-      }
-    }
-
-    .also__content {
-      ul {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 0;
-
-        li {
-          list-style: none;
-          a {
-            @include base-tab;
-            display: block;
-          }
-        }
       }
     }
   }

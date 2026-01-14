@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: "Noah";
+  font-family: 'Noah';
 }
 
 img {
@@ -26,8 +26,11 @@ ul {
 
 body {
   min-width: 320px;
-  font-family: "Noah";
+  font-family: 'Noah';
   background-color: $base-background-body;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -83,15 +86,14 @@ textarea {
 
               &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 top: 100%;
                 width: 100%;
                 left: 0;
                 height: 2px;
                 background-color: $primary-text;
                 transform: scaleX(0);
-                transition: transform 0.3s ease-in-out,
-                  background-color 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
               }
             }
 
@@ -408,7 +410,7 @@ textarea {
       }
 
       &:not(:last-child)::after {
-        content: "-";
+        content: '-';
       }
     }
   }
@@ -597,7 +599,7 @@ textarea {
 }
 
 .modal {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -608,6 +610,7 @@ textarea {
 
   &-object {
     width: 50vw;
+    max-width: 1000px;
 
     .modal-close {
       @include base-button;
@@ -635,6 +638,7 @@ textarea {
             border-radius: 10px;
             width: 100%;
             height: 25vw;
+            max-height: 480px;
             object-fit: cover;
           }
         }
@@ -688,6 +692,7 @@ textarea {
 }
 
 .overlay {
+  z-index: 1;
   background-color: rgba($color: #000000, $alpha: 0.4);
   position: fixed;
   top: 0;
@@ -696,7 +701,41 @@ textarea {
   left: 0;
 }
 
+.also {
+  margin: 70px 0 100px 0;
+
+  &__container {
+    @include container;
+
+    .also__info {
+      margin-bottom: 40px;
+
+      h2 {
+        @include title2;
+      }
+    }
+
+    .also__content {
+      ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 0;
+
+        li {
+          list-style: none;
+          a {
+            @include base-tab;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
+  margin-top: auto;
   border-radius: 15px 15px 0 0;
   background-color: $secondary-background;
 
@@ -708,7 +747,7 @@ textarea {
     gap: 40px;
 
     h3 {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-weight: $font-weight-medium;
       font-size: 18px;
       color: $primary-title;
@@ -750,7 +789,7 @@ textarea {
             &:first-child {
               a {
                 text-transform: none;
-                font-family: "Montserrat";
+                font-family: 'Montserrat';
                 font-weight: $font-weight-regular;
                 font-size: 18px;
                 margin-bottom: 20px;
@@ -781,7 +820,7 @@ textarea {
           position: absolute;
           top: 0;
           left: 0;
-          content: url("../../assets/img/mail.svg");
+          content: url('../../assets/img/mail.svg');
         }
       }
 
@@ -792,7 +831,7 @@ textarea {
           position: absolute;
           top: 0;
           left: 0;
-          content: url("../../assets/img/location.svg");
+          content: url('../../assets/img/location.svg');
         }
       }
 

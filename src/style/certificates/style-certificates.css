@@ -91,6 +91,11 @@
   border-color: #28282c;
   color: #ffffff;
 }
+.certificates__container .certificates__links ul li .filter--active {
+  color: #ffffff;
+  border-color: #000000;
+  background-color: #000000;
+}
 .certificates__container .certificates__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

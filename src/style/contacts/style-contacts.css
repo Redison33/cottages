@@ -440,75 +440,6 @@
   text-align: start;
 }
 
-.also {
-  margin: 70px 0 100px 0;
-}
-.also__container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-@media (max-width: 1760px) {
-  .also__container {
-    margin: 0 80px;
-  }
-}
-@media (max-width: 1360px) {
-  .also__container {
-    margin: 0 60px;
-  }
-}
-@media (max-width: 960px) {
-  .also__container {
-    margin: 0 40px;
-  }
-}
-@media (max-width: 700px) {
-  .also__container {
-    margin: 0 20px;
-  }
-}
-.also__container .also__info {
-  margin-bottom: 40px;
-}
-.also__container .also__info h2 {
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-}
-@media (max-width: 580px) {
-  .also__container .also__info h2 {
-    font-size: 38px;
-  }
-}
-.also__container .also__content ul {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 0;
-}
-.also__container .also__content ul li {
-  list-style: none;
-}
-.also__container .also__content ul li a {
-  padding: 10px 18px;
-  background-color: #ffffff;
-  color: #454545;
-  font-size: 18px;
-  line-height: 12px;
-  font-weight: 500;
-  border-radius: 50px;
-  border: 1px solid rgba(0, 1, 1, 0.1098039216);
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  text-wrap: nowrap;
-  display: block;
-}
-.also__container .also__content ul li a:hover {
-  background-color: #28282c;
-  border-color: #28282c;
-  color: #ffffff;
-}
-
 @media (max-width: 1360px) {
   .contacts {
     margin-bottom: 70px;
@@ -536,9 +467,6 @@
   }
   .contactForm__container {
     padding: 0;
-  }
-  .also {
-    margin: 70px 0;
   }
 }
 @media (max-width: 960px) {
@@ -578,9 +506,6 @@
   .contactForm__container form .form-table {
     width: 100%;
   }
-  .also {
-    margin: 60px 0;
-  }
 }
 @media (max-width: 580px) {
   .contacts {
@@ -603,11 +528,5 @@
   }
   .contactForm img {
     height: 300px;
-  }
-  .also {
-    margin: 30px 0;
-  }
-  .also__container .also__info {
-    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=style-contacts.css.map */

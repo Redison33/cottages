@@ -1,2 +1,52 @@
 @media (max-width: 580px) {
+  .feedback {
+    margin-bottom: 40px;
+    &__container {
+      h1 {
+      }
+
+      .feedback__content {
+        margin-bottom: 40px;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+
+        .card {
+          padding: 20px;
+
+          .card__header {
+            flex-direction: column;
+            gap: 12px;
+            a {
+            }
+
+            .raiting {
+              span {
+              }
+
+              &__wrap {
+              }
+            }
+          }
+
+          p {
+          }
+
+          &__gallery {
+            img {
+              width: 150px;
+              height: 100px;
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-bottom: 40px;
+  }
 }

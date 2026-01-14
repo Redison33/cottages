@@ -1,2 +1,43 @@
 @media (max-width: 960px) {
+  .feedback {
+    &__container {
+      h1 {
+      }
+
+      .feedback__content {
+        gap: 20px;
+
+        .card {
+          padding: 20px;
+
+          .card__header {
+            flex-direction: column;
+            gap: 12px;
+            a {
+            }
+
+            .raiting {
+              span {
+              }
+
+              &__wrap {
+              }
+            }
+          }
+
+          p {
+          }
+
+          &__gallery {
+            img {
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

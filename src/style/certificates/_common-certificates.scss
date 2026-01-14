@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .certificates {
   margin-bottom: 100px;
@@ -26,6 +26,12 @@
           a {
             @include base-tab;
             display: block;
+          }
+
+          .filter--active {
+            color: $button-tag-text-active;
+            border-color: $button-tag-border-active;
+            background-color: $button-tag-background-active;
           }
         }
       }

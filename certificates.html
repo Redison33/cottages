@@ -315,19 +315,18 @@
 
       <section class="certificates">
         <div class="certificates__container">
-          <h1>Сотрудники</h1>
+          <h1>Сертификаты</h1>
 
-          <!-- Тут хуй знает что с этим делать, по-хорошему фильтр, по-хорошему, мне локально фильтровать, значит на карточках должен быть атрибут какой-нибудь) -->
           <nav aria-label="type-certificates" class="certificates__links">
             <ul>
-              <li><a href="">Все награды</a></li>
-              <li><a href="">Сертификаты</a></li>
-              <li><a href="">Грамоты</a></li>
+              <li><a href="" class="filter--active" data-filter="">Все награды</a></li>
+              <li><a href="" data-filter="sert">Сертификаты</a></li>
+              <li><a href="" data-filter="gram">Грамоты</a></li>
             </ul>
           </nav>
 
           <div class="certificates__cards">
-            <div class="card">
+            <div class="card" data-filter="gram">
               <img data-fancybox="gallery" src="./src/assets/img/certificates.webp" alt="" />
 
               <p>Грамота</p>
@@ -335,7 +334,7 @@
               <h3>Современные материалы</h3>
             </div>
 
-            <div class="card">
+            <div class="card" data-filter="gram">
               <img data-fancybox="gallery" src="./src/assets/img/certificates.webp" alt="" />
 
               <p>Грамота</p>
@@ -343,7 +342,7 @@
               <h3>Современные материалы</h3>
             </div>
 
-            <div class="card">
+            <div class="card" data-filter="gram">
               <img data-fancybox="gallery" src="./src/assets/img/certificates.webp" alt="" />
 
               <p>Грамота</p>
@@ -351,7 +350,7 @@
               <h3>Современные материалы</h3>
             </div>
 
-            <div class="card">
+            <div class="card" data-filter="gram">
               <img data-fancybox="gallery" src="./src/assets/img/certificates.webp" alt="" />
 
               <p>Грамота</p>
@@ -359,12 +358,12 @@
               <h3>Современные материалы</h3>
             </div>
 
-            <div class="card">
+            <div class="card" data-filter="sert">
               <img data-fancybox="gallery" src="./src/assets/img/certificates.webp" alt="" />
 
-              <p>Грамота</p>
+              <p>Сертификат</p>
 
-              <h3>Современные материалы</h3>
+              <h3>Современные дома</h3>
             </div>
           </div>
         </div>
