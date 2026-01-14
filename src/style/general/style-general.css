@@ -390,6 +390,27 @@ textarea:active {
   background-color: #b6b6b6;
   cursor: not-allowed;
 }
+.slider .slick-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  display: flex;
+  gap: 6px;
+}
+.slider .slick-dots .slick-active {
+  background-color: #b1a489;
+}
+.slider .slick-dots li {
+  cursor: pointer;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
 
 .breadcrumbs {
   max-width: 1600px;
@@ -500,6 +521,9 @@ textarea:active {
   line-height: 100%;
   margin-bottom: 50px;
 }
+.popular__container .popular__slider {
+  margin: 0 -15px;
+}
 .popular__container .popular__slider .slick-track {
   margin: 0;
 }
@@ -512,11 +536,16 @@ textarea:active {
 }
 .popular__container .popular__slider .slide .add-comparison {
   border: none;
-  width: 34px;
-  height: 34px;
+  padding: 0;
   position: absolute;
+  z-index: 1;
   top: 10px;
   right: 20px;
+}
+.popular__container .popular__slider .slide .add-comparison label {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -524,11 +553,19 @@ textarea:active {
   background-color: #ffffff;
   border-radius: 50%;
 }
+.popular__container .popular__slider .slide .add-comparison label input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+.popular__container .popular__slider .slide .add-comparison input:checked ~ svg path {
+  fill: #b1a489;
+}
+.popular__container .popular__slider .slide .add-comparison svg {
+  cursor: pointer;
+}
 .popular__container .popular__slider .slide .add-comparison svg path {
   transition: fill 0.3s ease-in-out;
-}
-.popular__container .popular__slider .slide .add-comparison:hover svg path {
-  fill: #ffffff;
 }
 .popular__container .popular__slider .slide .add-comparison--active {
   background-color: #b1a489;
@@ -536,12 +573,25 @@ textarea:active {
 .popular__container .popular__slider .slide .add-comparison--active svg path {
   fill: #ffffff;
 }
-.popular__container .popular__slider .slide img {
+.popular__container .popular__slider .slide .slider img {
   height: 380px;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+.popular__container .popular__slider .slide .slider .slick-dots {
+  left: 30px;
+  right: 30px;
+  transform: none;
+  bottom: 12px;
+}
+.popular__container .popular__slider .slide .slider .slick-dots li {
+  flex: 1;
+  width: unset;
+  min-width: 6px;
+  height: 6px;
+  border-radius: 3px;
 }
 .popular__container .popular__slider .slide__wrap {
   display: flex;
@@ -582,7 +632,7 @@ textarea:active {
   font-weight: 700;
   color: #454545;
 }
-.popular__container .popular__slider .slide button {
+.popular__container .popular__slider .slide .open-modal {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -595,11 +645,11 @@ textarea:active {
   outline: none;
   text-transform: uppercase;
 }
-.popular__container .popular__slider .slide button:hover {
+.popular__container .popular__slider .slide .open-modal:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.popular__container .popular__slider .slide button:focus-visible {
+.popular__container .popular__slider .slide .open-modal:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 .popular__container .popular__slider .slick-prev {
@@ -607,6 +657,126 @@ textarea:active {
 }
 .popular__container .popular__slider .slick-next {
   right: -50px;
+}
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+  border-radius: 15px;
+}
+.modal-object {
+  width: 50vw;
+}
+.modal-object .modal-close {
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+  padding: 0;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+}
+.modal-object .modal-close:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.modal-object .modal-close:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
+}
+.modal-object .modal__container {
+  padding: 50px;
+}
+.modal-object .modal__container .slider {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.modal-object .modal__container .slider .slide img {
+  border-radius: 10px;
+  width: 100%;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-object .modal__container h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.modal-object .modal__container .modal__info {
+  padding: 15px 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.modal-object .modal__container .modal__info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.modal-object .modal__container .modal__info-wrap img {
+  width: unset;
+  height: unset;
+}
+.modal-object .modal__container .modal__info-wrap p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #454545;
+}
+.modal-object .modal__container a {
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.modal-object .modal__container a:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.modal-object .modal__container a:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .footer {
@@ -652,6 +822,7 @@ textarea:active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 200px;
+  grid-column-gap: 40px;
 }
 .footer__container .nav__wrap {
   display: flex;

@@ -166,4 +166,198 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headerMQ.addEventListener("change", handleHeaderChange);
   footerMQ.addEventListener("change", handleFooterChange);
+
+  if (document.querySelector(".popular__slider")) {
+    $(".popular__slider").slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: createArrow("next"),
+      prevArrow: createArrow("prev"),
+
+      responsive: [
+        {
+          breakpoint: 1250,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+
+    // document
+    //   .querySelector(".popular__slider")
+    //   .querySelector(" .slick-next").innerHTML = `
+    // <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    // <path d="M0.398438 0.302734L5.89844 7.52496L0.398438 14.3027" stroke="black"/>
+    // </svg>
+    // `;
+
+    // document
+    //   .querySelector(".popular__slider")
+    //   .querySelector(".slick-prev").innerHTML = `
+    // <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    // <path d="M6.13672 14.3154L0.636719 7.09321L6.13672 0.31543" stroke="black"/>
+    // </svg>
+    // `;
+  }
+
+  for (const [index, card] of document
+    .querySelector(".popular__slider")
+    .querySelectorAll(".slide")
+    .entries()) {
+    $(card).find(".slide__slider").slick({
+      dots: true,
+      draggable: false,
+      arrows: false,
+      // autoplay: true,
+      // autoplaySpeed: 2000 + 500 * (index + 1),
+    });
+
+    card.querySelector(".open-modal").addEventListener("click", () => {
+      const modal = document.createElement("div");
+      const overlay = document.createElement("div");
+
+      modal.classList.add("modal");
+      modal.classList.add("modal-object");
+      overlay.classList.add("overlay");
+      modal.innerHTML = `
+      <button class="modal-close">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.3333 1.645L14.6883 0L8.16667 6.52167L1.645 0L0 1.645L6.52167 8.16667L0 14.6883L1.645 16.3333L8.16667 9.81167L14.6883 16.3333L16.3333 14.6883L9.81167 8.16667L16.3333 1.645Z" fill="white"/>
+        </svg>
+      </button>
+      
+      <div class="modal__container">
+      <div class="modal__slider slider">
+      ${Array.from(card.querySelector(".slider").querySelectorAll("img"))
+        .map(
+          (img) => `
+          <div class="modal__slide slide">
+              <img src="${img.getAttribute("src")}" alt="${
+            img.getAttribute("alt") || "Изображение проекта"
+          }">
+          </div>
+        `
+        )
+        .join("")}
+       
+      </div>
+
+      <h3>${card.querySelector("h3").textContent}</h3>
+
+      <div class="modal__info">
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/square.svg" alt="Общая площадь" />
+
+          <p>
+          Общая площадь
+          <br/>
+          ${card.getAttribute("square")}
+          </p>
+        </div>
+
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/square.svg" alt="Жилая площадь" />
+
+          <p>
+          Жилая площадь
+          <br/>
+          ${card.getAttribute("effective_square")}
+          </p>
+        </div>
+
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/stair.svg" alt="Этаж" />
+
+          <p>
+          Этажи
+          <br/>
+          ${card.getAttribute("floor")}
+          </p>
+        </div>
+
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/bedroom.svg" alt="Размеры" />
+
+          <p>
+          Размеры
+          <br/>
+          ${card.getAttribute("length") + "x" + card.getAttribute("width")}
+          </p>
+        </div>
+
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/bedroom.svg" alt="Спальня" />
+
+          <p>
+          Спальни
+          <br/>
+          ${card.getAttribute("room")}
+          </p>
+        </div>
+
+        <div class="modal__info-wrap">
+          <img src="./src/assets/img/toilet.svg" alt="Тулает" />
+
+          <p>
+          Санузел
+          <br/>
+          ${card.getAttribute("wc")}
+          </p>
+        </div>
+      </div>
+    </div>
+      `;
+
+      // <a href="${card.getAttribute("link")}">Перейти</a>
+
+      modal.querySelector(".modal-close").addEventListener("click", () => {
+        $(".modal__slider").slick("unslick");
+        modal.remove();
+        overlay.remove();
+        document.body.removeAttribute("style");
+      });
+
+      document.body.appendChild(modal);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+
+      $(".modal__slider").slick({
+        dots: true,
+      });
+
+      modal.querySelector(".slick-next").innerHTML = `
+    <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.398438 0.302734L5.89844 7.52496L0.398438 14.3027" stroke="black"/>
+    </svg>
+    `;
+
+      modal.querySelector(".slick-prev").innerHTML = `
+    <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.13672 14.3154L0.636719 7.09321L6.13672 0.31543" stroke="black"/>
+    </svg>
+    `;
+    });
+  }
+
+  function createArrow(direction) {
+    const svg =
+      direction === "next"
+        ? '<svg width="7" height="15" viewBox="0 0 7 15" fill="none"><path d="M0.398438 0.302734L5.89844 7.52496L0.398438 14.3027" stroke="black"/></svg>'
+        : '<svg width="7" height="15" viewBox="0 0 7 15" fill="none"><path d="M6.13672 14.3154L0.636719 7.09321L6.13672 0.31543" stroke="black"/></svg>';
+
+    return `<button type="button" class="slick-${direction}" aria-label="${
+      direction === "next" ? "Следующий" : "Предыдущий"
+    }">${svg}</button>`;
+  }
 });

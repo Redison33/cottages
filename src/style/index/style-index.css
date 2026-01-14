@@ -151,11 +151,13 @@ body {
   background-position: 100% 100%, 0 0;
 }
 .banner__container .banner__wrap .banner__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .banner__container .banner__wrap .banner__list li {
+  list-style: none;
   position: relative;
   color: #ffffff;
   font-size: 20px;

@@ -2,4 +2,43 @@
 }
 
 @media (max-width: 1360px) {
+  .feedback {
+    &__container {
+      h1 {
+      }
+
+      .feedback__content {
+        gap: 20px;
+
+        .card {
+          padding: 30px;
+
+          .card__header {
+            a {
+            }
+
+            .raiting {
+              span {
+              }
+
+              &__wrap {
+              }
+            }
+          }
+
+          p {
+          }
+
+          &__gallery {
+            img {
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

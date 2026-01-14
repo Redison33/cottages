@@ -357,6 +357,30 @@ textarea {
     background-color: #b6b6b6;
     cursor: not-allowed;
   }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    display: flex;
+    gap: 6px;
+
+    .slick-active {
+      background-color: #b1a489;
+    }
+
+    li {
+      cursor: pointer;
+      font-size: 0;
+      width: 12px;
+      height: 12px;
+      background-color: $primary-background;
+      border-radius: 50%;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
 }
 
 .breadcrumbs {
@@ -424,6 +448,7 @@ textarea {
     }
 
     .popular__slider {
+      margin: 0 -15px;
       .slick-track {
         margin: 0;
       }
@@ -437,29 +462,40 @@ textarea {
 
         .add-comparison {
           border: none;
-          width: 34px;
-          height: 34px;
+          padding: 0;
           position: absolute;
+          z-index: 1;
           top: 10px;
           right: 20px;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $primary-background;
-          border-radius: 50%;
 
-          svg {
-            path {
-              transition: fill 0.3s ease-in-out;
+          label {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-background;
+            border-radius: 50%;
+
+            input {
+              cursor: pointer;
+              opacity: 0;
+              position: absolute;
             }
           }
 
-          &:hover {
-            svg {
-              path {
-                fill: $primary-background;
-              }
+          & input:checked ~ svg {
+            path {
+              fill: #b1a489;
+            }
+          }
+
+          svg {
+            cursor: pointer;
+            path {
+              transition: fill 0.3s ease-in-out;
             }
           }
 
@@ -474,11 +510,28 @@ textarea {
           }
         }
 
-        img {
-          height: 380px;
-          border-radius: 10px;
-          object-fit: cover;
-          width: 100%;
+        .slider {
+          img {
+            height: 380px;
+            border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
+          }
+
+          .slick-dots {
+            left: 30px;
+            right: 30px;
+            transform: none;
+            bottom: 12px;
+
+            li {
+              flex: 1;
+              width: unset;
+              min-width: 6px;
+              height: 6px;
+              border-radius: 3px;
+            }
+          }
         }
 
         &__wrap {
@@ -527,7 +580,7 @@ textarea {
           }
         }
 
-        button {
+        .open-modal {
           @include base-button;
         }
       }
@@ -541,6 +594,106 @@ textarea {
       }
     }
   }
+}
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $primary-background;
+  border: 1px solid #0000001c;
+  border-radius: 15px;
+
+  &-object {
+    width: 50vw;
+
+    .modal-close {
+      @include base-button;
+      padding: 0;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      top: -30px;
+      right: -30px;
+    }
+
+    .modal__container {
+      padding: 50px;
+
+      .slider {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .slide {
+          img {
+            border-radius: 10px;
+            width: 100%;
+            height: 25vw;
+            object-fit: cover;
+          }
+        }
+      }
+
+      h3 {
+        @include title3;
+        font-weight: $font-weight-regular;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+      }
+
+      .modal__info {
+        padding: 15px 30px;
+        border-radius: 15px;
+        background-color: $primary-background;
+        border: 1px solid #0000001c;
+        // margin-bottom: 30px;
+        //  display: flex;
+        // justify-content: space-between;
+        // gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        &-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+
+          img {
+            width: unset;
+            height: unset;
+          }
+
+          p {
+            text-align: center;
+            font-size: $font-size-tag;
+            font-weight: $font-weight-bold;
+            color: $actions-text;
+          }
+        }
+      }
+
+      a {
+        @include base-button;
+      }
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .footer {
@@ -566,6 +719,8 @@ textarea {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 200px;
+      grid-column-gap: 40px;
+
       &__wrap {
         display: flex;
         flex-direction: column;

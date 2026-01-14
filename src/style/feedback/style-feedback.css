@@ -132,4 +132,16 @@
 
 .pagination {
   margin-bottom: 80px;
+}
+
+@media (max-width: 1360px) {
+  .feedback__container .feedback__content {
+    gap: 20px;
+  }
+  .feedback__container .feedback__content .card {
+    padding: 30px;
+  }
+  .feedback__container .feedback__content .card::after {
+    display: none;
+  }
 }/*# sourceMappingURL=style-feedback.css.map */
