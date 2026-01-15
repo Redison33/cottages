@@ -101,7 +101,7 @@ textarea:active {
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  position: relative;
+  width: 100%;
   z-index: 1;
   margin-top: 42px;
   border-radius: 15px;
@@ -133,7 +133,6 @@ textarea:active {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  justify-content: space-between;
   position: relative;
 }
 .header__container .nav__list {
@@ -1049,6 +1048,7 @@ textarea:active {
 @media (max-width: 1760px) {
   .header {
     margin-top: 42px;
+    width: unset;
   }
   .header__container {
     gap: 18px;

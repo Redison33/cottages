@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: 'Noah';
+  font-family: "Noah";
 }
 
 img {
@@ -26,7 +26,7 @@ ul {
 
 body {
   min-width: 320px;
-  font-family: 'Noah';
+  font-family: "Noah";
   background-color: $base-background-body;
   min-height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@ textarea {
 
 .header {
   @include container;
-  position: relative;
+  width: 100%;
   z-index: 1;
   margin-top: 42px;
   border-radius: 15px;
@@ -55,7 +55,6 @@ textarea {
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-    justify-content: space-between;
     position: relative;
 
     .nav {
@@ -86,14 +85,15 @@ textarea {
 
               &::after {
                 position: absolute;
-                content: '';
+                content: "";
                 top: 100%;
                 width: 100%;
                 left: 0;
                 height: 2px;
                 background-color: $primary-text;
                 transform: scaleX(0);
-                transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out,
+                  background-color 0.3s ease-in-out;
               }
             }
 
@@ -410,7 +410,7 @@ textarea {
       }
 
       &:not(:last-child)::after {
-        content: '-';
+        content: "-";
       }
     }
   }
@@ -747,7 +747,7 @@ textarea {
     gap: 40px;
 
     h3 {
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
       font-weight: $font-weight-medium;
       font-size: 18px;
       color: $primary-title;
@@ -789,7 +789,7 @@ textarea {
             &:first-child {
               a {
                 text-transform: none;
-                font-family: 'Montserrat';
+                font-family: "Montserrat";
                 font-weight: $font-weight-regular;
                 font-size: 18px;
                 margin-bottom: 20px;
@@ -820,7 +820,7 @@ textarea {
           position: absolute;
           top: 0;
           left: 0;
-          content: url('../../assets/img/mail.svg');
+          content: url("../../assets/img/mail.svg");
         }
       }
 
@@ -831,7 +831,7 @@ textarea {
           position: absolute;
           top: 0;
           left: 0;
-          content: url('../../assets/img/location.svg');
+          content: url("../../assets/img/location.svg");
         }
       }
 

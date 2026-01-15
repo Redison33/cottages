@@ -1,0 +1,42 @@
+@media (max-width: 960px) {
+  .services {
+    margin-bottom: 60px;
+
+    &__container {
+      .services__content {
+        grid-template-columns: repeat(2, 1fr);
+        .card {
+          height: 290px;
+          img {
+          }
+
+          &__tag {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .finishProject {
+    margin-bottom: 60px;
+
+    &__container {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 100%;
+            max-width: 100%;
+            img {
+              height: 350px;
+            }
+
+            .slide__content {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

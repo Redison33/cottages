@@ -1,0 +1,46 @@
+@media (max-width: 1760px) {
+  .services {
+    margin-bottom: 70px;
+
+    &__container {
+      h1 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .finishProject {
+    margin-bottom: 70px;
+
+    &__container {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 870px;
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .finishProject {
+    margin-bottom: 70px;
+
+    &__container {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 620px;
+            img {
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
