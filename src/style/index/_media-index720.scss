@@ -7,6 +7,11 @@
 
   .banner {
     img {
+      display: block;
+    }
+
+    video {
+      display: none;
     }
 
     &__container {
@@ -362,7 +367,7 @@
             }
           }
 
-          input[type='submit'] {
+          input[type="submit"] {
           }
         }
 

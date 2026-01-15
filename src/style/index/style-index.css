@@ -45,7 +45,8 @@ body {
   display: flex;
   align-items: center;
 }
-.banner img {
+.banner img,
+.banner video {
   z-index: 10;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1542,6 +1543,12 @@ body {
     margin: 0;
     left: 40px;
     right: 40px;
+  }
+  .banner img {
+    display: block;
+  }
+  .banner video {
+    display: none;
   }
   .banner__container .banner__wrap {
     flex-direction: column;
