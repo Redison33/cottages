@@ -1,0 +1,147 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.blog {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .blog__text {
+      color: $actions-text;
+      font-size: $font-size-text;
+      margin-bottom: 80px;
+    }
+
+    .blog__filters {
+      ul {
+        display: flex;
+        padding: 0;
+
+        li {
+          list-style: none;
+
+          .blog__filter {
+            @include base-button;
+            display: block;
+            border-radius: 0;
+            padding: 25px 50px;
+            color: $actions-text;
+            background-color: $primary-background;
+            border-width: 1px;
+            border-color: #0001011c;
+
+            &:hover {
+              color: $button-text-primary;
+            }
+
+            &--active {
+              color: $button-text-primary;
+              background-color: $button-background-primary;
+              border-color: $button-background-primary;
+
+              &:hover {
+                background-color: $button-background-primary;
+                border-color: $button-background-primary;
+              }
+            }
+          }
+
+          &:first-child {
+            a {
+              border-top-left-radius: 15px;
+            }
+          }
+
+          &:last-child {
+            a {
+              border-top-right-radius: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .blog__content {
+      background-color: $primary-background;
+      padding: 40px;
+      border-radius: 0 10px 10px 10px;
+      .blog__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 70px;
+
+        .card {
+          margin-bottom: 42px;
+
+          img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 10px;
+          }
+
+          &__content {
+            h3 {
+              font-size: 26px;
+              font-weight: $font-weight-medium;
+              margin-bottom: 25px;
+            }
+
+            .card__tags {
+              display: flex;
+              gap: 12px;
+              margin-bottom: 25px;
+
+              p {
+                @include tag;
+                min-width: unset;
+                border: 1px solid #000101;
+              }
+            }
+
+            .card__date {
+              font-size: $font-size-text;
+              color: $actions-text;
+            }
+          }
+
+          &-big {
+            grid-area: 1 / 1 / 2 / 4;
+            margin-bottom: 0;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 42px;
+
+            img {
+              height: 500px;
+              margin-bottom: 0;
+            }
+
+            .card__content {
+              display: flex;
+              flex-direction: column;
+
+              h3 {
+                font-size: $font-size-h3;
+                text-transform: uppercase;
+              }
+
+              .card__tags {
+                margin-top: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
