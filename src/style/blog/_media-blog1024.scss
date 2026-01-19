@@ -1,15 +1,136 @@
 @media (max-width: 1760px) {
-  .FAQ {
+  .blog {
     margin-bottom: 70px;
-  }
-
-  .contactForm {
-    padding: 70px 0;
 
     &__container {
+      h1 {
+      }
+
+      .blog__text {
+        margin-bottom: 60px;
+      }
+
+      .blog__filters {
+        ul {
+          li {
+            .blog__filter {
+            }
+          }
+        }
+      }
+
+      .blog__content {
+        // padding: 40px;
+
+        .blog__cards {
+          // grid-template-columns: repeat(3, 1fr);
+          // grid-column-gap: 30px;
+          // grid-row-gap: 70px;
+
+          .card {
+            // margin-bottom: 42px;
+
+            img {
+            }
+
+            &__content {
+              h3 {
+              }
+
+              .card__tags {
+                p {
+                }
+              }
+
+              .card__date {
+              }
+            }
+
+            &-big {
+              img {
+              }
+
+              .card__content {
+                h3 {
+                }
+
+                .card__tags {
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1360px) {
+  .blog {
+    margin-bottom: 70px;
+
+    &__container {
+      h1 {
+      }
+
+      .blog__text {
+        margin-bottom: 60px;
+      }
+
+      .blog__filters {
+        ul {
+          li {
+            .blog__filter {
+            }
+          }
+        }
+      }
+
+      .blog__content {
+        padding: 20px;
+
+        .blog__cards {
+          // grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 15px;
+          grid-row-gap: 50px;
+
+          .card {
+            // margin-bottom: 42px;
+
+            img {
+              max-height: 350px;
+            }
+
+            &__content {
+              h3 {
+              }
+
+              .card__tags {
+                p {
+                  padding: 5px 10px;
+                }
+              }
+
+              .card__date {
+              }
+            }
+
+            &-big {
+              img {
+                height: 350px;
+              }
+
+              .card__content {
+                h3 {
+                }
+
+                .card__tags {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

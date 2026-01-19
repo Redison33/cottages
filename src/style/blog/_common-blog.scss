@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 .blog {
   margin-bottom: 100px;
@@ -22,12 +22,15 @@
       ul {
         display: flex;
         padding: 0;
+        overflow-x: auto;
 
         li {
           list-style: none;
 
           .blog__filter {
             @include base-button;
+            text-wrap: nowrap;
+            text-transform: none;
             display: block;
             border-radius: 0;
             padding: 25px 50px;
@@ -78,7 +81,12 @@
         grid-row-gap: 70px;
 
         .card {
+          display: block;
           margin-bottom: 42px;
+          // border: 1px solid $primary-background;
+          // border-radius: 10px;
+          cursor: pointer;
+          // transition: border-color 0.3s ease-in-out;
 
           img {
             width: 100%;
@@ -93,15 +101,19 @@
               font-size: 26px;
               font-weight: $font-weight-medium;
               margin-bottom: 25px;
+              color: $actions-text;
+              transition: color 0.3s ease-in-out;
             }
 
             .card__tags {
               display: flex;
+              flex-wrap: wrap;
               gap: 12px;
               margin-bottom: 25px;
 
               p {
                 @include tag;
+                text-wrap: nowrap;
                 min-width: unset;
                 border: 1px solid #000101;
               }
@@ -137,6 +149,16 @@
 
               .card__tags {
                 margin-top: auto;
+              }
+            }
+          }
+
+          &:hover {
+            // border-color: #b1a489;
+
+            .card__content {
+              h3 {
+                color: $link-text-hover;
               }
             }
           }

@@ -1,16 +1,74 @@
 @media (max-width: 960px) {
-  .FAQ {
+  .blog {
     margin-bottom: 60px;
-  }
-
-  .contactForm {
-    padding: 60px 0;
 
     &__container {
-      display: block;
+      h1 {
+      }
 
-      .contactForm__info {
+      .blog__text {
         margin-bottom: 40px;
+      }
+
+      .blog__filters {
+        ul {
+          li {
+            .blog__filter {
+            }
+          }
+        }
+      }
+
+      .blog__content {
+        padding: 20px;
+
+        .blog__cards {
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 15px;
+          grid-row-gap: 15px;
+
+          .card {
+            margin-bottom: 30px;
+
+            img {
+              margin-bottom: 20px;
+            }
+
+            &__content {
+              h3 {
+              }
+
+              .card__tags {
+                p {
+                }
+              }
+
+              .card__date {
+              }
+            }
+
+            &-big {
+              grid-area: 1 / 1 / 2 / 3;
+              display: block;
+
+              img {
+                margin-bottom: 20px;
+              }
+
+              .card__content {
+                h3 {
+                }
+
+                .card__tags {
+                }
+              }
+            }
+          }
+
+          .blog__wrap {
+            display: contents;
+          }
+        }
       }
     }
   }
