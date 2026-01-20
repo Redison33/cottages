@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Regular"), local("Noah Regular"), url("../../assets/fonts/Noah-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Medium"), local("Noah Medium"), url("../../assets/fonts/Noah-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  src: local("Noah-Bold"), local("Noah Bold"), url("../../assets/fonts/Noah-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Medium"), local("Montserrat Medium"), url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+.FAQ {
+  margin-bottom: 100px;
+}
+.FAQ__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .FAQ__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .FAQ__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .FAQ__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .FAQ__container {
+    margin: 0 20px;
+  }
+}
+.FAQ__container h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media (max-width: 580px) {
+  .FAQ__container h1 {
+    font-size: 38px;
+  }
+}
+.FAQ__container .FAQ__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.FAQ__container .FAQ__content .accordion {
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .accordion .accordion__button {
+  padding: 30px 60px;
+  color: #454545;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  transition: color 0.3s ease-in-out;
+  text-align: start;
+}
+.FAQ__container .FAQ__content .accordion .accordion__button svg {
+  min-width: 7px;
+  transition: transform 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .accordion .accordion__button svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .accordion .accordion__content {
+  height: 0;
+  transition: height 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .accordion .accordion__content .accordion__wrap {
+  padding: 40px 60px;
+  border-top: 1px solid #ffffff;
+}
+.FAQ__container .FAQ__content .accordion .accordion__content .accordion__wrap p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.FAQ__container .FAQ__content .accordion--active {
+  background-color: #b1a489;
+}
+.FAQ__container .FAQ__content .accordion--active .accordion__button {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.FAQ__container .FAQ__content .accordion--active .accordion__button svg {
+  transform: rotate(180deg);
+}
+.FAQ__container .FAQ__content .accordion--active .accordion__button svg path {
+  fill: #ffffff;
+}
+
+.contactForm {
+  background-color: #28282c;
+  padding: 100px 0;
+}
+.contactForm__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+@media (max-width: 1760px) {
+  .contactForm__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .contactForm__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .contactForm__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .contactForm__container {
+    margin: 0 20px;
+  }
+}
+.contactForm__container .contactForm__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contactForm__container .contactForm__info h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media (max-width: 580px) {
+  .contactForm__container .contactForm__info h2 {
+    font-size: 38px;
+  }
+}
+.contactForm__container .contactForm__info p {
+  font-size: 20px;
+  color: #ffffff;
+}
+.contactForm__container .contactForm__info .personal {
+  display: flex;
+  gap: 30px;
+}
+.contactForm__container .contactForm__info .personal img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #fff;
+}
+.contactForm__container .contactForm__info .personal__wrap h4 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.contactForm__container .contactForm__info .personal__wrap h5 {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.contactForm__container .contactForm__info .personal__wrap p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.contactForm__container form .form-table {
+  width: 100%;
+}
+.contactForm__container form .form-table .input {
+  width: 100%;
+  padding: 16px 26px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  color: #454545;
+  border-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.contactForm__container form .form-table .input:hover {
+  border-color: #000000;
+}
+.contactForm__container form .form-table .input:focus-visible {
+  border-color: rgba(0, 0, 0, 0.4);
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+}
+.contactForm__container form .form-table .input:active {
+  border-color: #000000;
+}
+.contactForm__container form .form-table .form__required {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.contactForm__container form .form-table .form__required .checkbox {
+  display: block;
+  position: relative;
+  height: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.contactForm__container form .form-table .form__required .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.contactForm__container form .form-table .form__required .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.contactForm__container form .form-table .form__required .checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 10px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.contactForm__container form .form-table .form__required .checkbox input:checked ~ .checkmark {
+  background-color: #b1a489;
+}
+.contactForm__container form .form-table .form__required .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.contactForm__container form .form-table .form__required p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.contactForm__container form .form-table .form__required p a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 400;
+}
+.contactForm__container form .form-table .form__required p a:hover {
+  color: #b1a489;
+}
+.contactForm__container form .form-table input[type=submit] {
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.contactForm__container form .form-table input[type=submit]:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.contactForm__container form .form-table input[type=submit]:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
+}
+.contactForm__container form tfoot th {
+  text-align: start;
+}
+.contactForm img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+
+@media (max-width: 1760px) {
+  .FAQ {
+    margin-bottom: 70px;
+  }
+  .contactForm {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 960px) {
+  .FAQ {
+    margin-bottom: 60px;
+  }
+  .contactForm {
+    padding: 60px 0;
+  }
+  .contactForm__container {
+    display: block;
+  }
+  .contactForm__container .contactForm__info {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 580px) {
+  .about__container .about__wrap img {
+    width: 100%;
+    height: 300px;
+  }
+  .about__container .about__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=style-projects-detail.css.map */

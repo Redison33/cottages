@@ -1,0 +1,59 @@
+@media (max-width: 1760px) {
+  .projects {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .projects {
+    &__container {
+      h1 {
+      }
+
+      .projects__filters {
+        ul {
+          li {
+            .projects__filter {
+            }
+          }
+        }
+      }
+
+      .projects__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        .card {
+          max-width: calc(50% - 15px);
+          margin-bottom: 0px;
+
+          .slider {
+            img {
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          h3 {
+          }
+
+          &__status {
+          }
+
+          &__tags {
+            p {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+    }
+  }
+}

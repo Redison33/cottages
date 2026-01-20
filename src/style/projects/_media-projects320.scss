@@ -1,0 +1,51 @@
+@media (max-width: 580px) {
+  .projects {
+    &__container {
+      h1 {
+      }
+
+      .projects__filters {
+        ul {
+          li {
+            .projects__filter {
+            }
+          }
+        }
+      }
+
+      .projects__cards {
+        gap: 30px;
+
+        .card {
+          max-width: 100%;
+          margin-bottom: 0px;
+
+          .slider {
+            img {
+              height: 210px;
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          h3 {
+          }
+
+          &__status {
+          }
+
+          &__tags {
+            p {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+    }
+  }
+}

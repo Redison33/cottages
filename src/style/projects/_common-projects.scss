@@ -1,0 +1,168 @@
+@import "../_vars.scss";
+@import "../_mixin.scss";
+
+.projects {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .projects__filters {
+      margin-bottom: 30px;
+
+      ul {
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        overflow-x: auto;
+
+        li {
+          list-style: none;
+
+          .projects__filter {
+            @include base-tab;
+            display: block;
+            border-radius: 10px;
+            padding: 25px 20px;
+
+            &--active {
+              color: $button-tag-text-active;
+              border-color: $button-tag-border-active;
+              background-color: $button-tag-background-active;
+            }
+          }
+        }
+      }
+    }
+
+    .projects__cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+
+      .card {
+        max-width: calc(33% - 16px);
+        position: relative;
+        margin-bottom: 40px;
+        .add-comparison {
+          border: none;
+          padding: 0;
+          position: absolute;
+          z-index: 1;
+          top: 10px;
+          right: 20px;
+
+          label {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-background;
+            border-radius: 50%;
+
+            input {
+              cursor: pointer;
+              opacity: 0;
+              position: absolute;
+            }
+          }
+
+          & input:checked ~ svg {
+            path {
+              fill: #b1a489;
+            }
+          }
+
+          svg {
+            cursor: pointer;
+            path {
+              transition: fill 0.3s ease-in-out;
+            }
+          }
+
+          &--active {
+            background-color: #b1a489;
+
+            svg {
+              path {
+                fill: $primary-background;
+              }
+            }
+          }
+        }
+
+        .slider {
+          margin-bottom: 25px;
+
+          img {
+            width: 100%;
+            height: 380px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+
+          .slick-dots {
+            left: 30px;
+            right: 30px;
+            transform: none;
+            bottom: 12px;
+
+            li {
+              flex: 1;
+              width: unset;
+              min-width: 6px;
+              height: 6px;
+              border-radius: 3px;
+            }
+          }
+        }
+
+        h3 {
+          font-size: $font-size-text;
+          font-weight: $font-weight-bold;
+          color: $actions-text;
+          margin-bottom: 10px;
+        }
+
+        &__status {
+          font-size: $font-size-text;
+          font-weight: $font-weight-regular;
+          color: $actions-text;
+          margin-bottom: 20px;
+        }
+
+        &__tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 25px;
+
+          p {
+            @include tag;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-wrap: nowrap;
+            min-width: unset;
+            border: 1px solid #000101;
+            text-transform: lowercase;
+          }
+        }
+
+        a {
+          @include base-button;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

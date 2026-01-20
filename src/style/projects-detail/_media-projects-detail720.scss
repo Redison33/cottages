@@ -1,0 +1,17 @@
+@media (max-width: 960px) {
+  .FAQ {
+    margin-bottom: 60px;
+  }
+
+  .contactForm {
+    padding: 60px 0;
+
+    &__container {
+      display: block;
+
+      .contactForm__info {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
