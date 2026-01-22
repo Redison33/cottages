@@ -854,6 +854,83 @@ textarea:active {
   color: #ffffff;
 }
 
+.universal {
+  margin-bottom: 100px;
+}
+.universal__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .universal__container {
+    margin: 0 80px;
+  }
+}
+@media (max-width: 1360px) {
+  .universal__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .universal__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .universal__container {
+    margin: 0 20px;
+  }
+}
+.universal__container h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media (max-width: 580px) {
+  .universal__container h1 {
+    font-size: 38px;
+  }
+}
+.universal__container h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+.universal__container h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.universal__container p {
+  font-size: 20px;
+  color: #454545;
+  margin-bottom: 30px;
+}
+.universal__container li {
+  font-size: 20px;
+  color: #454545;
+}
+.universal__container a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+}
+.universal__container a:hover {
+  color: #b1a489;
+}
+.universal__container ul {
+  margin-bottom: 30px;
+}
+
 .footer {
   margin-top: auto;
   border-radius: 15px 15px 0 0;

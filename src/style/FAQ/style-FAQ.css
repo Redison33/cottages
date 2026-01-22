@@ -61,6 +61,41 @@
     font-size: 38px;
   }
 }
+.FAQ__container .FAQ__links {
+  margin-bottom: 60px;
+}
+.FAQ__container .FAQ__links ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.FAQ__container .FAQ__links ul li {
+  list-style: none;
+}
+.FAQ__container .FAQ__links ul li a {
+  padding: 10px 18px;
+  background-color: #ffffff;
+  color: #454545;
+  font-size: 18px;
+  line-height: 12px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 1, 1, 0.1098039216);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-wrap: nowrap;
+  display: block;
+}
+.FAQ__container .FAQ__links ul li a:hover {
+  background-color: #28282c;
+  border-color: #28282c;
+  color: #ffffff;
+}
+.FAQ__container .FAQ__links ul li .filter--active {
+  color: #ffffff;
+  border-color: #000000;
+  background-color: #000000;
+}
 .FAQ__container .FAQ__content {
   display: flex;
   flex-direction: column;

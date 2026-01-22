@@ -66,15 +66,15 @@
   font-size: 20px;
   margin-bottom: 80px;
 }
-.blog__container .blog__filters ul {
+.blog__container .blog__links ul {
   display: flex;
   padding: 0;
   overflow-x: auto;
 }
-.blog__container .blog__filters ul li {
+.blog__container .blog__links ul li {
   list-style: none;
 }
-.blog__container .blog__filters ul li .blog__filter {
+.blog__container .blog__links ul li a {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -96,29 +96,29 @@
   border-width: 1px;
   border-color: rgba(0, 1, 1, 0.1098039216);
 }
-.blog__container .blog__filters ul li .blog__filter:hover {
+.blog__container .blog__links ul li a:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.blog__container .blog__filters ul li .blog__filter:focus-visible {
+.blog__container .blog__links ul li a:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
-.blog__container .blog__filters ul li .blog__filter:hover {
+.blog__container .blog__links ul li a:hover {
   color: #ffffff;
 }
-.blog__container .blog__filters ul li .blog__filter--active {
+.blog__container .blog__links ul li .filter--active {
   color: #ffffff;
   background-color: #b1a489;
   border-color: #b1a489;
 }
-.blog__container .blog__filters ul li .blog__filter--active:hover {
+.blog__container .blog__links ul li .filter--active:hover {
   background-color: #b1a489;
   border-color: #b1a489;
 }
-.blog__container .blog__filters ul li:first-child a {
+.blog__container .blog__links ul li:first-child a {
   border-top-left-radius: 15px;
 }
-.blog__container .blog__filters ul li:last-child a {
+.blog__container .blog__links ul li:last-child a {
   border-top-right-radius: 15px;
 }
 .blog__container .blog__content {

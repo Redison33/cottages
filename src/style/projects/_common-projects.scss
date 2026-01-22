@@ -12,7 +12,7 @@
       margin-bottom: 30px;
     }
 
-    .projects__filters {
+    .FAQ__links {
       margin-bottom: 30px;
 
       ul {
@@ -24,17 +24,17 @@
         li {
           list-style: none;
 
-          .projects__filter {
+          a {
             @include base-tab;
             display: block;
             border-radius: 10px;
             padding: 25px 20px;
+          }
 
-            &--active {
-              color: $button-tag-text-active;
-              border-color: $button-tag-border-active;
-              background-color: $button-tag-background-active;
-            }
+          .filter--active {
+            color: $button-tag-text-active;
+            border-color: $button-tag-border-active;
+            background-color: $button-tag-background-active;
           }
         }
       }

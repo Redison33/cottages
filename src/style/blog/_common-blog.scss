@@ -18,7 +18,7 @@
       margin-bottom: 80px;
     }
 
-    .blog__filters {
+    .blog__links {
       ul {
         display: flex;
         padding: 0;
@@ -27,7 +27,7 @@
         li {
           list-style: none;
 
-          .blog__filter {
+          a {
             @include base-button;
             text-wrap: nowrap;
             text-transform: none;
@@ -42,16 +42,16 @@
             &:hover {
               color: $button-text-primary;
             }
+          }
 
-            &--active {
-              color: $button-text-primary;
+          .filter--active {
+            color: $button-text-primary;
+            background-color: $button-background-primary;
+            border-color: $button-background-primary;
+
+            &:hover {
               background-color: $button-background-primary;
               border-color: $button-background-primary;
-
-              &:hover {
-                background-color: $button-background-primary;
-                border-color: $button-background-primary;
-              }
             }
           }
 

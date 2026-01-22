@@ -1,5 +1,5 @@
-@import '../_vars.scss';
-@import '../_mixin.scss';
+@import "../_vars.scss";
+@import "../_mixin.scss";
 
 .FAQ {
   margin-bottom: 100px;
@@ -10,6 +10,31 @@
     h1 {
       @include title2;
       margin-bottom: 30px;
+    }
+
+    .FAQ__links {
+      margin-bottom: 60px;
+
+      ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 0;
+
+        li {
+          list-style: none;
+          a {
+            @include base-tab;
+            display: block;
+          }
+
+          .filter--active {
+            color: $button-tag-text-active;
+            border-color: $button-tag-border-active;
+            background-color: $button-tag-background-active;
+          }
+        }
+      }
     }
 
     .FAQ__content {
@@ -177,7 +202,7 @@
           }
         }
 
-        input[type='submit'] {
+        input[type="submit"] {
           @include base-button;
         }
       }
