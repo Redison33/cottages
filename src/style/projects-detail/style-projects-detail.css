@@ -66,38 +66,52 @@
   font-weight: 500;
   line-height: 100%;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 .projects-detail__container .projects-detail__imgs {
-  max-height: 700px;
+  max-height: 100%;
   display: flex;
   gap: 20px;
   margin-bottom: 15px;
 }
-.projects-detail__container .projects-detail__imgs img {
+.projects-detail__container .projects-detail__imgs .projects-detail__slider {
   width: 100%;
-  height: 700px;
+  max-height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
   cursor: zoom-in;
 }
+.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-slide {
+  width: 100%;
+}
+.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .projects-detail__container .projects-detail__imgs .projects-detail__gallery {
   min-width: 170px;
   max-width: 170px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  max-height: 700px;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery img {
+.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide {
   width: 170px;
-  min-height: 150px;
-  max-height: 150px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery::-webkit-scrollbar {
-  display: none;
+.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(1px) opacity(70%);
+  transition: filter 0.3s ease-in-out;
+}
+.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide-thumb-active img {
+  filter: blur(0px) opacity(100%);
 }
 .projects-detail__container .projects-detail__wrap {
   display: flex;
@@ -152,6 +166,7 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
+  text-wrap: nowrap;
 }
 .projects-detail__container .projects-detail__wrap .project-detail__actions a:hover {
   background-color: #000101;
@@ -165,6 +180,67 @@
   color: #454545;
   margin-bottom: 40px;
 }
+.projects-detail__container .projects-detail__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+  margin-bottom: 100px;
+}
+.projects-detail__container .projects-detail__cards .card {
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+  border-radius: 10px;
+  padding: 25px 35px;
+  background-color: #ffffff;
+}
+.projects-detail__container .projects-detail__cards .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #b1a489;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.projects-detail__container .projects-detail__cards .card p {
+  font-size: 20px;
+  color: #454545;
+}
+.projects-detail__container .projects-detail__video .video {
+  position: relative;
+}
+.projects-detail__container .projects-detail__video .video video {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: brightness(30%);
+}
+.projects-detail__container .projects-detail__video .video button {
+  position: absolute;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  z-index: 1;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+.projects-detail__container .projects-detail__video .video button span {
+  margin-left: 20px;
+  display: block;
+  border: 15px solid transparent;
+  border-left: 25px solid #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+.projects-detail__container .projects-detail__video .video button:hover {
+  border-color: #b1a489;
+}
+.projects-detail__container .projects-detail__video .video button:hover span {
+  border-left-color: #b1a489;
+}
+
 .contactForm {
   background-color: #28282c;
   padding: 100px 0;
@@ -376,16 +452,76 @@
 }
 
 @media (max-width: 1760px) {
-  .FAQ {
+  .projects-detail {
     margin-bottom: 70px;
   }
   .contactForm {
     padding: 70px 0;
   }
 }
+@media (max-width: 1360px) {
+  .projects-detail__container .projects-detail__imgs .projects-detail__slider {
+    max-height: 550px;
+  }
+  .projects-detail__container .projects-detail__imgs .projects-detail__gallery {
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 550px;
+  }
+  .projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide {
+    width: 120px;
+    height: 100px;
+  }
+  .projects-detail__container .projects-detail__wrap {
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+  }
+  .projects-detail__container .projects-detail__wrap .projects-detail__info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+  }
+  .projects-detail__container .projects-detail__wrap .projects-detail__info-wrap {
+    padding: 15px;
+  }
+  .projects-detail__container .projects-detail__cards {
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 960px) {
-  .FAQ {
+  .projects-detail {
     margin-bottom: 60px;
+  }
+  .projects-detail__container .projects-detail__imgs .projects-detail__slider {
+    max-height: 550px;
+  }
+  .projects-detail__container .projects-detail__imgs .projects-detail__gallery {
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 550px;
+  }
+  .projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide {
+    width: 120px;
+    height: 100px;
+  }
+  .projects-detail__container .projects-detail__wrap {
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+  }
+  .projects-detail__container .projects-detail__wrap .projects-detail__info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+  }
+  .projects-detail__container .projects-detail__wrap .projects-detail__info-wrap {
+    padding: 15px;
+  }
+  .projects-detail__container .projects-detail__cards {
+    grid-template-columns: repeat(1, 1fr);
   }
   .contactForm {
     padding: 60px 0;

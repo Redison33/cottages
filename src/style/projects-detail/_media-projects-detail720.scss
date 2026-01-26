@@ -1,6 +1,99 @@
 @media (max-width: 960px) {
-  .FAQ {
+  .projects-detail {
     margin-bottom: 60px;
+    &__container {
+      h1 {
+      }
+      h2 {
+      }
+
+      .projects-detail__imgs {
+        .projects-detail__slider {
+          max-height: 550px;
+          .swiper-slide {
+            img {
+            }
+          }
+        }
+
+        .projects-detail__gallery {
+          min-width: 120px;
+          max-width: 120px;
+          max-height: 550px;
+
+          .swiper-slide {
+            width: 120px;
+            height: 100px;
+
+            img {
+            }
+
+            &-thumb-active {
+              img {
+              }
+            }
+          }
+        }
+      }
+
+      .projects-detail__wrap {
+        gap: 20px;
+        margin-bottom: 40px;
+        flex-wrap: nowrap;
+
+        .projects-detail__info {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 5px;
+
+          &-wrap {
+            padding: 15px;
+
+            p {
+            }
+          }
+        }
+
+        .project-detail__actions {
+          p {
+            span {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+
+      .projects-detail__content {
+        p {
+        }
+      }
+
+      .projects-detail__cards {
+        grid-template-columns: repeat(1, 1fr);
+
+        .card {
+          h3 {
+          }
+
+          p {
+          }
+        }
+      }
+
+      .projects-detail__video {
+        .video {
+          video {
+          }
+
+          button {
+            span {
+            }
+          }
+        }
+      }
+    }
   }
 
   .contactForm {
