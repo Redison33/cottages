@@ -148,12 +148,16 @@
       .services__content {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .services__tabs {
           min-width: unset;
 
           .tab {
             padding: 24px 30px;
+            text-wrap: wrap;
+            justify-content: center;
+
             span {
             }
 
@@ -183,12 +187,13 @@
       }
 
       .achievement__content {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         .card {
-          padding: 40px 20px;
+          padding: 40px 0 40px 20px;
 
           h3 {
+            font-size: 22px;
           }
 
           p {
@@ -246,13 +251,14 @@
       }
 
       .reviews__content {
-        padding: 30px 45px 30px 30px;
+        padding: 30px 20px 30px 30px;
         margin-bottom: 20px;
         .reviews__wrap {
           max-height: 600px;
 
           .card {
             padding: 0;
+            padding-right: 20px;
             &__header {
               flex-direction: column;
 
@@ -296,6 +302,7 @@
     &__container {
       .social__info {
         h2 {
+          word-break: break-word;
         }
       }
 
@@ -329,7 +336,13 @@
 
   .contactForm {
     &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
       .contactForm__info {
+        margin-bottom: 0;
+        display: contents;
         h2 {
         }
 
@@ -337,6 +350,7 @@
         }
 
         .personal {
+          order: 1;
           img {
             min-width: 100px;
           }
@@ -371,6 +385,7 @@
           }
 
           input[type='submit'] {
+            width: 100%;
           }
         }
 

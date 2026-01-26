@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.querySelector('.popular__slider')) {
     $('.popular__slider').slick({
-      infinite: false,
+      infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
       nextArrow: createArrow('next'),

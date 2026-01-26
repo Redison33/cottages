@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .projects-detail {
   margin-bottom: 100px;
@@ -215,8 +215,10 @@
           }
         }
 
-        input[type="submit"] {
+        input[type='submit'] {
           @include base-button;
+          width: unset;
+          padding: 20px 60px;
         }
       }
 

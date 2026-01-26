@@ -661,6 +661,12 @@ textarea:active {
 .popular__container .popular__slider .slick-next {
   right: -50px;
 }
+.popular__container .popular__slider .slick-arrow {
+  background-color: #b1a489;
+}
+.popular__container .popular__slider .slick-arrow svg path {
+  stroke: #ffffff;
+}
 
 .modal {
   z-index: 2;

@@ -19,4 +19,66 @@
       }
     }
   }
+
+  .contactForm {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .contactForm__info {
+        margin-bottom: 0;
+        display: contents;
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          order: 1;
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+            width: 100%;
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+  }
 }

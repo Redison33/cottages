@@ -72,6 +72,9 @@
   margin-bottom: 30px;
   color: #454545;
 }
+.blog-detail__container div {
+  width: 100%;
+}
 .blog-detail__container ul,
 .blog-detail__container p {
   width: 100%;
@@ -296,6 +299,8 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
+  width: unset;
+  padding: 20px 60px;
 }
 .contactForm__container form .form-table input[type=submit]:hover {
   background-color: #000101;
@@ -349,5 +354,23 @@
   }
   .blog-detail__container img {
     margin-bottom: 30px;
+  }
+  .contactForm__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contactForm__container .contactForm__info {
+    margin-bottom: 0;
+    display: contents;
+  }
+  .contactForm__container .contactForm__info .personal {
+    order: 1;
+  }
+  .contactForm__container form .form-table {
+    width: 100%;
+  }
+  .contactForm__container form .form-table input[type=submit] {
+    width: 100%;
   }
 }/*# sourceMappingURL=style-blog-detail.css.map */

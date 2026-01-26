@@ -355,6 +355,8 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
+  width: unset;
+  padding: 20px 60px;
 }
 .contactForm__container form .form-table input[type=submit]:hover {
   background-color: #000101;
@@ -402,5 +404,23 @@
   }
   .about__container .about__cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .contactForm__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contactForm__container .contactForm__info {
+    margin-bottom: 0;
+    display: contents;
+  }
+  .contactForm__container .contactForm__info .personal {
+    order: 1;
+  }
+  .contactForm__container form .form-table {
+    width: 100%;
+  }
+  .contactForm__container form .form-table input[type=submit] {
+    width: 100%;
   }
 }/*# sourceMappingURL=style-projects-detail.css.map */

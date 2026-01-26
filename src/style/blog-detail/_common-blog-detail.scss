@@ -22,6 +22,10 @@
       color: $actions-text;
     }
 
+    div {
+      width: 100%;
+    }
+
     ul,
     p {
       width: 100%;
@@ -148,6 +152,8 @@
 
         input[type='submit'] {
           @include base-button;
+          width: unset;
+          padding: 20px 60px;
         }
       }
 

@@ -888,6 +888,7 @@ body {
   position: relative;
   padding-left: 40px;
   padding-top: 20px;
+  padding-right: 60px;
 }
 .reviews__container .reviews__content .reviews__wrap .card .card__header {
   display: flex;
@@ -1277,6 +1278,8 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
+  width: unset;
+  padding: 20px 60px;
 }
 .contactForm__container form .form-table input[type=submit]:hover {
   background-color: #000101;
@@ -1431,6 +1434,9 @@ body {
   .reviews__container .reviews__info {
     margin-bottom: 60px;
   }
+  .reviews__container .reviews__content .reviews__wrap .card {
+    padding-right: 40px;
+  }
   .social {
     margin-bottom: 70px;
   }
@@ -1523,6 +1529,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .reviews__container .reviews__content .reviews__wrap .card {
+    padding-right: 30px;
   }
   .social {
     margin-bottom: 70px;
@@ -1700,8 +1709,12 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .reviews__container .reviews__content {
+    padding: 40px 30px 60px 30px;
+  }
   .reviews__container .reviews__content .reviews__wrap .card {
     padding: 0;
+    padding-right: 20px;
   }
   .reviews__container .reviews__content .reviews__wrap .card::after {
     display: none;
@@ -1830,12 +1843,15 @@ body {
   .services__container .services__content {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .services__container .services__content .services__tabs {
     min-width: unset;
   }
   .services__container .services__content .services__tabs .tab {
     padding: 24px 30px;
+    text-wrap: wrap;
+    justify-content: center;
   }
   .services__container .services__content .services__tabs .tab svg {
     display: none;
@@ -1851,10 +1867,13 @@ body {
     margin-bottom: 30px;
   }
   .achievement__container .achievement__content {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .achievement__container .achievement__content .card {
-    padding: 40px 20px;
+    padding: 40px 0 40px 20px;
+  }
+  .achievement__container .achievement__content .card h3 {
+    font-size: 22px;
   }
   .possibilities {
     padding-bottom: 0;
@@ -1882,7 +1901,7 @@ body {
     margin-bottom: 30px;
   }
   .reviews__container .reviews__content {
-    padding: 30px 45px 30px 30px;
+    padding: 30px 20px 30px 30px;
     margin-bottom: 20px;
   }
   .reviews__container .reviews__content .reviews__wrap {
@@ -1890,6 +1909,7 @@ body {
   }
   .reviews__container .reviews__content .reviews__wrap .card {
     padding: 0;
+    padding-right: 20px;
   }
   .reviews__container .reviews__content .reviews__wrap .card__header {
     flex-direction: column;
@@ -1916,13 +1936,31 @@ body {
   .social {
     margin-bottom: 30px;
   }
+  .social__container .social__info h2 {
+    word-break: break-word;
+  }
   .social__container .social__content .telegram {
     max-width: 300px;
+  }
+  .contactForm__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contactForm__container .contactForm__info {
+    margin-bottom: 0;
+    display: contents;
+  }
+  .contactForm__container .contactForm__info .personal {
+    order: 1;
   }
   .contactForm__container .contactForm__info .personal img {
     min-width: 100px;
   }
   .contactForm__container form .form-table {
+    width: 100%;
+  }
+  .contactForm__container form .form-table input[type=submit] {
     width: 100%;
   }
   .contactForm img {

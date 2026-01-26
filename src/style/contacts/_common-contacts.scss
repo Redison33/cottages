@@ -310,6 +310,8 @@
 
         input[type='submit'] {
           @include base-button;
+          width: unset;
+          padding: 20px 60px;
         }
       }
 
