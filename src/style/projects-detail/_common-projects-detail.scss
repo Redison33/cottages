@@ -40,6 +40,27 @@
             object-fit: cover;
           }
         }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+          background-color: $primary-background;
+          border-radius: 50%;
+
+          svg {
+            fill: transparent;
+            width: 6px;
+            height: 14px;
+          }
+        }
+
+        .swiper-button-next {
+          right: 35px;
+        }
+
+        .swiper-button-prev {
+          left: 35px;
+        }
       }
 
       .projects-detail__gallery {
@@ -211,7 +232,6 @@
 
   &__container {
     @include container;
-    padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;

@@ -685,7 +685,7 @@ body {
 }
 .achievement__container .achievement__content .card h3 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
   margin-bottom: 24px;
   transition: color 0.3s ease-in-out;

@@ -1,36 +1,85 @@
 @media (max-width: 580px) {
-  .about {
+  .projects-detail {
     &__container {
       h1 {
       }
+      h2 {
+      }
 
-      .about__wrap {
-        img {
+      .projects-detail__imgs {
+        flex-direction: column;
+        gap: 16px;
+
+        .projects-detail__slider {
+          max-height: 400px;
+          .swiper-slide {
+            img {
+            }
+          }
+
+          .swiper-button-next {
+            right: 10px;
+          }
+
+          .swiper-button-prev {
+            left: 10px;
+          }
+        }
+
+        .projects-detail__gallery {
           width: 100%;
-          height: 300px;
-        }
+          max-width: unset;
 
-        .aboout__content {
-          h3 {
+          .swiper-slide {
+            width: 150px;
+            height: 100px;
+
+            img {
+            }
+
+            &-thumb-active {
+              img {
+              }
+            }
           }
-
-          ul {
-          }
-
-          p,
-          li {
-          }
-
-          a,
-          button {
-          }
-        }
-
-        &:nth-child(2n + 4) {
         }
       }
 
-      .about__cards {
+      .projects-detail__wrap {
+        flex-direction: column;
+        align-items: center;
+
+        .projects-detail__info {
+          width: 100%;
+          display: flex;
+          overflow-x: auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+
+          &-wrap {
+            min-width: 120px;
+            p {
+            }
+          }
+        }
+
+        .project-detail__actions {
+          p {
+            span {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+
+      .projects-detail__content {
+        p {
+        }
+      }
+
+      .projects-detail__cards {
         grid-template-columns: repeat(1, 1fr);
 
         .card {
@@ -39,8 +88,17 @@
 
           p {
           }
+        }
+      }
 
-          a {
+      .projects-detail__video {
+        .video {
+          video {
+          }
+
+          button {
+            span {
+            }
           }
         }
       }

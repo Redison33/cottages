@@ -5,9 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     freeMode: true,
     watchSlidesProgress: true,
     direction: 'vertical',
+    breakpoints: {
+      320: {
+        direction: 'horizontal',
+        spaceBetween: 12,
+      },
+      960: {
+        direction: 'vertical',
+        spaceBetween: 16,
+      },
+    },
   });
   const swiper2 = new Swiper('.projects-detail__slider', {
     spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     thumbs: {
       swiper: swiper,
     },
