@@ -12,4 +12,11 @@
 }
 
 @media (max-width: 1360px) {
+  .blog-detail {
+    &__container {
+      .blog-detail__tags {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }

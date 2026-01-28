@@ -46,6 +46,33 @@
       border-radius: 10px;
     }
 
+    .blog-detail__tags {
+      margin-bottom: 60px;
+
+      ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          a {
+            @include base-tab;
+            display: block;
+            text-decoration: none;
+          }
+
+          .filter--active {
+            color: $button-tag-text-active;
+            border-color: $button-tag-border-active;
+            background-color: $button-tag-background-active;
+          }
+        }
+      }
+    }
+
     .blog-detail__content {
       display: flex;
       flex-direction: column;

@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".swiper", {
-    effect: "coverflow",
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.swiper', {
+    effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     loop: true,
     coverflowEffect: {
       rotate: 0,
@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
       depth: 150,
       modifier: 1.2,
       slideShadows: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 });

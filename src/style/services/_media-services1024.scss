@@ -6,6 +6,19 @@
       h1 {
         margin-bottom: 30px;
       }
+      .services__content {
+        .card {
+          height: 276px;
+
+          img {
+          }
+
+          &__tag {
+            min-width: unset;
+            padding: 4px 20px;
+          }
+        }
+      }
     }
   }
 

@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .services {
   margin-bottom: 100px;
@@ -120,6 +120,27 @@
             }
           }
         }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+        background-color: $primary-background;
+        border-radius: 50%;
+
+        svg {
+          fill: transparent;
+          width: 6px;
+          height: 14px;
+        }
+      }
+
+      .swiper-button-next {
+        right: 35px;
+      }
+
+      .swiper-button-prev {
+        left: 35px;
       }
     }
   }

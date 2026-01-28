@@ -29,11 +29,26 @@
     margin-bottom: 42px;
 
     &__container {
+      margin: 0;
+
+      h2 {
+        margin: 0 20px;
+        margin-bottom: 30px;
+      }
+
       .swiper {
         .swiper-wrapper {
           .swiper-slide {
           }
         }
+      }
+
+      .swiper-button-next {
+        right: 20px;
+      }
+
+      .swiper-button-prev {
+        left: 20px;
       }
     }
   }
