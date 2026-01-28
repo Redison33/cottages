@@ -96,6 +96,9 @@
   color: #b1a489;
 }
 .blog-detail__container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 600px;
   margin-bottom: 60px;
   border-radius: 10px;
