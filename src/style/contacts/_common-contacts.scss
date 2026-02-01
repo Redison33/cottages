@@ -235,23 +235,19 @@
 
       .personal {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 30px;
+        align-items: center;
 
         img {
           border-radius: 50%;
-          width: 165px;
-          height: 165px;
+          width: 100px;
+          height: 100px;
+          min-width: 100px;
           object-fit: cover;
           background-color: #fff;
         }
 
         &__wrap {
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-
           h4 {
             font-size: $font-size-text;
             color: $primary-title;

@@ -1,13 +1,15 @@
 @media (max-width: 960px) {
   .blog {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
 
       .blog__text {
-        margin-bottom: 40px;
+        font-size: 16px;
+        margin-bottom: 24px;
       }
 
       .blog__links {
@@ -36,6 +38,7 @@
 
             &__content {
               h3 {
+                font-size: 20px;
               }
 
               .card__tags {
@@ -44,6 +47,7 @@
               }
 
               .card__date {
+                font-size: 16px;
               }
             }
 
@@ -53,6 +57,7 @@
 
               img {
                 margin-bottom: 20px;
+                height: 300px;
               }
 
               .card__content {

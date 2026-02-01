@@ -31,7 +31,7 @@
 }
 @media (max-width: 1760px) {
   .blog-detail__container {
-    margin: 0 80px;
+    margin: 0 100px;
   }
 }
 @media (max-width: 1360px) {
@@ -58,9 +58,29 @@
   margin-bottom: 30px;
   color: #454545;
 }
+@media (max-width: 1760px) {
+  .blog-detail__container h1 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .blog-detail__container h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .blog-detail__container h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .blog-detail__container h1 {
+    font-size: 26px;
+  }
+}
 @media (max-width: 580px) {
   .blog-detail__container h1 {
-    font-size: 38px;
+    font-size: 24px;
   }
 }
 .blog-detail__container h2 {
@@ -71,6 +91,21 @@
   font-size: 26px;
   margin-bottom: 30px;
   color: #454545;
+}
+@media (max-width: 1600px) {
+  .blog-detail__container h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 960px) {
+  .blog-detail__container h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 580px) {
+  .blog-detail__container h2 {
+    font-size: 20px;
+  }
 }
 .blog-detail__container div {
   width: 100%;
@@ -94,6 +129,11 @@
 }
 .blog-detail__container a:hover {
   color: #b1a489;
+}
+@media (max-width: 960px) {
+  .blog-detail__container a {
+    font-size: 16px;
+  }
 }
 .blog-detail__container img {
   width: 100%;
@@ -163,7 +203,7 @@
 }
 @media (max-width: 1760px) {
   .contactForm__container {
-    margin: 0 80px;
+    margin: 0 100px;
   }
 }
 @media (max-width: 1360px) {
@@ -193,9 +233,29 @@
   text-transform: uppercase;
   color: #ffffff;
 }
+@media (max-width: 1760px) {
+  .contactForm__container .contactForm__info h2 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .contactForm__container .contactForm__info h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .contactForm__container .contactForm__info h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .contactForm__container .contactForm__info h2 {
+    font-size: 26px;
+  }
+}
 @media (max-width: 580px) {
   .contactForm__container .contactForm__info h2 {
-    font-size: 38px;
+    font-size: 24px;
   }
 }
 .contactForm__container .contactForm__info p {
@@ -256,6 +316,12 @@
 }
 .contactForm__container form .form-table .input:active {
   border-color: #000000;
+}
+@media (max-width: 960px) {
+  .contactForm__container form .form-table .input {
+    padding: 11px 20px;
+    font-size: 16px;
+  }
 }
 .contactForm__container form .form-table .form__required {
   display: flex;
@@ -327,6 +393,11 @@
 .contactForm__container form .form-table .form__required p a:hover {
   color: #b1a489;
 }
+@media (max-width: 960px) {
+  .contactForm__container form .form-table .form__required p a {
+    font-size: 16px;
+  }
+}
 .contactForm__container form .form-table input[type=submit] {
   border-radius: 10px;
   padding: 14px 20px;
@@ -349,6 +420,12 @@
 .contactForm__container form .form-table input[type=submit]:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
+@media (max-width: 960px) {
+  .contactForm__container form .form-table input[type=submit] {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
 .contactForm__container form tfoot th {
   text-align: start;
 }
@@ -361,56 +438,130 @@
 
 @media (max-width: 1760px) {
   .blog-detail {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
-  .contactForm {
-    padding: 70px 0;
-  }
-}
-@media (max-width: 1360px) {
   .blog-detail__container .blog-detail__tags {
+    margin-bottom: 40px;
+  }
+  .blog-detail__container .blog-detail__content h1,
+  .blog-detail__container .blog-detail__content h2 {
     margin-bottom: 30px;
   }
-}
-@media (max-width: 960px) {
-  .blog-detail {
-    margin-bottom: 60px;
+  .blog-detail__container .blog-detail__content ul,
+  .blog-detail__container .blog-detail__content p {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+  .blog-detail__container .blog-detail__content img {
+    margin-bottom: 24px;
+    max-height: 350px;
   }
   .contactForm {
     padding: 60px 0;
   }
   .contactForm__container {
+    padding: 0;
+  }
+  .contactForm__container .contactForm__info {
+    gap: 24px;
+  }
+  .contactForm__container .contactForm__info p {
+    font-size: 18px;
+  }
+  .contactForm__container .contactForm__info .personal__wrap h5 {
+    margin-bottom: 16px;
+  }
+  .contactForm__container .contactForm__info .personal__wrap p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 960px) {
+  .blog-detail {
+    margin-bottom: 40px;
+  }
+  .blog-detail__container .blog-detail__tags {
+    margin-bottom: 30px;
+  }
+  .blog-detail__container .blog-detail__content h1,
+  .blog-detail__container .blog-detail__content h2 {
+    margin-bottom: 24px;
+  }
+  .blog-detail__container .blog-detail__content ul,
+  .blog-detail__container .blog-detail__content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .blog-detail__container .blog-detail__content img {
+    margin-bottom: 20px;
+    max-height: 350px;
+  }
+  .contactForm {
+    padding: 30px 0;
+  }
+  .contactForm__container {
     display: block;
   }
   .contactForm__container .contactForm__info {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+  .contactForm__container .contactForm__info p {
+    font-size: 16px;
+  }
+  .contactForm__container form .form-table {
+    width: 100%;
+  }
+  .contactForm__container form .form-table .form__required p {
+    font-size: 16px;
+  }
+  .contactForm__container form .form-table .form__required p a {
+    font-size: 16px;
   }
 }
 @media (max-width: 580px) {
-  .blog-detail__container h1 {
-    margin-bottom: 20px;
+  .blog-detail {
+    margin-bottom: 30px;
   }
+  .blog-detail__container h1,
   .blog-detail__container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .blog-detail__container ul,
   .blog-detail__container p {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
   .blog-detail__container img {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+    height: 250px;
   }
   .contactForm__container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 16px;
   }
   .contactForm__container .contactForm__info {
     margin-bottom: 0;
     display: contents;
   }
+  .contactForm__container .contactForm__info h2 {
+    margin-bottom: 16px;
+  }
   .contactForm__container .contactForm__info .personal {
     order: 1;
+    gap: 20px;
+  }
+  .contactForm__container .contactForm__info .personal img {
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+  }
+  .contactForm__container .contactForm__info .personal__wrap h4 {
+    font-size: 16px;
+  }
+  .contactForm__container .contactForm__info .personal__wrap h5 {
+    font-size: 16px;
+  }
+  .contactForm__container .contactForm__info .personal__wrap p {
+    font-size: 14px;
   }
   .contactForm__container form .form-table {
     width: 100%;

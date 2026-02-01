@@ -1,21 +1,20 @@
 @media (max-width: 580px) {
   .blog-detail {
+    margin-bottom: 30px;
     &__container {
-      h1 {
-        margin-bottom: 20px;
-      }
-
+      h1,
       h2 {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       ul,
       p {
-        margin-bottom: 30px;
+        margin-bottom: 16px;
       }
 
       img {
-        margin-bottom: 30px;
+        margin-bottom: 16px;
+        height: 250px;
       }
     }
   }
@@ -24,12 +23,13 @@
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 16px;
 
       .contactForm__info {
         margin-bottom: 0;
         display: contents;
         h2 {
+          margin-bottom: 16px;
         }
 
         p {
@@ -37,17 +37,25 @@
 
         .personal {
           order: 1;
+          gap: 20px;
+
           img {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
           }
 
           &__wrap {
             h4 {
+              font-size: 16px;
             }
 
             h5 {
+              font-size: 16px;
             }
 
             p {
+              font-size: 14px;
             }
           }
         }

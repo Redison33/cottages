@@ -1,7 +1,9 @@
 @media (max-width: 580px) {
   .blog {
+    margin-bottom: 30px;
     &__container {
       h1 {
+        margin-bottom: 18px;
       }
 
       .blog__text {
@@ -47,6 +49,8 @@
               grid-area: unset;
               img {
                 margin-bottom: 20px;
+                max-height: 300px;
+                height: unset;
               }
 
               .card__content {

@@ -1,10 +1,13 @@
 @media (max-width: 960px) {
   .certificates {
+    margin-bottom: 40px;
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
 
       .certificates__links {
+        margin-bottom: 30px;
         ul {
           li {
             a {
@@ -16,8 +19,8 @@
       .certificates__cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 60px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
 
         .card {
           img {
@@ -27,6 +30,7 @@
           }
 
           p {
+            font-size: 16px;
           }
         }
       }

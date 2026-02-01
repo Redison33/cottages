@@ -28,7 +28,7 @@
 }
 @media (max-width: 1760px) {
   .feedback__container {
-    margin: 0 80px;
+    margin: 0 100px;
   }
 }
 @media (max-width: 1360px) {
@@ -53,9 +53,29 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+@media (max-width: 1760px) {
+  .feedback__container h1 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .feedback__container h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .feedback__container h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .feedback__container h1 {
+    font-size: 26px;
+  }
+}
 @media (max-width: 580px) {
   .feedback__container h1 {
-    font-size: 38px;
+    font-size: 24px;
   }
 }
 .feedback__container .feedback__content {
@@ -91,6 +111,11 @@
 }
 .feedback__container .feedback__content .card .card__header a:hover {
   color: #b1a489;
+}
+@media (max-width: 960px) {
+  .feedback__container .feedback__content .card .card__header a {
+    font-size: 16px;
+  }
 }
 .feedback__container .feedback__content .card .card__header .raiting {
   display: flex;
@@ -134,12 +159,41 @@
   margin-bottom: 80px;
 }
 
+@media (max-width: 1760px) {
+  .feedback {
+    margin-bottom: 60px;
+  }
+  .feedback__container h1 {
+    margin-bottom: 30px;
+  }
+  .feedback__container .feedback__content {
+    gap: 20px;
+  }
+  .feedback__container .feedback__content .card {
+    padding: 40px 60px;
+  }
+  .feedback__container .feedback__content .card a {
+    font-size: 22px;
+  }
+  .feedback__container .feedback__content .card p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .feedback__container .feedback__content .card__gallery img {
+    width: 150px;
+    height: 110px;
+  }
+  .feedback__container .feedback__content .card::after {
+    left: 15px;
+    top: 20px;
+  }
+}
 @media (max-width: 1360px) {
   .feedback__container .feedback__content {
     gap: 20px;
   }
   .feedback__container .feedback__content .card {
-    padding: 30px;
+    padding: 20px 40px;
   }
   .feedback__container .feedback__content .card .card__header {
     flex-direction: column;
@@ -150,15 +204,20 @@
   }
 }
 @media (max-width: 960px) {
+  .feedback {
+    margin-bottom: 40px;
+  }
+  .feedback__container h1 {
+    margin-bottom: 24px;
+  }
   .feedback__container .feedback__content {
     gap: 20px;
   }
-  .feedback__container .feedback__content .card {
-    padding: 20px;
+  .feedback__container .feedback__content .card .card__header a {
+    font-size: 20px;
   }
-  .feedback__container .feedback__content .card .card__header {
-    flex-direction: column;
-    gap: 12px;
+  .feedback__container .feedback__content .card p {
+    font-size: 16px;
   }
   .feedback__container .feedback__content .card::after {
     display: none;
@@ -166,7 +225,10 @@
 }
 @media (max-width: 580px) {
   .feedback {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+  .feedback__container h1 {
+    margin-bottom: 18px;
   }
   .feedback__container .feedback__content {
     margin-bottom: 40px;
@@ -178,7 +240,15 @@
   }
   .feedback__container .feedback__content .card .card__header {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .feedback__container .feedback__content .card .card__header .raiting__wrap img {
+    width: 16px;
+    height: 16px;
+  }
+  .feedback__container .feedback__content .card .card__header .raiting span {
+    font-size: 16px;
   }
   .feedback__container .feedback__content .card__gallery img {
     width: 150px;

@@ -31,7 +31,7 @@
 }
 @media (max-width: 1760px) {
   .certificates__container {
-    margin: 0 80px;
+    margin: 0 100px;
   }
 }
 @media (max-width: 1360px) {
@@ -56,9 +56,29 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+@media (max-width: 1760px) {
+  .certificates__container h1 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .certificates__container h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .certificates__container h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .certificates__container h1 {
+    font-size: 26px;
+  }
+}
 @media (max-width: 580px) {
   .certificates__container h1 {
-    font-size: 38px;
+    font-size: 24px;
   }
 }
 .certificates__container .certificates__links {
@@ -123,11 +143,23 @@
 }
 
 @media (max-width: 1760px) {
+  .certificates {
+    margin-bottom: 60px;
+  }
+  .certificates__container h1 {
+    margin-bottom: 30px;
+  }
+  .certificates__container .certificates__links {
+    margin-bottom: 40px;
+  }
   .certificates__container .certificates__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 80px;
+    grid-row-gap: 40px;
+  }
+  .certificates__container .certificates__cards .card p {
+    font-size: 18px;
   }
 }
 @media (max-width: 1360px) {
@@ -138,14 +170,32 @@
   }
 }
 @media (max-width: 960px) {
+  .certificates {
+    margin-bottom: 40px;
+  }
+  .certificates__container h1 {
+    margin-bottom: 24px;
+  }
+  .certificates__container .certificates__links {
+    margin-bottom: 30px;
+  }
   .certificates__container .certificates__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 60px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .certificates__container .certificates__cards .card p {
+    font-size: 16px;
   }
 }
 @media (max-width: 580px) {
+  .certificates {
+    margin-bottom: 30px;
+  }
+  .certificates__container h1 {
+    margin-bottom: 18px;
+  }
   .certificates__container .certificates__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,53 +1,64 @@
 @media (max-width: 1760px) {
   .blog {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       h1 {
+        margin-bottom: 30px;
       }
 
       .blog__text {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
+        font-size: 18px;
       }
 
       .blog__links {
         ul {
           li {
-            .a {
+            a {
+              padding: 16px 28px;
             }
           }
         }
       }
 
       .blog__content {
-        // padding: 40px;
+        padding: 25px;
 
         .blog__cards {
           // grid-template-columns: repeat(3, 1fr);
-          // grid-column-gap: 30px;
-          // grid-row-gap: 70px;
+          grid-column-gap: 20px;
+          grid-row-gap: 30px;
 
           .card {
-            // margin-bottom: 42px;
+            margin-bottom: 30px;
 
             img {
+              margin-bottom: 20px;
             }
 
             &__content {
               h3 {
+                font-size: 22px;
+                margin-bottom: 18px;
               }
 
               .card__tags {
+                margin-bottom: 18px;
                 p {
                 }
               }
 
               .card__date {
+                font-size: 18px;
               }
             }
 
             &-big {
+              margin-bottom: 0;
               img {
+                height: 350px;
+                margin: 0;
               }
 
               .card__content {
@@ -67,14 +78,11 @@
 
 @media (max-width: 1360px) {
   .blog {
-    margin-bottom: 70px;
-
     &__container {
       h1 {
       }
 
       .blog__text {
-        margin-bottom: 60px;
       }
 
       .blog__links {
@@ -90,15 +98,10 @@
         padding: 20px;
 
         .blog__cards {
-          // grid-template-columns: repeat(3, 1fr);
-          grid-column-gap: 15px;
-          grid-row-gap: 50px;
-
           .card {
             // margin-bottom: 42px;
 
             img {
-              max-height: 350px;
             }
 
             &__content {
@@ -117,7 +120,6 @@
 
             &-big {
               img {
-                height: 350px;
               }
 
               .card__content {

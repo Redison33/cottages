@@ -1,10 +1,12 @@
 @media (max-width: 960px) {
   .projects-detail {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
       h2 {
+        margin-bottom: 24px;
       }
 
       .projects-detail__imgs {
@@ -46,16 +48,20 @@
       .projects-detail__wrap {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
 
         .projects-detail__info {
           &-wrap {
             p {
+              font-weight: 500;
+              font-size: 16px;
             }
           }
         }
 
         .project-detail__actions {
           p {
+            font-size: 16px;
             span {
             }
           }
@@ -67,6 +73,7 @@
 
       .projects-detail__content {
         p {
+          font-size: 16px;
         }
       }
 
@@ -74,10 +81,12 @@
         grid-template-columns: repeat(1, 1fr);
 
         .card {
+          padding: 15px 25px;
           h3 {
           }
 
           p {
+            font-size: 16px;
           }
         }
       }
@@ -97,14 +106,67 @@
   }
 
   .contactForm {
-    padding: 60px 0;
+    padding: 30px 0;
 
     &__container {
       display: block;
 
       .contactForm__info {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        h2 {
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p {
+            }
+          }
+        }
       }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              font-size: 16px;
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
     }
   }
 }

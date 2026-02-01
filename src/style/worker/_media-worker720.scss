@@ -1,43 +1,35 @@
 @media (max-width: 960px) {
   .workers {
+    margin-bottom: 40px;
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
 
       .workers__links {
-        margin-bottom: 40px;
-
-        ul {
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-
-          li {
-            a {
-              @include base-tab;
-              display: block;
-            }
-          }
-        }
+        margin-bottom: 30px;
       }
 
       .group {
-        margin-bottom: 100px;
+        margin-bottom: 30px;
 
         h2 {
-          margin-bottom: 30px;
+          margin-bottom: 24px;
         }
 
         .group__cards {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 60px;
+          gap: 30px;
 
           .card {
-            min-width: unset;
-
             img {
-              height: 440px;
+            }
+
+            h3 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 16px;
             }
           }
         }

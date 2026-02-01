@@ -1,4 +1,45 @@
 @media (max-width: 1760px) {
+  .feedback {
+    margin-bottom: 60px;
+    &__container {
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      .feedback__content {
+        gap: 20px;
+
+        .card {
+          padding: 40px 60px;
+          a {
+            font-size: 22px;
+          }
+
+          p {
+            font-size: 18px;
+            margin-bottom: 24px;
+          }
+
+          &__gallery {
+            img {
+              width: 150px;
+              height: 110px;
+            }
+          }
+
+          .raiting {
+            span {
+            }
+          }
+
+          &::after {
+            left: 15px;
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1360px) {
@@ -11,7 +52,7 @@
         gap: 20px;
 
         .card {
-          padding: 30px;
+          padding: 20px 40px;
 
           .card__header {
             flex-direction: column;

@@ -1,8 +1,12 @@
 @media (max-width: 960px) {
   .services {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     &__container {
+      h1 {
+        margin-bottom: 24px;
+      }
+
       .services__content {
         grid-template-columns: repeat(2, 1fr);
         .card {
@@ -19,9 +23,13 @@
   }
 
   .finishProject {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     &__container {
+      h2 {
+        margin-bottom: 24px;
+      }
+
       .swiper {
         .swiper-wrapper {
           .swiper-slide {

@@ -5,7 +5,7 @@
   margin: 0 auto;
 
   @media (max-width: 1760px) {
-    margin: 0 80px;
+    margin: 0 100px;
   }
 
   @media (max-width: 1360px) {
@@ -44,6 +44,11 @@
 
   &:focus-visible {
     border-color: $button-background-focus;
+  }
+
+  @media (max-width: 960px) {
+    padding: 12px 16px;
+    font-size: 16px;
   }
 }
 
@@ -262,6 +267,10 @@
   &:hover {
     color: $link-text-hover;
   }
+
+  @media (max-width: 960px) {
+    font-size: 16px;
+  }
 }
 
 @mixin link-black {
@@ -292,6 +301,11 @@
   &:active {
     border-color: $input-border-active;
   }
+
+  @media (max-width: 960px) {
+    padding: 11px 20px;
+    font-size: 16px;
+  }
 }
 
 @mixin base-textarea {
@@ -316,6 +330,11 @@
 
   &:active {
     border-color: $input-border-active;
+  }
+
+  @media (max-width: 960px) {
+    padding: 11px 20px;
+    font-size: 16px;
   }
 }
 
@@ -386,6 +405,21 @@
     }
   }
 
+  @media (max-width: 960px) {
+    &__inner {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    &__list {
+      font-size: 16px;
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+  }
+
   // &:hover {
   //   &__inner {
   //     border-color: $input-border-hover;
@@ -447,12 +481,20 @@
   line-height: 100%;
   text-transform: uppercase;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1760px) {
     font-size: 60px;
   }
 
-  @media (max-width: 580px) {
+  @media (max-width: 1600px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 960px) {
     font-size: 40px;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 30px;
   }
 }
 
@@ -462,8 +504,24 @@
   line-height: 100%;
   text-transform: uppercase;
 
+  @media (max-width: 1760px) {
+    font-size: 46px;
+  }
+
+  @media (max-width: 1600px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 26px;
+  }
+
   @media (max-width: 580px) {
-    font-size: 38px;
+    font-size: 24px;
   }
 }
 
@@ -471,6 +529,18 @@
   font-size: $font-size-h3;
   font-weight: $font-weight-regular;
   line-height: 100%;
+
+  @media (max-width: 1600px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 20px;
+  }
 }
 
 @mixin tag {

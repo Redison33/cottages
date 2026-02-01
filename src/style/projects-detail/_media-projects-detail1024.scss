@@ -1,12 +1,159 @@
 @media (max-width: 1760px) {
   .projects-detail {
-    margin-bottom: 70px;
+    &__container {
+      margin-bottom: 60px;
+
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .projects-detail__imgs {
+        .projects-detail__slider {
+          max-height: 500px;
+          .swiper-slide {
+            img {
+            }
+          }
+        }
+
+        .projects-detail__gallery {
+          max-height: 500px;
+          .swiper-slide {
+            img {
+            }
+
+            &-thumb-active {
+              img {
+              }
+            }
+          }
+        }
+      }
+
+      .projects-detail__wrap {
+        gap: 20px;
+        margin-bottom: 40px;
+        flex-wrap: nowrap;
+
+        .projects-detail__info {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 5px;
+
+          &-wrap {
+            padding: 15px;
+
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .project-detail__actions {
+          p {
+            font-size: 18px;
+            span {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+
+      .projects-detail__content {
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .projects-detail__cards {
+        .card {
+          h3 {
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .projects-detail__video {
+        .video {
+          video {
+          }
+
+          button {
+            span {
+            }
+          }
+        }
+      }
+    }
   }
 
   .contactForm {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &__container {
+      padding: 0;
+
+      .contactForm__info {
+        gap: 24px;
+        h2 {
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+              margin-bottom: 16px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 @media (max-width: 1760px) {
   .services {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       h1 {
@@ -23,14 +23,19 @@
   }
 
   .finishProject {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
+      h2 {
+        margin-bottom: 30px;
+      }
+
       .swiper {
         .swiper-wrapper {
           .swiper-slide {
-            width: 870px;
+            width: 700px;
             img {
+              height: 400px;
             }
           }
         }
@@ -41,8 +46,6 @@
 
 @media (max-width: 1360px) {
   .finishProject {
-    margin-bottom: 70px;
-
     &__container {
       .swiper {
         .swiper-wrapper {

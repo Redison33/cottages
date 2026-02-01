@@ -1,46 +1,34 @@
 @media (max-width: 580px) {
-  .about {
+  .FAQ {
+    margin-bottom: 30px;
+
     &__container {
       h1 {
+        margin-bottom: 18px;
       }
 
-      .about__wrap {
-        img {
-          width: 100%;
-          height: 300px;
-        }
-
-        .aboout__content {
-          h3 {
-          }
-
-          ul {
-          }
-
-          p,
+      .FAQ__links {
+        ul {
           li {
+            a {
+            }
           }
-
-          a,
-          button {
-          }
-        }
-
-        &:nth-child(2n + 4) {
         }
       }
 
-      .about__cards {
-        grid-template-columns: repeat(1, 1fr);
-
-        .card {
-          h3 {
+      .FAQ__content {
+        .accordion {
+          .accordion__button {
+            padding: 15px 20px;
           }
 
-          p {
-          }
+          .accordion__content {
+            .accordion__wrap {
+              padding: 15px 20px;
 
-          a {
+              p {
+              }
+            }
           }
         }
       }
@@ -51,12 +39,13 @@
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 16px;
 
       .contactForm__info {
         margin-bottom: 0;
         display: contents;
         h2 {
+          margin-bottom: 16px;
         }
 
         p {
@@ -64,17 +53,25 @@
 
         .personal {
           order: 1;
+          gap: 20px;
+
           img {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
           }
 
           &__wrap {
             h4 {
+              font-size: 16px;
             }
 
             h5 {
+              font-size: 16px;
             }
 
             p {
+              font-size: 14px;
             }
           }
         }

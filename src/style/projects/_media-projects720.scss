@@ -1,10 +1,13 @@
 @media (max-width: 960px) {
   .projects {
+    margin-bottom: 40px;
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
 
       .projects__links {
+        margin-bottom: 30px;
         ul {
           li {
             .a {
@@ -32,9 +35,11 @@
           }
 
           h3 {
+            font-size: 18px;
           }
 
           &__status {
+            font-size: 16px;
           }
 
           &__tags {

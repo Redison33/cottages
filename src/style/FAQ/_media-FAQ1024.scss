@@ -1,12 +1,101 @@
 @media (max-width: 1760px) {
   .FAQ {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+
+    &__container {
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      .FAQ__links {
+        margin-bottom: 40px;
+
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+
+      .FAQ__content {
+        .accordion {
+          .accordion__button {
+            padding: 20px 40px;
+          }
+
+          .accordion__content {
+            .accordion__wrap {
+              padding: 20px 40px;
+
+              p {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .contactForm {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &__container {
+      padding: 0;
+
+      .contactForm__info {
+        gap: 24px;
+        h2 {
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+              margin-bottom: 16px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
     }
   }
 }

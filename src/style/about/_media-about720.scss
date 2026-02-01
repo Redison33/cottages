@@ -1,26 +1,34 @@
 @media (max-width: 960px) {
   .about {
+    margin-bottom: 40px;
     &__container {
       h1 {
+        margin-bottom: 24px;
       }
 
       .about__wrap {
         flex-direction: column !important;
         align-items: unset;
+        margin-bottom: 30px;
+        gap: 24px;
 
         img {
           width: 100%;
+          height: 320px;
         }
 
         .aboout__content {
           h3 {
+            margin-bottom: 20px;
           }
 
           ul {
+            gap: 20px;
           }
 
           p,
           li {
+            font-size: 16px;
           }
 
           a,
@@ -34,12 +42,22 @@
 
       .about__cards {
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 40px;
+        gap: 15px;
 
         .card {
+          padding: 15px 20px;
+          img {
+            height: 50px;
+          }
+
           h3 {
+            font-size: 20px;
+            margin-bottom: 24px;
           }
 
           p {
+            font-size: 16px;
           }
 
           a {

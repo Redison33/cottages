@@ -1,8 +1,9 @@
 @media (max-width: 580px) {
   .feedback {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     &__container {
       h1 {
+        margin-bottom: 18px;
       }
 
       .feedback__content {
@@ -15,15 +16,21 @@
 
           .card__header {
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
+            margin-bottom: 10px;
             a {
             }
 
             .raiting {
-              span {
+              &__wrap {
+                img {
+                  width: 16px;
+                  height: 16px;
+                }
               }
 
-              &__wrap {
+              span {
+                font-size: 16px;
               }
             }
           }

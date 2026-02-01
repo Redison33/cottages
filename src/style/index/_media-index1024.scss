@@ -1,8 +1,8 @@
 @media (max-width: 1760px) {
   .header {
     margin: 0;
-    left: 80px;
-    right: 80px;
+    left: 100px;
+    right: 100px;
     width: unset;
     transform: none;
   }
@@ -21,6 +21,8 @@
 
         .banner__list {
           li {
+            font-size: 18px;
+            font-weight: 500;
           }
         }
       }
@@ -28,10 +30,11 @@
   }
 
   .filter {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       h2 {
+        margin-bottom: 40px;
       }
 
       .filter__form {
@@ -47,17 +50,18 @@
   }
 
   .projects {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .projects__info {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
 
         .projects__wrap {
           h2 {
           }
 
           p {
+            font-size: 18px;
           }
         }
 
@@ -67,6 +71,7 @@
 
       .projects__content {
         .card {
+          height: 350px;
           img {
           }
 
@@ -78,17 +83,18 @@
   }
 
   .services {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .services__info {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
 
         .services__wrap {
           h2 {
           }
 
           p {
+            font-size: 18px;
           }
         }
 
@@ -99,7 +105,12 @@
       .services__content {
         .services__tabs {
           .tab {
+            padding: 24px 42px;
+            font-size: 18px;
             span {
+              &::after {
+                height: 1px;
+              }
             }
           }
         }
@@ -113,22 +124,23 @@
   }
 
   .achievement {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
-      @include container;
-
       .achievement__info {
+        margin-bottom: 40px;
         h2 {
         }
       }
 
       .achievement__content {
         .card {
+          padding: 45px 20px;
           h3 {
           }
 
           p {
+            font-size: 18px;
           }
         }
       }
@@ -136,27 +148,24 @@
   }
 
   .possibilities {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    margin-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
 
     &__container {
       .possibilities__info {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
 
         h2 {
-          @include title2;
-          margin-bottom: 24px;
         }
 
         p {
-          max-width: 900px;
-          color: $actions-text;
-          font-size: $font-size-text;
+          font-size: 18px;
         }
       }
 
       .possibilities__content {
+        // grid-template-rows: repeat(3, 400px);
         .card {
           img {
           }
@@ -165,6 +174,7 @@
           }
 
           p {
+            font-size: 18px;
           }
 
           &:first-child {
@@ -194,31 +204,39 @@
   }
 
   .reviews {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .reviews__info {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
 
         h2 {
         }
 
         p {
+          font-size: 18px;
         }
       }
 
       .reviews__content {
+        padding: 40px;
         .reviews__wrap {
+          gap: 40px;
+          max-height: 65vh;
           .card {
             padding-right: 40px;
             a {
             }
 
             p {
+              font-size: 18px;
+              margin-bottom: 24px;
             }
 
             &__gallery {
               img {
+                width: 150px;
+                height: 110px;
               }
             }
 
@@ -239,7 +257,7 @@
   }
 
   .social {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .social__info {
@@ -275,17 +293,19 @@
   }
 
   .contactForm {
-    padding-top: 70px;
+    padding-top: 60px;
 
     &__container {
       padding: 0;
-      margin-bottom: 70px;
+      margin-bottom: 60px;
 
       .contactForm__info {
+        gap: 24px;
         h2 {
         }
 
         p {
+          font-size: 18px;
         }
 
         .personal {
@@ -297,9 +317,11 @@
             }
 
             h5 {
+              margin-bottom: 16px;
             }
 
             p {
+              font-size: 16px;
             }
           }
         }
@@ -332,20 +354,23 @@
     }
 
     img {
+      max-height: 600px;
     }
   }
 
   .comfort {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &__container {
       .comfort__info {
+        margin-bottom: 40px;
         h2 {
         }
       }
 
       .comfort__content {
         p {
+          font-size: 18px;
         }
       }
     }
@@ -381,7 +406,7 @@
 
   .filter {
     &__container {
-      padding: 45px 0 60px 0;
+      padding: 45px 0;
       h2 {
       }
 
@@ -400,8 +425,6 @@
   .projects {
     &__container {
       .projects__info {
-        margin-bottom: 60px;
-
         .projects__wrap {
           h2 {
           }
@@ -431,8 +454,6 @@
   .services {
     &__container {
       .services__info {
-        margin-bottom: 60px;
-
         .services__wrap {
           h2 {
           }
@@ -453,6 +474,7 @@
           min-width: unset;
 
           .tab {
+            font-size: 18px;
             span {
             }
           }
@@ -479,7 +501,7 @@
         grid-template-columns: repeat(2, 1fr);
 
         .card {
-          padding: 75px 60px;
+          padding: 30px;
 
           h3 {
           }
@@ -560,7 +582,6 @@
       .reviews__content {
         .reviews__wrap {
           .card {
-            padding-right: 30px;
             a {
             }
 
@@ -589,7 +610,7 @@
   }
 
   .social {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .social__info {
@@ -625,11 +646,11 @@
   }
 
   .contactForm {
-    padding-top: 70px;
+    padding-top: 60px;
 
     &__container {
       padding: 0;
-      margin-bottom: 70px;
+      margin-bottom: 60px;
 
       .contactForm__info {
         h2 {
@@ -686,7 +707,7 @@
   }
 
   .comfort {
-    padding: 70px 0;
+    padding: 60px 0;
 
     &__container {
       .comfort__info {

@@ -1,8 +1,9 @@
-@media (max-width: 1360px) {
+@media (max-width: 1760px) {
   .contacts {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     &__container {
       h1 {
+        margin-bottom: 30px;
       }
 
       .contacts__wrap {
@@ -12,12 +13,15 @@
           gap: 10px;
 
           .card {
-            padding: 30px;
+            padding: 20px;
 
             h3 {
+              font-size: 22px;
+              margin-bottom: 15px;
             }
 
             p {
+              font-size: 18px;
             }
           }
         }
@@ -37,15 +41,17 @@
       }
 
       .contacts__info {
-        padding: 30px;
+        padding: 20px;
 
         h2 {
+          font-size: 22px;
         }
 
         .contacts__content {
           flex-wrap: wrap;
 
           p {
+            font-size: 18px;
           }
         }
       }
@@ -53,7 +59,7 @@
   }
 
   .social {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     &__container {
       .social__info {
@@ -89,16 +95,18 @@
   }
 
   .contactForm {
-    padding-top: 70px 0;
+    padding: 60px 0;
 
     &__container {
       padding: 0;
 
       .contactForm__info {
+        gap: 24px;
         h2 {
         }
 
         p {
+          font-size: 18px;
         }
 
         .personal {
@@ -110,9 +118,11 @@
             }
 
             h5 {
+              margin-bottom: 16px;
             }
 
             p {
+              font-size: 16px;
             }
           }
         }
@@ -142,9 +152,6 @@
           }
         }
       }
-    }
-
-    img {
     }
   }
 }

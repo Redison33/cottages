@@ -1,5 +1,5 @@
-@import "../_vars.scss";
-@import "../_mixin.scss";
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 .blog {
   margin-bottom: 100px;
@@ -79,6 +79,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 30px;
         grid-row-gap: 70px;
+        margin-bottom: 30px;
 
         .card {
           display: block;
@@ -143,7 +144,7 @@
               flex-direction: column;
 
               h3 {
-                font-size: $font-size-h3;
+                @include title3;
                 text-transform: uppercase;
               }
 

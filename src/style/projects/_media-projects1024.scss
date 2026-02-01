@@ -1,6 +1,56 @@
 @media (max-width: 1760px) {
   .projects {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    &__container {
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      .projects__links {
+        margin-bottom: 40px;
+        ul {
+          li {
+            .a {
+            }
+          }
+        }
+      }
+
+      .projects__cards {
+        gap: 20px;
+        .card {
+          margin-bottom: 20px;
+          .slider {
+            margin-bottom: 20px;
+            img {
+              height: 300px;
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          h3 {
+          }
+
+          &__status {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          &__tags {
+            margin-bottom: 20px;
+            p {
+            }
+          }
+
+          a {
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,9 +1,12 @@
 @media (max-width: 580px) {
   .projects-detail {
+    margin-bottom: 30px;
     &__container {
       h1 {
+        margin-bottom: 18px;
       }
       h2 {
+        margin-bottom: 18px;
       }
 
       .projects-detail__imgs {
@@ -84,6 +87,8 @@
 
         .card {
           h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
           }
 
           p {
@@ -109,12 +114,13 @@
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 16px;
 
       .contactForm__info {
         margin-bottom: 0;
         display: contents;
         h2 {
+          margin-bottom: 16px;
         }
 
         p {
@@ -122,17 +128,25 @@
 
         .personal {
           order: 1;
+          gap: 20px;
+
           img {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
           }
 
           &__wrap {
             h4 {
+              font-size: 16px;
             }
 
             h5 {
+              font-size: 16px;
             }
 
             p {
+              font-size: 14px;
             }
           }
         }

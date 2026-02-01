@@ -1,48 +1,86 @@
 @media (max-width: 580px) {
   .workers {
+    margin-bottom: 30px;
     &__container {
-      //   h1 {
-      //   }
+      h1 {
+        margin-bottom: 18px;
+      }
 
-      //   .workers__links {
-      //     margin-bottom: 40px;
-
-      //     ul {
-      //       display: flex;
-      //       gap: 20px;
-      //       flex-wrap: wrap;
-
-      //       li {
-      //         a {
-      //           @include base-tab;
-      //           display: block;
-      //         }
-      //       }
-      //     }
-      //   }
+      .workers__links {
+      }
 
       .group {
-        margin-bottom: 100px;
-
         h2 {
-          margin-bottom: 30px;
+          margin-bottom: 18px;
         }
 
         .group__cards {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
+          gap: 20px;
           align-items: center;
+          justify-content: center;
 
           .card {
-            max-width: 375px;
-
+            min-width: 300px;
+            max-width: 300px;
             img {
-              height: 490px;
+              height: 360px;
+              margin-bottom: 10px;
+            }
+
+            h3 {
+            }
+
+            p {
             }
           }
         }
       }
     }
   }
+  // .workers {
+  //   &__container {
+  //     //   h1 {
+  //     //   }
+
+  //     //   .workers__links {
+  //     //     margin-bottom: 40px;
+
+  //     //     ul {
+  //     //       display: flex;
+  //     //       gap: 20px;
+  //     //       flex-wrap: wrap;
+
+  //     //       li {
+  //     //         a {
+  //     //           @include base-tab;
+  //     //           display: block;
+  //     //         }
+  //     //       }
+  //     //     }
+  //     //   }
+
+  //     .group {
+  //       margin-bottom: 100px;
+
+  //       h2 {
+  //         margin-bottom: 30px;
+  //       }
+
+  //       .group__cards {
+  //         display: flex;
+  //         flex-direction: column;
+  //         gap: 30px;
+  //         align-items: center;
+
+  //         .card {
+  //           max-width: 375px;
+
+  //           img {
+  //             height: 490px;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
