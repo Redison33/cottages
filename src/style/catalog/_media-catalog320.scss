@@ -1,0 +1,39 @@
+@media (max-width: 580px) {
+  .certificates {
+    margin-bottom: 30px;
+    &__container {
+      h1 {
+        margin-bottom: 18px;
+      }
+
+      .certificates__links {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+
+      .certificates__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+
+        .card {
+          img {
+            margin-bottom: 10px;
+          }
+
+          h3 {
+          }
+
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

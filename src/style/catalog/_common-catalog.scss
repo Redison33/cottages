@@ -1,0 +1,169 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.catalog {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .catalog__wrap {
+      display: flex;
+      gap: 40px;
+
+      .catalog__filter {
+        display: none;
+        width: 330px;
+        min-width: 330px;
+      }
+
+      .catalog__cards {
+        width: 800px;
+        // max-width: 100%;
+        // display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        // position: relative;
+
+        .card {
+          width: calc(50% - 16px);
+          // display: flex;
+          flex-direction: column;
+          gap: 20px;
+          // position: relative;
+
+          .add-comparison {
+            border: none;
+            padding: 0;
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 20px;
+
+            label {
+              cursor: pointer;
+              width: 34px;
+              height: 34px;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: $primary-background;
+              border-radius: 50%;
+
+              input {
+                cursor: pointer;
+                opacity: 0;
+                position: absolute;
+              }
+            }
+
+            & input:checked ~ svg {
+              path {
+                fill: #b1a489;
+              }
+            }
+
+            svg {
+              cursor: pointer;
+              path {
+                transition: fill 0.3s ease-in-out;
+              }
+            }
+
+            &--active {
+              background-color: #b1a489;
+
+              svg {
+                path {
+                  fill: $primary-background;
+                }
+              }
+            }
+          }
+
+          .slider {
+            width: 100%;
+            cursor: e-resize;
+            img {
+              height: 380px;
+              border-radius: 10px;
+              object-fit: cover;
+              width: 100%;
+            }
+
+            .slick-dots {
+              left: 30px;
+              right: 30px;
+              transform: none;
+              bottom: 12px;
+
+              li {
+                flex: 1;
+                width: unset;
+                min-width: 6px;
+                height: 6px;
+                border-radius: 3px;
+              }
+            }
+          }
+
+          &__wrap {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            h3 {
+              font-size: $font-size-text;
+              font-weight: $font-weight-bold;
+              color: $actions-text;
+            }
+
+            p {
+              font-size: $font-size-text;
+              font-weight: $font-weight-regular;
+              color: $actions-text;
+            }
+          }
+
+          &__info {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 30px;
+            border-radius: 15px;
+            background-color: $primary-background;
+            border: 1px solid #0000001c;
+
+            &-wrap {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+
+              img {
+                width: unset;
+                height: unset;
+              }
+
+              p {
+                font-size: $font-size-tag;
+                font-weight: $font-weight-bold;
+                color: $actions-text;
+              }
+            }
+          }
+
+          .open-modal {
+            @include base-button;
+          }
+        }
+      }
+    }
+  }
+}
