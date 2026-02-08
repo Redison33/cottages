@@ -18,17 +18,14 @@
       ul {
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
         padding: 0;
-        overflow-x: auto;
 
         li {
           list-style: none;
-
           a {
             @include base-tab;
             display: block;
-            border-radius: 10px;
-            padding: 25px 20px;
           }
 
           .filter--active {

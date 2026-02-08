@@ -22,34 +22,34 @@
   font-weight: 500;
   font-style: normal;
 }
-.projects-detail {
+.catalog-detail {
   margin-bottom: 100px;
 }
-.projects-detail__container {
+.catalog-detail__container {
   max-width: 1600px;
   margin: 0 auto;
 }
 @media (max-width: 1760px) {
-  .projects-detail__container {
+  .catalog-detail__container {
     margin: 0 100px;
   }
 }
 @media (max-width: 1360px) {
-  .projects-detail__container {
+  .catalog-detail__container {
     margin: 0 60px;
   }
 }
 @media (max-width: 960px) {
-  .projects-detail__container {
+  .catalog-detail__container {
     margin: 0 40px;
   }
 }
 @media (max-width: 700px) {
-  .projects-detail__container {
+  .catalog-detail__container {
     margin: 0 20px;
   }
 }
-.projects-detail__container h1 {
+.catalog-detail__container h1 {
   font-size: 56px;
   font-weight: 400;
   line-height: 100%;
@@ -57,128 +57,84 @@
   margin-bottom: 40px;
 }
 @media (max-width: 1760px) {
-  .projects-detail__container h1 {
+  .catalog-detail__container h1 {
     font-size: 46px;
   }
 }
 @media (max-width: 1600px) {
-  .projects-detail__container h1 {
+  .catalog-detail__container h1 {
     font-size: 36px;
   }
 }
 @media (max-width: 1360px) {
-  .projects-detail__container h1 {
+  .catalog-detail__container h1 {
     font-size: 32px;
   }
 }
 @media (max-width: 960px) {
-  .projects-detail__container h1 {
+  .catalog-detail__container h1 {
     font-size: 26px;
   }
 }
 @media (max-width: 580px) {
-  .projects-detail__container h1 {
+  .catalog-detail__container h1 {
     font-size: 24px;
   }
 }
-.projects-detail__container h2 {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 100%;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-@media (max-width: 1600px) {
-  .projects-detail__container h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 960px) {
-  .projects-detail__container h2 {
-    font-size: 22px;
-  }
-}
-@media (max-width: 580px) {
-  .projects-detail__container h2 {
-    font-size: 20px;
-  }
-}
-.projects-detail__container .projects-detail__imgs {
-  max-height: 100%;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 15px;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider {
   width: 100%;
-  max-height: 700px;
+  max-width: 1100px;
+  height: 650px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
   cursor: zoom-in;
+  margin: 0;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-slide {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-slide {
   width: 100%;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-slide img {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-next,
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-prev {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-next,
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-prev {
   display: none;
   background-color: #ffffff;
   border-radius: 50%;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-next svg,
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-prev svg {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-next svg,
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-prev svg {
   fill: transparent;
   width: 6px;
   height: 14px;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-next {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-next {
   right: 35px;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__slider .swiper-button-prev {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-button-prev {
   left: 35px;
 }
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery {
-  min-width: 170px;
-  max-width: 170px;
-  max-height: 700px;
-}
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide {
-  width: 170px;
-  height: 150px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: blur(1px) opacity(70%);
-  transition: filter 0.3s ease-in-out;
-}
-.projects-detail__container .projects-detail__imgs .projects-detail__gallery .swiper-slide-thumb-active img {
-  filter: blur(0px) opacity(100%);
-}
-.projects-detail__container .projects-detail__wrap {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 100px;
-}
-.projects-detail__container .projects-detail__wrap .projects-detail__info {
-  display: grid;
-  grid-template-columns: repeat(6, 170px);
+  flex-direction: column;
   gap: 10px;
 }
-.projects-detail__container .projects-detail__wrap .projects-detail__info-wrap {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__info {
+  display: grid;
+  grid-template-columns: repeat(3, 161px);
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__info-wrap {
   padding: 20px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1098039216);
@@ -188,26 +144,13 @@
   align-items: center;
   gap: 10px;
 }
-.projects-detail__container .projects-detail__wrap .projects-detail__info-wrap p {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__info-wrap p {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   color: #454545;
 }
-.projects-detail__container .projects-detail__wrap .project-detail__actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-.projects-detail__container .projects-detail__wrap .project-detail__actions p {
-  font-size: 20px;
-  font-weight: 500;
-}
-.projects-detail__container .projects-detail__wrap .project-detail__actions p span {
-  font-weight: 700;
-}
-.projects-detail__container .projects-detail__wrap .project-detail__actions a {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -219,85 +162,130 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  text-wrap: nowrap;
 }
-.projects-detail__container .projects-detail__wrap .project-detail__actions a:hover {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.projects-detail__container .projects-detail__wrap .project-detail__actions a:focus-visible {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
-  .projects-detail__container .projects-detail__wrap .project-detail__actions a {
+  .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button {
     padding: 12px 16px;
     font-size: 16px;
   }
 }
-.projects-detail__container .projects-detail__content p {
-  font-size: 20px;
-  color: #454545;
-  margin-bottom: 40px;
-}
-.projects-detail__container .projects-detail__cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 15px;
-  margin-bottom: 100px;
-}
-.projects-detail__container .projects-detail__cards .card {
-  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark {
   border-radius: 10px;
-  padding: 25px 35px;
-  background-color: #ffffff;
-}
-.projects-detail__container .projects-detail__cards .card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #b1a489;
-  margin-bottom: 20px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
   text-transform: uppercase;
+  background-color: #28282c;
+  border-color: #28282c;
 }
-.projects-detail__container .projects-detail__cards .card p {
-  font-size: 20px;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
+}
+@media (max-width: 960px) {
+  .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark:hover {
+  background-color: #b1a489;
+  border-color: #b1a489;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-grey {
   color: #454545;
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
 }
-.projects-detail__container .projects-detail__video .video {
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-grey:hover {
+  background-color: #b9b9b9;
+  border-color: #b9b9b9;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison {
   position: relative;
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1098039216);
+  padding: 6px;
 }
-.projects-detail__container .projects-detail__video .video video {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  filter: brightness(30%);
-}
-.projects-detail__container .projects-detail__video .video button {
-  position: absolute;
-  top: calc(50% - 45px);
-  left: calc(50% - 45px);
-  width: 90px;
-  height: 90px;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison label {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
-  z-index: 1;
+  background-color: transparent;
   border-radius: 50%;
-  transition: border-color 0.3s ease-in-out;
 }
-.projects-detail__container .projects-detail__video .video button span {
-  margin-left: 20px;
-  display: block;
-  border: 15px solid transparent;
-  border-left: 25px solid #fff;
-  transition: border-color 0.3s ease-in-out;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison label input {
+  cursor: pointer;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
 }
-.projects-detail__container .projects-detail__video .video button:hover {
-  border-color: #b1a489;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison input:checked ~ svg path {
+  fill: #b1a489;
 }
-.projects-detail__container .projects-detail__video .video button:hover span {
-  border-left-color: #b1a489;
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison svg {
+  cursor: pointer;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .add-comparison:hover {
+  background-color: #dfdfdf;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: auto;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__gallery {
+  width: 100%;
+  max-height: 150px;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__gallery .swiper-slide {
+  width: 170px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__gallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(1px) opacity(70%);
+  transition: filter 0.3s ease-in-out;
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__gallery .swiper-slide-thumb-active img {
+  filter: blur(0px) opacity(100%);
+}
+
+.contactForm {
+  margin-bottom: 100px;
+}
+
+.reviews__container .reviews__content {
+  background-color: #ffffff;
 }
 
 @media (max-width: 1760px) {
@@ -480,4 +468,4 @@
     font-size: 18px;
     margin-bottom: 15px;
   }
-}/*# sourceMappingURL=style-projects-detail.css.map */
+}/*# sourceMappingURL=style-catalog-detail.css.map */

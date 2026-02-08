@@ -1,0 +1,206 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.catalog-detail {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 40px;
+    }
+
+    .catalog-detail__wrap {
+      .catalog-detail__base {
+        // max-height: 100%;
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        .catalog-detail__slider {
+          width: 100%;
+          max-width: 1100px;
+          height: 650px;
+          object-fit: cover;
+          border-radius: 10px;
+          cursor: zoom-in;
+          margin: 0;
+
+          .swiper-slide {
+            width: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            display: none;
+            background-color: $primary-background;
+            border-radius: 50%;
+
+            svg {
+              fill: transparent;
+              width: 6px;
+              height: 14px;
+            }
+          }
+
+          .swiper-button-next {
+            right: 35px;
+          }
+
+          .swiper-button-prev {
+            left: 35px;
+          }
+        }
+
+        .catalog-detail__content {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .catalog-detail__info {
+            display: grid;
+            grid-template-columns: repeat(3, 161px);
+            gap: 10px;
+            margin-bottom: 5px;
+
+            &-wrap {
+              padding: 20px;
+              background-color: $primary-background;
+              border: 1px solid $button-tag-border;
+              border-radius: 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+
+              p {
+                text-align: center;
+                font-size: $font-size-tag;
+                font-weight: $font-weight-bold;
+                color: $actions-text;
+              }
+            }
+          }
+
+          .catalog-detail__button {
+            @include base-button;
+
+            &-dark {
+              @include dark-button;
+            }
+
+            &-grey {
+              color: #454545;
+              background-color: #dfdfdf;
+              border-color: #dfdfdf;
+
+              &:hover {
+                background-color: #b9b9b9;
+                border-color: #b9b9b9;
+              }
+            }
+          }
+
+          .add-comparison {
+            position: relative;
+            background-color: $primary-background;
+            border-color: $button-tag-border;
+            padding: 6px;
+
+            label {
+              cursor: pointer;
+              width: 34px;
+              height: 34px;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: transparent;
+              border-radius: 50%;
+
+              input {
+                cursor: pointer;
+                opacity: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+              }
+            }
+
+            & input:checked ~ svg {
+              path {
+                fill: #b1a489;
+              }
+            }
+
+            svg {
+              cursor: pointer;
+              path {
+                transition: fill 0.3s ease-in-out;
+              }
+            }
+
+            &:hover {
+              background-color: #dfdfdf;
+            }
+          }
+
+          .catalog-detail__buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: auto;
+
+            .catalog-detail__button {
+            }
+          }
+        }
+      }
+
+      .catalog-detail__gallery {
+        width: 100%;
+        max-height: 150px;
+
+        .swiper-slide {
+          width: 170px;
+          height: 150px;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px) opacity(70%);
+            transition: filter 0.3s ease-in-out;
+          }
+
+          &-thumb-active {
+            img {
+              filter: blur(0px) opacity(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contactForm {
+  margin-bottom: 100px;
+}
+
+.reviews {
+  &__container {
+    .reviews__content {
+      background-color: $primary-background;
+    }
+  }
+}

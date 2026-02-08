@@ -57,8 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('#bx-panel')) {
-    document.querySelector('.header').style.top =
-      42 + document.querySelector('#bx-panel').scrollHeight + 'px';
+    document.querySelector('.header').style.top = 42 + document.querySelector('#bx-panel').scrollHeight + 'px';
   }
 
   document.querySelector('.header__burger').addEventListener('click', () => {
@@ -95,8 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       link.addEventListener('click', (e) => {
         const nested = link.querySelector('.nested');
-        if (!nested || e.target.classList.contains('nested__link') || e.target.tagName === 'SPAN')
-          return;
+        if (!nested || e.target.classList.contains('nested__link') || e.target.tagName === 'SPAN') return;
 
         e.preventDefault();
 
@@ -183,10 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('.popular__slider'))
-    for (const [index, card] of document
-      .querySelector('.popular__slider')
-      .querySelectorAll('.slide')
-      .entries()) {
+    for (const [index, card] of document.querySelector('.popular__slider').querySelectorAll('.slide').entries()) {
       $(card).find('.slide__slider').slick({
         dots: true,
         draggable: false,
@@ -204,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           hoverInterval = setInterval(() => {
             $(card).find('.slide__slider').slick('slickNext');
-          }, 1500);
+          }, 2500);
         });
 
       $(card)
@@ -346,9 +341,35 @@ document.addEventListener('DOMContentLoaded', () => {
         accordion.querySelector('.accordion__content').removeAttribute('style');
       } else {
         accordion.classList.add('accordion--active');
-        accordion.querySelector('.accordion__content').style.height =
-          accordion.querySelector('.accordion__content').scrollHeight + 'px';
+        accordion.querySelector('.accordion__content').style.height = accordion.querySelector('.accordion__content').scrollHeight + 'px';
       }
     });
+  }
+
+  if (document.querySelector('.similar__cards')) {
+    for (const card of document.querySelector('.similar__cards').querySelectorAll('.card')) {
+      const $slider = $(card).find('.slider');
+
+      $slider.slick({
+        dots: true,
+        draggable: false,
+        arrows: false,
+      });
+
+      let hoverInterval = null;
+
+      $($slider).on('mouseenter', () => {
+        if (hoverInterval) return;
+
+        hoverInterval = setInterval(() => {
+          $slider.slick('slickNext');
+        }, 2500);
+      });
+
+      $($slider).on('mouseleave', () => {
+        clearInterval(hoverInterval);
+        hoverInterval = null;
+      });
+    }
   }
 });

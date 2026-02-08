@@ -147,6 +147,220 @@
     }
   }
 
+  .social {
+    margin-bottom: 60px;
+
+    &__container {
+      .social__info {
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          a {
+          }
+
+          &__header {
+            img {
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    padding-top: 60px;
+
+    &__container {
+      padding: 0;
+      padding-bottom: 60px;
+
+      .contactForm__info {
+        gap: 24px;
+        h2 {
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+              margin-bottom: 16px;
+            }
+
+            p,
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+      max-height: 600px;
+    }
+  }
+
+  .reviews {
+    margin-bottom: 60px;
+
+    &__container {
+      .reviews__info {
+        margin-bottom: 40px;
+
+        h2 {
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .reviews__content {
+        padding: 40px;
+        .reviews__wrap {
+          gap: 40px;
+          max-height: 65vh;
+          .card {
+            padding-right: 40px;
+            a {
+            }
+
+            p {
+              font-size: 18px;
+              margin-bottom: 24px;
+            }
+
+            &__gallery {
+              img {
+                width: 150px;
+                height: 110px;
+              }
+            }
+
+            .raiting {
+              span {
+              }
+            }
+
+            &::after {
+            }
+          }
+        }
+      }
+
+      .reviews__link {
+      }
+    }
+  }
+
+  .similar {
+    margin-bottom: 60px;
+
+    &__container {
+      @include container;
+
+      .similar__info {
+        margin-bottom: 30px;
+      }
+
+      .similar__cards {
+        gap: 20px;
+
+        .card {
+          .add-comparison {
+            label {
+              input {
+              }
+            }
+          }
+
+          .slider {
+            img {
+              height: 300px;
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          &__wrap {
+            h3 {
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+
+          &__info {
+            &-wrap {
+              img {
+              }
+
+              p {
+              }
+            }
+          }
+
+          a {
+          }
+        }
+      }
+    }
+  }
+
   .universal {
     margin-bottom: 60px;
 
@@ -346,6 +560,7 @@
       }
     }
   }
+
   .popular {
     margin-bottom: 60px;
     &__container {
@@ -404,6 +619,131 @@
 
         .slick-next {
           right: -7px;
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    padding-top: 60px;
+
+    &__container {
+      padding: 0;
+      padding-bottom: 60px;
+
+      .contactForm__info {
+        h2 {
+        }
+
+        p {
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p,
+            a {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              a {
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+    }
+  }
+
+  .reviews {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .reviews__info {
+        h2 {
+        }
+
+        p {
+        }
+      }
+
+      .reviews__content {
+        .reviews__wrap {
+          .card {
+            a {
+            }
+
+            p {
+            }
+
+            &__gallery {
+              img {
+              }
+            }
+
+            .raiting {
+              span {
+              }
+            }
+
+            &::after {
+            }
+          }
+        }
+      }
+
+      .reviews__link {
+      }
+    }
+  }
+
+  .similar {
+    margin-bottom: 60px;
+
+    &__container {
+      @include container;
+
+      .similar__info {
+        margin-bottom: 30px;
+      }
+
+      .similar__cards {
+        gap: 30px;
+
+        .card {
+          width: calc(50% - 16px);
         }
       }
     }

@@ -86,19 +86,21 @@
   gap: 40px;
 }
 .catalog__container .catalog__wrap .catalog__filter {
-  display: none;
   width: 330px;
   min-width: 330px;
 }
 .catalog__container .catalog__wrap .catalog__cards {
-  width: 800px;
+  width: 1230px;
+  display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 .catalog__container .catalog__wrap .catalog__cards .card {
   width: calc(50% - 16px);
+  display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 .catalog__container .catalog__wrap .catalog__cards .card .add-comparison {
   border: none;

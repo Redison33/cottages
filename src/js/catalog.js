@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hoverInterval = setInterval(() => {
           $slider.slick('slickNext');
-        }, 1500);
+        }, 2500);
       });
 
       $($slider).on('mouseleave', () => {

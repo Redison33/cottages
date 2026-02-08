@@ -26,67 +26,6 @@
       }
     }
   }
-
-  .contactForm {
-    padding: 60px 0;
-
-    &__container {
-      padding: 0;
-
-      .contactForm__info {
-        gap: 24px;
-        h2 {
-        }
-
-        p {
-          font-size: 18px;
-        }
-
-        .personal {
-          img {
-          }
-
-          &__wrap {
-            h4 {
-            }
-
-            h5 {
-              margin-bottom: 16px;
-            }
-
-            p {
-              font-size: 16px;
-            }
-          }
-        }
-      }
-
-      form {
-        .form-table {
-          .input {
-          }
-
-          .form__required {
-            .checkbox {
-            }
-
-            p {
-              a {
-              }
-            }
-          }
-
-          input[type='submit'] {
-          }
-        }
-
-        tfoot {
-          th {
-          }
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 1360px) {

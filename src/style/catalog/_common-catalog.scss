@@ -17,25 +17,25 @@
       gap: 40px;
 
       .catalog__filter {
-        display: none;
+        // display: none;
         width: 330px;
         min-width: 330px;
       }
 
       .catalog__cards {
-        width: 800px;
+        width: calc(1600px - 330px - 40px);
         // max-width: 100%;
-        // display: flex;
+        display: flex;
         flex-wrap: wrap;
         gap: 30px;
         // position: relative;
 
         .card {
           width: calc(50% - 16px);
-          // display: flex;
+          display: flex;
           flex-direction: column;
           gap: 20px;
-          // position: relative;
+          position: relative;
 
           .add-comparison {
             border: none;

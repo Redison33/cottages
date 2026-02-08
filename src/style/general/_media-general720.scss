@@ -181,6 +181,232 @@
     }
   }
 
+  .social {
+    margin-bottom: 40px;
+
+    &__container {
+      .social__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+      }
+
+      .social__content {
+        .telegram {
+          a {
+          }
+
+          &__header {
+            img {
+            }
+
+            .telegram__name {
+              h3 {
+              }
+            }
+          }
+
+          &__content {
+            p {
+            }
+
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    padding-top: 30px;
+
+    &__container {
+      padding: 0;
+      padding-bottom: 40px;
+      display: block;
+
+      .contactForm__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .personal {
+          img {
+          }
+
+          &__wrap {
+            h4 {
+            }
+
+            h5 {
+            }
+
+            p,
+            a {
+            }
+          }
+        }
+      }
+
+      form {
+        .form-table {
+          width: 100%;
+          .input {
+          }
+
+          .form__required {
+            .checkbox {
+            }
+
+            p {
+              font-size: 16px;
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+
+          input[type='submit'] {
+          }
+        }
+
+        tfoot {
+          th {
+          }
+        }
+      }
+    }
+
+    img {
+    }
+  }
+
+  .reviews {
+    margin-bottom: 40px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .reviews__info {
+        margin-bottom: 30px;
+        h2 {
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .reviews__content {
+        padding: 30px;
+        .reviews__wrap {
+          .card {
+            padding: 0;
+            padding-right: 20px;
+
+            .card__header {
+              a {
+                font-size: 20px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+
+            &__gallery {
+              img {
+              }
+            }
+
+            .raiting {
+              span {
+              }
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .reviews__link {
+      }
+    }
+  }
+
+  .similar {
+    margin-bottom: 40px;
+
+    &__container {
+      .similar__info {
+        margin-bottom: 30px;
+      }
+
+      .similar__cards {
+        gap: 20px;
+
+        .card {
+          gap: 15px;
+          width: calc(50% - 11px);
+
+          .add-comparison {
+            label {
+              input {
+              }
+            }
+          }
+
+          .slider {
+            img {
+              height: 280px;
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          &__wrap {
+            text-align: center;
+            h3 {
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          &__info {
+            padding: 5px 10px;
+            gap: 15px;
+            &-wrap {
+              gap: 10px;
+              img {
+              }
+
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .open-modal {
+            @include base-button;
+          }
+        }
+      }
+    }
+  }
+
   .modal {
     &-object {
       max-width: 500px;
