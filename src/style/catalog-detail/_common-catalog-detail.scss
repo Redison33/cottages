@@ -13,6 +13,8 @@
     }
 
     .catalog-detail__wrap {
+      margin-bottom: 70px;
+
       .catalog-detail__base {
         // max-height: 100%;
         display: flex;
@@ -186,6 +188,106 @@
             img {
               filter: blur(0px) opacity(100%);
             }
+          }
+        }
+      }
+    }
+
+    .layout {
+      margin-bottom: 30px;
+
+      h3 {
+        @include title3;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      .slider {
+        margin: 0 -15px;
+        .slide {
+          margin: 0 15px;
+          background-color: $primary-background;
+          border: 1px solid #0000001c;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 32px;
+
+          h4 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: $font-size-text;
+            font-weight: $font-weight-medium;
+          }
+
+          img {
+            height: 440px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .banner {
+      border-radius: 10px;
+      background-color: $secondary-background;
+      padding: 90px 0;
+      margin-bottom: 90px;
+
+      &__container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          @include title3;
+          text-transform: uppercase;
+          color: $primary-title;
+          text-align: center;
+          margin-bottom: 24px;
+        }
+
+        p {
+          font-size: $font-size-text;
+          color: $primary-title;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        button {
+          @include base-button;
+        }
+      }
+    }
+
+    .equipment {
+      margin-bottom: 100px;
+
+      h3 {
+        @include title3;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      &__buttons {
+        display: flex;
+        gap: 12px;
+
+        button {
+          background-color: $primary-background;
+          border: 1px solid #0000001c;
+          border-radius: 10px;
+          width: 135px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 12px;
+
+          img {
+            margin-bottom: auto;
           }
         }
       }
