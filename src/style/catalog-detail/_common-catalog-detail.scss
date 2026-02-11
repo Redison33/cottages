@@ -42,7 +42,7 @@
 
           .swiper-button-next,
           .swiper-button-prev {
-            display: none;
+            // display: none;
             background-color: $primary-background;
             border-radius: 50%;
 
@@ -83,6 +83,10 @@
               align-items: center;
               gap: 10px;
 
+              img {
+                height: 50px;
+              }
+
               p {
                 text-align: center;
                 font-size: $font-size-tag;
@@ -116,6 +120,8 @@
             background-color: $primary-background;
             border-color: $button-tag-border;
             padding: 6px;
+            display: flex;
+            align-items: center;
 
             label {
               cursor: pointer;
@@ -207,7 +213,7 @@
         .slide {
           margin: 0 15px;
           background-color: $primary-background;
-          border: 1px solid #0000001c;
+          border: 1px solid $button-tag-border;
           border-radius: 10px;
           display: flex;
           flex-direction: column;
@@ -275,20 +281,299 @@
       &__buttons {
         display: flex;
         gap: 12px;
+        margin-bottom: 24px;
 
         button {
           background-color: $primary-background;
-          border: 1px solid #0000001c;
+          border: 1px solid $button-tag-border;
           border-radius: 10px;
           width: 135px;
           display: flex;
           flex-direction: column;
           align-items: center;
           padding: 12px;
+          transition: color 0.3s ease-in-out background-color 0.3s ease-in-out;
+          text-transform: lowercase;
 
           img {
             margin-bottom: auto;
+            transition: filter 0.3s ease-in-out;
           }
+        }
+
+        .tab__button--active {
+          background-color: $button-background-secondary;
+          color: $button-text-primary;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+
+      &__wrap {
+        height: 400px;
+        position: relative;
+
+        .tab {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+
+          img {
+            border-radius: 10px;
+            object-fit: cover;
+            height: 100%;
+          }
+
+          &__content {
+            ul,
+            p {
+              padding: 0;
+              font-size: $font-size-text;
+              line-height: 20px;
+              color: $actions-text;
+              margin-bottom: 24px;
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+            }
+
+            li {
+              // padding-left: 30px;
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              position: relative;
+
+              &::before {
+                content: '';
+                min-width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $actions-text;
+              }
+            }
+          }
+
+          &--active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .gift {
+      margin-bottom: 100px;
+
+      h3 {
+        @include title3;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      .gift__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .card {
+          border: 1px solid $button-tag-border;
+          background-color: $primary-background;
+          border-radius: 10px;
+          padding: 40px 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: background-color 0.3s ease-in-out;
+
+          h4 {
+            font-size: $font-size-text;
+            color: $actions-text;
+            text-align: center;
+            transition: color 0.3s ease-in-out;
+          }
+
+          img {
+            transition: filter 0.3s ease-in-out;
+          }
+
+          &--active {
+            background-color: $button-background-primary;
+
+            h4 {
+              color: $primary-title;
+            }
+
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 100px;
+
+      h3 {
+        @include title3;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: $font-size-text;
+        color: $actions-text;
+      }
+    }
+
+    .material {
+      margin-bottom: 100px;
+
+      &__container {
+        padding: 60px;
+        background-color: $primary-background;
+        border: 1px solid $button-tag-border;
+        border-radius: 10px;
+
+        h3 {
+          @include title3;
+          text-transform: uppercase;
+          margin-bottom: 40px;
+        }
+
+        .material__wrap {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+
+          .material__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .card {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding-left: 50px;
+              position: relative;
+
+              h4,
+              p {
+                font-size: $font-size-text;
+                line-height: 120%;
+                color: $actions-text;
+              }
+
+              h4 {
+                font-weight: $font-weight-medium;
+                color: $primary-text;
+              }
+
+              p {
+                text-transform: lowercase;
+              }
+
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 24px;
+                height: 28px;
+                background-image: url('../../assets/img/material-list-decor.svg');
+              }
+            }
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .design {
+      margin-bottom: 100px;
+
+      h3 {
+        @include title3;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      .swiper {
+        &-wrapper {
+          .swiper-slide {
+            width: 1000px;
+            // height: 620px;
+
+            img {
+              height: 540px;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+              margin-bottom: 20px;
+              transition: filter 0.3s ease-in-out;
+            }
+
+            button {
+              opacity: 0;
+              @include base-button;
+              transition: opacity 0.3s ease-in-out;
+            }
+
+            .swiper-slide-shadow-left,
+            .swiper-slide-shadow-right {
+              height: 540px;
+            }
+
+            &-active {
+              button {
+                opacity: 1;
+              }
+            }
+
+            &-prev,
+            &-next {
+              img {
+                filter: brightness(60%);
+              }
+            }
+          }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+          background-color: $primary-background;
+          border-radius: 50%;
+
+          svg {
+            fill: transparent;
+            width: 6px;
+            height: 14px;
+          }
+        }
+
+        .swiper-button-next {
+          right: 35px;
+        }
+
+        .swiper-button-prev {
+          left: 35px;
         }
       }
     }

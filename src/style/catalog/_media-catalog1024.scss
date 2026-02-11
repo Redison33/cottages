@@ -1,72 +1,186 @@
 @media (max-width: 1760px) {
-  .certificates {
+  .catalog {
     margin-bottom: 60px;
+
     &__container {
       h1 {
         margin-bottom: 30px;
       }
 
-      .certificates__links {
-        margin-bottom: 40px;
-        ul {
-          li {
-            a {
-            }
-          }
-        }
-      }
+      .catalog__wrap {
+        display: flex;
+        gap: 40px;
+        align-items: start;
 
-      .certificates__cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 40px;
-
-        .card {
-          img {
+        .catalog__filter {
+          h2 {
           }
 
           h3 {
           }
 
-          p {
-            font-size: 18px;
+          .form__wrap {
+            // margin-bottom: 40px;
+
+            &-grid {
+            }
           }
         }
+
+        .catalog__content {
+          .catalog__actions {
+            .catalog__links {
+              // margin-bottom: 20px;
+            }
+          }
+
+          .catalog__tags {
+            margin-bottom: 30px;
+          }
+
+          .catalog__cards {
+            // gap: 30px;
+            // margin-bottom: 50px;
+
+            .card {
+              .slider {
+                img {
+                  height: 300px;
+                }
+
+                .slick-dots {
+                  li {
+                  }
+                }
+              }
+            }
+
+            .catalog__banner {
+              padding: 50px;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    margin-bottom: 60px;
+
+    &__container {
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      p,
+      ul {
+        font-size: 18px;
+        // margin-bottom: 20px;
+      }
+
+      ul {
+        // gap: 20px;
       }
     }
   }
 }
 
 @media (max-width: 1360px) {
-  .certificates {
+  .catalog {
+    margin-bottom: 60px;
+
     &__container {
       h1 {
+        margin-bottom: 30px;
       }
 
-      .certificates__links {
-        ul {
-          li {
-            a {
-            }
-          }
-        }
-      }
+      .catalog__wrap {
+        display: flex;
+        gap: 40px;
+        align-items: start;
 
-      .certificates__cards {
-        display: grid;
-        // grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 70px;
-
-        .card {
-          img {
+        .catalog__filter {
+          h2 {
           }
 
           h3 {
           }
 
-          p {
+          .form__wrap {
+            // margin-bottom: 40px;
+
+            &-grid {
+            }
+          }
+        }
+
+        .catalog__content {
+          .catalog__actions {
+            .catalog__links {
+              // margin-bottom: 20px;
+            }
+          }
+
+          .catalog__tags {
+            margin-bottom: 30px;
+          }
+
+          .catalog__cards {
+            gap: 15px;
+            // margin-bottom: 50px;
+
+            .card {
+              width: calc(50% - 8px);
+              .slider {
+                img {
+                  height: 200px;
+                }
+
+                .slick-dots {
+                  li {
+                  }
+                }
+              }
+
+              &__wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                text-align: start;
+
+                h3 {
+                  font-size: $font-size-text;
+                  font-weight: $font-weight-bold;
+                  color: $actions-text;
+                }
+
+                p {
+                  font-size: $font-size-text;
+                  font-weight: $font-weight-regular;
+                  color: $actions-text;
+                }
+              }
+
+              &__info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 15px;
+                gap: 5px;
+
+                &-wrap {
+                  gap: 30px;
+                  img {
+                    width: 30px;
+                  }
+                }
+              }
+            }
+
+            .catalog__banner {
+              padding: 50px;
+              gap: 50px;
+            }
           }
         }
       }

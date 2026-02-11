@@ -1,38 +1,130 @@
 @media (max-width: 580px) {
-  .certificates {
+  .catalog {
     margin-bottom: 30px;
+
     &__container {
       h1 {
         margin-bottom: 18px;
       }
 
-      .certificates__links {
-        ul {
-          li {
-            a {
-            }
-          }
-        }
-      }
+      .catalog__wrap {
+        display: flex;
+        gap: 40px;
+        align-items: start;
 
-      .certificates__cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 40px;
-
-        .card {
-          img {
-            margin-bottom: 10px;
+        .catalog__filter {
+          width: 100%;
+          h2 {
           }
 
           h3 {
           }
 
-          p {
-            margin-bottom: 10px;
+          .form__wrap {
+            // margin-bottom: 30px;
+
+            &-grid {
+            }
           }
         }
+
+        .catalog__content {
+          width: 100%;
+          .catalog__actions {
+            gap: 20px;
+            flex-direction: column;
+            .catalog__links {
+              order: 2;
+              // margin-bottom: 20px;
+            }
+
+            .filter-list {
+              width: 100%;
+              button {
+                width: 100%;
+              }
+            }
+          }
+
+          .catalog__tags {
+            margin-bottom: 18px;
+          }
+
+          .catalog__cards {
+            // gap: 30px;
+            margin-bottom: 30px;
+
+            .card {
+              width: 100%;
+              .slider {
+                img {
+                  height: 240px;
+                }
+
+                .slick-dots {
+                  li {
+                  }
+                }
+              }
+
+              &__wrap {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                h3 {
+                  font-size: $font-size-text;
+                  font-weight: $font-weight-bold;
+                  color: $actions-text;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+
+              &__info {
+                display: flex;
+                padding: 15px;
+                gap: 20px;
+
+                &-wrap {
+                  gap: 5px;
+                  img {
+                    width: 30px;
+                  }
+                  p {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+
+            .catalog__banner {
+              padding: 30px;
+              gap: 20px;
+              flex-direction: column;
+              align-items: start;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    margin-bottom: 30px;
+
+    &__container {
+      h2 {
+        margin-bottom: 18px;
+      }
+
+      p,
+      ul {
+        font-size: 16px;
+      }
+
+      ul {
       }
     }
   }
