@@ -465,6 +465,7 @@
   background-color: #000000;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list {
+  flex-shrink: 0;
   position: relative;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button {
@@ -478,6 +479,13 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #28282c;
+  border-color: #28282c;
+  color: #ffffff;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button:hover {
   background-color: #28282c;

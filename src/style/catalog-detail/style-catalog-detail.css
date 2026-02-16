@@ -744,6 +744,18 @@
 .catalog-detail__container .design .swiper-wrapper .swiper-slide-prev img, .catalog-detail__container .design .swiper-wrapper .swiper-slide-next img {
   filter: brightness(60%);
 }
+.catalog-detail__container .design .swiper .swiper-pagination {
+  bottom: 80px;
+}
+.catalog-detail__container .design .swiper .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: #ffffff;
+  width: 12px;
+  height: 12px;
+}
+.catalog-detail__container .design .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #b1a489;
+}
 .catalog-detail__container .design .swiper .swiper-button-next,
 .catalog-detail__container .design .swiper .swiper-button-prev {
   display: none;
@@ -782,7 +794,7 @@
     margin-bottom: 60px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider {
-    height: 500px;
+    height: 550px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-slide {
     width: 100%;
@@ -794,7 +806,7 @@
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__info {
     display: grid;
-    grid-template-columns: repeat(3, 140px);
+    grid-template-columns: repeat(3, 150px);
     gap: 5px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__info-wrap {
@@ -802,9 +814,13 @@
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button {
     text-align: center;
+    font-size: 16px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__buttons .catalog-detail__button {
-    padding: 8px 20px;
+    padding: 14px 18px;
+  }
+  .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__buttons .add-comparison {
+    padding: 6px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__gallery {
     max-height: 120px;
@@ -935,7 +951,7 @@
     margin-bottom: 60px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider {
-    height: 550px;
+    height: 580px;
   }
   .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__slider .swiper-slide {
     width: 100%;
