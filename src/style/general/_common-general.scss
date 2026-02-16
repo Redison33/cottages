@@ -621,7 +621,8 @@ textarea {
 }
 
 .modal {
-  z-index: 2;
+  display: none;
+  z-index: 110;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -630,84 +631,140 @@ textarea {
   border: 1px solid #0000001c;
   border-radius: 15px;
 
+  .modal-close {
+    @include base-button;
+    padding: 0;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+  }
+
+  .modal__container {
+    padding: 50px;
+  }
+
+  h3 {
+    @include title3;
+    font-weight: $font-weight-regular;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
   &-object {
     width: 50vw;
     max-width: 1000px;
 
-    .modal-close {
-      @include base-button;
-      padding: 0;
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      top: -30px;
-      right: -30px;
-    }
+    .slider {
+      width: 100%;
+      margin-bottom: 30px;
 
-    .modal__container {
-      padding: 50px;
-
-      .slider {
-        width: 100%;
-        margin-bottom: 30px;
-
-        .slide {
-          img {
-            border-radius: 10px;
-            width: 100%;
-            height: 25vw;
-            max-height: 480px;
-            object-fit: cover;
-          }
+      .slide {
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 25vw;
+          max-height: 480px;
+          object-fit: cover;
         }
       }
+    }
 
-      h3 {
-        @include title3;
-        font-weight: $font-weight-regular;
-        margin-bottom: 40px;
-        text-transform: uppercase;
+    .modal__info {
+      padding: 15px 30px;
+      border-radius: 15px;
+      background-color: $primary-background;
+      border: 1px solid #0000001c;
+      // margin-bottom: 30px;
+      //  display: flex;
+      // justify-content: space-between;
+      // gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        img {
+          width: unset;
+          height: unset;
+        }
+
+        p {
+          text-align: center;
+          font-size: $font-size-tag;
+          font-weight: $font-weight-bold;
+          color: $actions-text;
+        }
       }
+    }
 
-      .modal__info {
-        padding: 15px 30px;
-        border-radius: 15px;
-        background-color: $primary-background;
-        border: 1px solid #0000001c;
-        // margin-bottom: 30px;
-        //  display: flex;
-        // justify-content: space-between;
-        // gap: 20px;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+    a {
+      @include base-button;
+    }
+  }
 
-        &-wrap {
+  &-form {
+    display: none;
+    max-width: 800px;
+
+    form {
+      .form-table {
+        width: 100%;
+        .input {
+          @include base-input;
+          width: 100%;
+          margin-bottom: 12px;
+        }
+
+        .form__required {
           display: flex;
-          flex-direction: column;
+          gap: 25px;
           align-items: center;
-          justify-content: space-between;
-          gap: 10px;
+          margin-bottom: 30px;
 
-          img {
-            width: unset;
-            height: unset;
+          .checkbox {
+            @include base-checkbox;
+
+            .checkmark {
+              border-color: $actions-text;
+            }
           }
 
           p {
-            text-align: center;
-            font-size: $font-size-tag;
-            font-weight: $font-weight-bold;
+            font-size: $font-size-link;
             color: $actions-text;
+            font-weight: $font-weight-regular;
+
+            a {
+              @include link-base;
+              color: $actions-text;
+              font-size: $font-size-link;
+              font-weight: $font-weight-regular;
+            }
           }
+        }
+
+        input[type='submit'] {
+          @include base-button;
+          width: unset;
+          padding: 20px 60px;
         }
       }
 
-      a {
-        @include base-button;
+      tfoot {
+        th {
+          text-align: start;
+        }
       }
     }
   }

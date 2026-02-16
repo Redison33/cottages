@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('#bx-panel')) {
-    document.querySelector('.header').style.top = 42 + document.querySelector('#bx-panel').scrollHeight + 'px';
+    document.querySelector('.header').style.top =
+      42 + document.querySelector('#bx-panel').scrollHeight + 'px';
   }
 
   document.querySelector('.header__burger').addEventListener('click', () => {
@@ -94,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       link.addEventListener('click', (e) => {
         const nested = link.querySelector('.nested');
-        if (!nested || e.target.classList.contains('nested__link') || e.target.tagName === 'SPAN') return;
+        if (!nested || e.target.classList.contains('nested__link') || e.target.tagName === 'SPAN')
+          return;
 
         e.preventDefault();
 
@@ -181,7 +183,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('.popular__slider'))
-    for (const [index, card] of document.querySelector('.popular__slider').querySelectorAll('.slide').entries()) {
+    for (const [index, card] of document
+      .querySelector('.popular__slider')
+      .querySelectorAll('.slide')
+      .entries()) {
       $(card).find('.slide__slider').slick({
         dots: true,
         draggable: false,
@@ -341,7 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
         accordion.querySelector('.accordion__content').removeAttribute('style');
       } else {
         accordion.classList.add('accordion--active');
-        accordion.querySelector('.accordion__content').style.height = accordion.querySelector('.accordion__content').scrollHeight + 'px';
+        accordion.querySelector('.accordion__content').style.height =
+          accordion.querySelector('.accordion__content').scrollHeight + 'px';
       }
     });
   }
@@ -372,4 +378,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  for (const openForm of document.querySelectorAll('.open-form')) {
+    openForm.addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      document.body.appendChild(overlay);
+      document.querySelector('.modal-form').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  document.querySelector('.modal-close').addEventListener('click', () => {
+    document.querySelector('.modal-form').removeAttribute('style');
+    document.querySelector('.overlay').remove();
+    document.body.removeAttribute('style');
+  });
 });

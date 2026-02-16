@@ -249,9 +249,17 @@
           }
 
           .filter-list {
+            flex-shrink: 0;
             position: relative;
             button {
               @include base-tab;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              background-color: $secondary-background;
+              border-color: $secondary-background;
+              color: $button-tag-text-active;
             }
 
             &__content {

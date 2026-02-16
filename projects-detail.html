@@ -293,7 +293,7 @@
 
           <a class="header__phone" href="tel:+7(495)800-78-78">8(495)800-78-78</a>
 
-          <button href="" class="header__feedback">Перезвоните мне</button>
+          <button href="" class="header__feedback open-form">Перезвоните мне</button>
         </div>
 
         <div class="header__links">
@@ -839,7 +839,7 @@
             </div>
           </div>
 
-          <button>Перезвоните мне</button>
+          <button class="open-form">Перезвоните мне</button>
 
           <div class="contacts__links">
             <a href="">
@@ -861,5 +861,85 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модалку везде пихнуть -->
+    <div class="modal modal-form">
+      <button class="modal-close">
+        <svg
+          width="17"
+          height="17"
+          viewBox="0 0 17 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.3333 1.645L14.6883 0L8.16667 6.52167L1.645 0L0 1.645L6.52167 8.16667L0 14.6883L1.645 16.3333L8.16667 9.81167L14.6883 16.3333L16.3333 14.6883L9.81167 8.16667L16.3333 1.645Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+
+      <div class="modal__container">
+        <h3>Оставьте заявку</h3>
+
+        <form name="SIMPLE_FORM_1" action="/" method="POST" enctype="multipart/form-data">
+          <input
+            type="hidden"
+            name="sessid"
+            id="sessid"
+            value="de87c0b6d68d4e004f6c48195cfb89be"
+          /><input type="hidden" name="WEB_FORM_ID" value="1" />
+          <table class="form-table data-table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    class="input"
+                    type="text"
+                    name="form_text_1"
+                    required=""
+                    placeholder="Имя"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    class="input"
+                    type="tel"
+                    name="form_text_2"
+                    required=""
+                    placeholder="Телефон"
+                  />
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  <div class="form__required">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <p>
+                      Нажимая кнопку «Отправить», я соглашаюсь с
+                      <a href="">политикой конфиденциальности</a>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <input type="submit" name="web_form_submit" value="Отправить" />
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
