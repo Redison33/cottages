@@ -54,7 +54,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 60px;
 }
 @media (max-width: 1760px) {
   .contacts__container h1 {
@@ -80,6 +79,9 @@
   .contacts__container h1 {
     font-size: 24px;
   }
+}
+.contacts__container h1 {
+  margin-bottom: 60px;
 }
 .contacts__container .contacts__wrap {
   display: grid;

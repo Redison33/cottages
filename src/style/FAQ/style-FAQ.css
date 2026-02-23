@@ -54,7 +54,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 @media (max-width: 1760px) {
   .FAQ__container h1 {
@@ -81,6 +80,9 @@
     font-size: 24px;
   }
 }
+.FAQ__container h1 {
+  margin-bottom: 30px;
+}
 .FAQ__container .FAQ__links {
   margin-bottom: 60px;
 }
@@ -104,12 +106,14 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: block;
 }
 .FAQ__container .FAQ__links ul li a:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
+}
+.FAQ__container .FAQ__links ul li a {
+  display: block;
 }
 .FAQ__container .FAQ__links ul li .filter--active {
   color: #ffffff;

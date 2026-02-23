@@ -51,7 +51,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 @media (max-width: 1760px) {
   .workers__container h1 {
@@ -77,6 +76,9 @@
   .workers__container h1 {
     font-size: 24px;
   }
+}
+.workers__container h1 {
+  margin-bottom: 30px;
 }
 .workers__container .workers__links {
   margin-bottom: 60px;
@@ -101,12 +103,14 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: block;
 }
 .workers__container .workers__links ul li a:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
+}
+.workers__container .workers__links ul li a {
+  display: block;
 }
 .workers__container .group {
   margin-bottom: 100px;
@@ -116,7 +120,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 50px;
 }
 @media (max-width: 1760px) {
   .workers__container .group h2 {
@@ -142,6 +145,9 @@
   .workers__container .group h2 {
     font-size: 24px;
   }
+}
+.workers__container .group h2 {
+  margin-bottom: 50px;
 }
 .workers__container .group .group__cards {
   display: flex;

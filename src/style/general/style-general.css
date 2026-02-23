@@ -1,36 +1,24 @@
 @font-face {
-  font-family: 'Noah';
-  src:
-    local('Noah-Regular'),
-    local('Noah Regular'),
-    url('../../assets/fonts/Noah-Regular.woff2') format('woff2');
+  font-family: "Noah";
+  src: local("Noah-Regular"), local("Noah Regular"), url("../../assets/fonts/Noah-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noah';
-  src:
-    local('Noah-Medium'),
-    local('Noah Medium'),
-    url('../../assets/fonts/Noah-Medium.woff2') format('woff2');
+  font-family: "Noah";
+  src: local("Noah-Medium"), local("Noah Medium"), url("../../assets/fonts/Noah-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noah';
-  src:
-    local('Noah-Bold'),
-    local('Noah Bold'),
-    url('../../assets/fonts/Noah-Bold.woff2') format('woff2');
+  font-family: "Noah";
+  src: local("Noah-Bold"), local("Noah Bold"), url("../../assets/fonts/Noah-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src:
-    local('Montserrat-Medium'),
-    local('Montserrat Medium'),
-    url('../../assets/fonts/Montserrat-Medium.woff2') format('woff2');
+  font-family: "Montserrat";
+  src: local("Montserrat-Medium"), local("Montserrat Medium"), url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -43,7 +31,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: 'Noah';
+  font-family: "Noah";
 }
 
 img {
@@ -59,7 +47,7 @@ ul li {
 
 body {
   min-width: 320px;
-  font-family: 'Noah';
+  font-family: "Noah";
   background-color: #f8f8f8;
   min-height: 100vh;
   display: flex;
@@ -135,12 +123,11 @@ textarea:active {
   padding: 2px 4px;
   border-radius: 10px;
   position: absolute;
-  right: 24px;
   z-index: 1;
 }
 .tooltip .tooltiptext img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -149,11 +136,6 @@ textarea:active {
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  width: 100%;
-  z-index: 100;
-  margin-top: 42px;
-  border-radius: 15px;
-  background-color: #ffffff;
 }
 @media (max-width: 1760px) {
   .header {
@@ -174,6 +156,13 @@ textarea:active {
   .header {
     margin: 0 20px;
   }
+}
+.header {
+  width: 100%;
+  z-index: 100;
+  margin-top: 42px;
+  border-radius: 15px;
+  background-color: #ffffff;
 }
 .header__container {
   padding: 28px 46px;
@@ -210,16 +199,14 @@ textarea:active {
 }
 .header__container .nav__list .list__item a span::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 100%;
   width: 100%;
   left: 0;
   height: 2px;
   background-color: #000101;
   transform: scaleX(0);
-  transition:
-    transform 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .header__container .nav__list .list__item a svg {
   min-width: 20px;
@@ -245,9 +232,7 @@ textarea:active {
   left: -50px;
   top: 20px;
   transform: scaleY(0);
-  transition:
-    transform 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .header__container .nav__list .list__item .nested__menu {
   margin-top: 45px;
@@ -327,13 +312,9 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  padding: 14px 12px;
 }
 .header__container .header__actions .header__feedback:hover {
   background-color: #000101;
@@ -347,6 +328,9 @@ textarea:active {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.header__container .header__actions .header__feedback {
+  padding: 14px 12px;
 }
 .header__container .header__links {
   display: flex;
@@ -401,9 +385,7 @@ textarea:active {
   height: 2px;
   border-radius: 2px;
   background-color: #ffffff;
-  transition:
-    transform 0.3s ease-in-out,
-    top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 .header__container .header__burger span:nth-child(1) {
   top: 16px;
@@ -480,8 +462,6 @@ textarea:active {
 .breadcrumbs {
   max-width: 1600px;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 @media (max-width: 1760px) {
   .breadcrumbs {
@@ -503,6 +483,10 @@ textarea:active {
     margin: 0 20px;
   }
 }
+.breadcrumbs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -523,11 +507,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  color: #000101;
-  color: #454545;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
 }
 .breadcrumbs ol li a:hover {
   color: #b1a489;
@@ -537,8 +516,15 @@ textarea:active {
     font-size: 16px;
   }
 }
+.breadcrumbs ol li a {
+  color: #000101;
+  color: #454545;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
 .breadcrumbs ol li:not(:last-child)::after {
-  content: '-';
+  content: "-";
 }
 
 .pagination ul {
@@ -590,7 +576,6 @@ textarea:active {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 50px;
 }
 @media (max-width: 1600px) {
   .popular__container h2 {
@@ -606,6 +591,9 @@ textarea:active {
   .popular__container h2 {
     font-size: 20px;
   }
+}
+.popular__container h2 {
+  margin-bottom: 50px;
 }
 .popular__container .popular__slider {
   margin: 0 -15px;
@@ -666,7 +654,7 @@ textarea:active {
   height: 380px;
   border-radius: 10px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 .popular__container .popular__slider .slide .slider .slick-dots {
@@ -731,10 +719,7 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
 }
@@ -784,22 +769,9 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  padding: 0;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  top: -30px;
-  right: -30px;
 }
 .modal .modal-close:hover {
   background-color: #000101;
@@ -814,6 +786,18 @@ textarea:active {
     font-size: 16px;
   }
 }
+.modal .modal-close {
+  padding: 0;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+}
 .modal .modal__container {
   padding: 50px;
 }
@@ -821,9 +805,6 @@ textarea:active {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  font-weight: 400;
-  margin-bottom: 40px;
-  text-transform: uppercase;
 }
 @media (max-width: 1600px) {
   .modal h3 {
@@ -840,7 +821,13 @@ textarea:active {
     font-size: 20px;
   }
 }
+.modal h3 {
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
 .modal-object {
+  display: block;
   width: 50vw;
   max-width: 1000px;
 }
@@ -854,7 +841,7 @@ textarea:active {
   height: 25vw;
   max-height: 480px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .modal-object .modal__info {
   padding: 15px 30px;
@@ -890,10 +877,7 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
 }
@@ -927,8 +911,6 @@ textarea:active {
   transition: border-color 0.3s ease-in-out;
   font-size: 18px;
   font-weight: 400;
-  width: 100%;
-  margin-bottom: 12px;
 }
 .modal-form form .form-table .input:hover {
   border-color: #000000;
@@ -945,6 +927,10 @@ textarea:active {
     padding: 11px 20px;
     font-size: 16px;
   }
+}
+.modal-form form .form-table .input {
+  width: 100%;
+  margin-bottom: 12px;
 }
 .modal-form form .form-table .form__required {
   display: flex;
@@ -980,7 +966,7 @@ textarea:active {
   border-radius: 8px;
 }
 .modal-form form .form-table .form__required .checkbox .checkmark::after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
   left: 9px;
@@ -1013,9 +999,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  color: #454545;
-  font-size: 18px;
-  font-weight: 400;
 }
 .modal-form form .form-table .form__required p a:hover {
   color: #b1a489;
@@ -1025,7 +1008,12 @@ textarea:active {
     font-size: 16px;
   }
 }
-.modal-form form .form-table input[type='submit'] {
+.modal-form form .form-table .form__required p a {
+  color: #454545;
+  font-size: 18px;
+  font-weight: 400;
+}
+.modal-form form .form-table input[type=submit] {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -1034,27 +1022,26 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  width: unset;
-  padding: 20px 60px;
 }
-.modal-form form .form-table input[type='submit']:hover {
+.modal-form form .form-table input[type=submit]:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.modal-form form .form-table input[type='submit']:focus-visible {
+.modal-form form .form-table input[type=submit]:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
-  .modal-form form .form-table input[type='submit'] {
+  .modal-form form .form-table input[type=submit] {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.modal-form form .form-table input[type=submit] {
+  width: unset;
+  padding: 20px 60px;
 }
 .modal-form form tfoot th {
   text-align: start;
@@ -1149,17 +1136,16 @@ textarea:active {
   font-weight: 500;
   border-radius: 50px;
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
-  transition:
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: block;
 }
 .also__container .also__content ul li a:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
+}
+.also__container .also__content ul li a {
+  display: block;
 }
 
 .reviews {
@@ -1198,7 +1184,6 @@ textarea:active {
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 @media (max-width: 1760px) {
   .reviews__container .reviews__info h2 {
@@ -1224,6 +1209,9 @@ textarea:active {
   .reviews__container .reviews__info h2 {
     font-size: 24px;
   }
+}
+.reviews__container .reviews__info h2 {
+  margin-bottom: 24px;
 }
 .reviews__container .reviews__info p {
   color: #454545;
@@ -1262,9 +1250,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  color: #000101;
-  font-size: 26px;
-  font-weight: 500;
 }
 .reviews__container .reviews__content .reviews__wrap .card .card__header a:hover {
   color: #b1a489;
@@ -1273,6 +1258,11 @@ textarea:active {
   .reviews__container .reviews__content .reviews__wrap .card .card__header a {
     font-size: 16px;
   }
+}
+.reviews__container .reviews__content .reviews__wrap .card .card__header a {
+  color: #000101;
+  font-size: 26px;
+  font-weight: 500;
 }
 .reviews__container .reviews__content .reviews__wrap .card .card__header .raiting {
   display: flex;
@@ -1304,10 +1294,10 @@ textarea:active {
   width: 190px;
   height: 150px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .reviews__container .reviews__content .reviews__wrap .card::after {
-  content: url('../../assets/img/reviews-decor.svg');
+  content: url("../../assets/img/reviews-decor.svg");
   position: absolute;
   left: 0;
   top: 0;
@@ -1333,13 +1323,9 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  display: inline-block;
 }
 .reviews__container .reviews__link:hover {
   background-color: #000101;
@@ -1353,6 +1339,9 @@ textarea:active {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.reviews__container .reviews__link {
+  display: inline-block;
 }
 
 .similar {
@@ -1475,7 +1464,7 @@ textarea:active {
   height: 380px;
   border-radius: 10px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 .similar__container .similar__cards .card .slider .slick-dots {
@@ -1539,14 +1528,9 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  display: block;
-  text-align: center;
 }
 .similar__container .similar__cards .card a:hover {
   background-color: #000101;
@@ -1560,6 +1544,10 @@ textarea:active {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.similar__container .similar__cards .card a {
+  display: block;
+  text-align: center;
 }
 
 .social {
@@ -1689,6 +1677,150 @@ textarea:active {
   background-color: #62b0e9;
 }
 
+.possibilities {
+  padding-top: 100px;
+  background-color: #f8f8f8;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+.possibilities__container .possibilities__info {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .possibilities__container .possibilities__info {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 1360px) {
+  .possibilities__container .possibilities__info {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .possibilities__container .possibilities__info {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .possibilities__container .possibilities__info {
+    margin: 0 20px;
+  }
+}
+.possibilities__container .possibilities__info {
+  margin-bottom: 100px;
+}
+.possibilities__container .possibilities__info h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+@media (max-width: 1760px) {
+  .possibilities__container .possibilities__info h2 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .possibilities__container .possibilities__info h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .possibilities__container .possibilities__info h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .possibilities__container .possibilities__info h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 580px) {
+  .possibilities__container .possibilities__info h2 {
+    font-size: 24px;
+  }
+}
+.possibilities__container .possibilities__info h2 {
+  margin-bottom: 24px;
+}
+.possibilities__container .possibilities__info p {
+  max-width: 900px;
+  color: #454545;
+  font-size: 20px;
+}
+.possibilities__container .possibilities__content {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  aspect-ratio: 1/1;
+}
+.possibilities__container .possibilities__content .card {
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.possibilities__container .possibilities__content .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.possibilities__container .possibilities__content .card h3 {
+  max-width: 390px;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000000;
+}
+.possibilities__container .possibilities__content .card p {
+  max-width: 390px;
+  color: #454545;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.possibilities__container .possibilities__content .card:first-child {
+  aspect-ratio: 2/1;
+  grid-column: span 2;
+  border-bottom-right-radius: 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(4) {
+  border-radius: 15px;
+  background-color: #f8f8f8;
+}
+.possibilities__container .possibilities__content .card:nth-child(5) {
+  border-radius: 15px 0 0 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(6) {
+  border-bottom-left-radius: 15px;
+}
+.possibilities__container .possibilities__content .card:nth-child(7) {
+  background-color: #b1a489;
+  border-radius: 0 15px 15px 0;
+  position: relative;
+}
+.possibilities__container .possibilities__content .card:nth-child(7)::before {
+  position: absolute;
+  bottom: -74px;
+  right: -155px;
+  content: url("../../assets/img/possibilities-decor.svg");
+  opacity: 0.45;
+}
+.possibilities__container .possibilities__content .card:nth-child(7) h3,
+.possibilities__container .possibilities__content .card:nth-child(7) p {
+  color: #ffffff;
+}
+
 .contactForm {
   background-color: #28282c;
   padding-top: 100px;
@@ -1696,10 +1828,6 @@ textarea:active {
 .contactForm__container {
   max-width: 1600px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-  padding-bottom: 100px;
 }
 @media (max-width: 1760px) {
   .contactForm__container {
@@ -1721,6 +1849,12 @@ textarea:active {
     margin: 0 20px;
   }
 }
+.contactForm__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  padding-bottom: 100px;
+}
 .contactForm__container .contactForm__info {
   display: flex;
   flex-direction: column;
@@ -1731,7 +1865,6 @@ textarea:active {
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  color: #ffffff;
 }
 @media (max-width: 1760px) {
   .contactForm__container .contactForm__info h2 {
@@ -1758,6 +1891,9 @@ textarea:active {
     font-size: 24px;
   }
 }
+.contactForm__container .contactForm__info h2 {
+  color: #ffffff;
+}
 .contactForm__container .contactForm__info p {
   font-size: 20px;
   color: #ffffff;
@@ -1771,7 +1907,7 @@ textarea:active {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   background-color: #fff;
 }
 .contactForm__container .contactForm__info .personal__wrap h4 {
@@ -1808,8 +1944,6 @@ textarea:active {
   transition: border-color 0.3s ease-in-out;
   font-size: 18px;
   font-weight: 400;
-  width: 100%;
-  margin-bottom: 12px;
 }
 .contactForm__container form .form-table .input:hover {
   border-color: #000000;
@@ -1826,6 +1960,10 @@ textarea:active {
     padding: 11px 20px;
     font-size: 16px;
   }
+}
+.contactForm__container form .form-table .input {
+  width: 100%;
+  margin-bottom: 12px;
 }
 .contactForm__container form .form-table .form__required {
   display: flex;
@@ -1861,7 +1999,7 @@ textarea:active {
   border-radius: 8px;
 }
 .contactForm__container form .form-table .form__required .checkbox .checkmark::after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
   left: 9px;
@@ -1891,8 +2029,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  font-size: 18px;
-  font-weight: 400;
 }
 .contactForm__container form .form-table .form__required p a:hover {
   color: #b1a489;
@@ -1902,7 +2038,11 @@ textarea:active {
     font-size: 16px;
   }
 }
-.contactForm__container form .form-table input[type='submit'] {
+.contactForm__container form .form-table .form__required p a {
+  font-size: 18px;
+  font-weight: 400;
+}
+.contactForm__container form .form-table input[type=submit] {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -1911,36 +2051,35 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  width: unset;
-  padding: 20px 60px;
 }
-.contactForm__container form .form-table input[type='submit']:hover {
+.contactForm__container form .form-table input[type=submit]:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.contactForm__container form .form-table input[type='submit']:focus-visible {
+.contactForm__container form .form-table input[type=submit]:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
-  .contactForm__container form .form-table input[type='submit'] {
+  .contactForm__container form .form-table input[type=submit] {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.contactForm__container form .form-table input[type=submit] {
+  width: unset;
+  padding: 20px 60px;
 }
 .contactForm__container form tfoot th {
   text-align: start;
 }
 .contactForm img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: bottom;
-  object-position: bottom;
+     object-position: bottom;
   border-radius: 15px 15px 0 0;
   width: 100%;
 }
@@ -1977,7 +2116,6 @@ textarea:active {
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 @media (max-width: 1760px) {
   .universal__container h1 {
@@ -2004,11 +2142,13 @@ textarea:active {
     font-size: 24px;
   }
 }
+.universal__container h1 {
+  margin-bottom: 30px;
+}
 .universal__container h2 {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 30px;
 }
 @media (max-width: 1600px) {
   .universal__container h2 {
@@ -2024,13 +2164,14 @@ textarea:active {
   .universal__container h2 {
     font-size: 20px;
   }
+}
+.universal__container h2 {
+  margin-bottom: 30px;
 }
 .universal__container h3 {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  font-size: 26px;
-  margin-bottom: 30px;
 }
 @media (max-width: 1600px) {
   .universal__container h3 {
@@ -2046,6 +2187,10 @@ textarea:active {
   .universal__container h3 {
     font-size: 20px;
   }
+}
+.universal__container h3 {
+  font-size: 26px;
+  margin-bottom: 30px;
 }
 .universal__container p {
   font-size: 20px;
@@ -2085,10 +2230,6 @@ textarea:active {
 .footer__container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 70px 0 50px 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
 }
 @media (max-width: 1760px) {
   .footer__container {
@@ -2110,8 +2251,14 @@ textarea:active {
     margin: 0 20px;
   }
 }
+.footer__container {
+  padding: 70px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
 .footer__container h3 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
@@ -2145,10 +2292,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  text-transform: lowercase;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
 }
 .footer__container .nav__wrap ul li a:hover {
   color: #b1a489;
@@ -2158,13 +2301,19 @@ textarea:active {
     font-size: 16px;
   }
 }
+.footer__container .nav__wrap ul li a {
+  text-transform: lowercase;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
 .footer__container .nav__wrap ul li svg {
   display: none;
   transition: transform 0.3s ease-in-out;
 }
 .footer__container .nav__wrap ul li:first-child a {
   text-transform: none;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 20px;
@@ -2183,7 +2332,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  text-decoration: none;
 }
 .footer__container .contacts__wrap a:hover {
   color: #b1a489;
@@ -2193,6 +2341,9 @@ textarea:active {
     font-size: 16px;
   }
 }
+.footer__container .contacts__wrap a {
+  text-decoration: none;
+}
 .footer__container .contacts__email {
   position: relative;
   padding-left: 50px;
@@ -2201,7 +2352,7 @@ textarea:active {
   position: absolute;
   top: 0;
   left: 0;
-  content: url('../../assets/img/mail.svg');
+  content: url("../../assets/img/mail.svg");
 }
 .footer__container .contacts__map {
   position: relative;
@@ -2211,7 +2362,7 @@ textarea:active {
   position: absolute;
   top: 0;
   left: 0;
-  content: url('../../assets/img/location.svg');
+  content: url("../../assets/img/location.svg");
 }
 .footer__container .contacts__link {
   display: flex;
@@ -2227,8 +2378,6 @@ textarea:active {
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  line-height: 122%;
-  letter-spacing: 0;
 }
 .footer__container .contacts__link p:hover,
 .footer__container .contacts__link a:hover {
@@ -2239,6 +2388,11 @@ textarea:active {
   .footer__container .contacts__link a {
     font-size: 16px;
   }
+}
+.footer__container .contacts__link p,
+.footer__container .contacts__link a {
+  line-height: 122%;
+  letter-spacing: 0;
 }
 .footer__container .contacts__link p {
   text-decoration: none;
@@ -2255,13 +2409,9 @@ textarea:active {
   line-height: 100%;
   font-weight: 500;
   color: #ffffff;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 .footer__container .contacts button:hover {
   background-color: #000101;
@@ -2275,6 +2425,9 @@ textarea:active {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.footer__container .contacts button {
+  margin-bottom: 30px;
 }
 .footer__container .contacts__links {
   display: flex;
@@ -2346,10 +2499,7 @@ textarea:active {
     line-height: 100%;
     font-weight: 500;
     color: #ffffff;
-    transition:
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out,
-      border-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     outline: none;
     text-transform: uppercase;
   }
@@ -2376,6 +2526,23 @@ textarea:active {
   }
   .social {
     margin-bottom: 60px;
+  }
+  .possibilities {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+  }
+  .possibilities__container .possibilities__info {
+    margin-bottom: 40px;
+  }
+  .possibilities__container .possibilities__info p {
+    font-size: 18px;
+  }
+  .possibilities__container .possibilities__content .card p {
+    font-size: 18px;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(7)::before {
+    display: none;
   }
   .contactForm {
     padding-top: 60px;
@@ -2575,10 +2742,7 @@ textarea:active {
     line-height: 100%;
     font-weight: 500;
     color: #ffffff;
-    transition:
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out,
-      border-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     outline: none;
     text-transform: uppercase;
   }
@@ -2602,6 +2766,20 @@ textarea:active {
   }
   .popular__container .popular__slider .slick-next {
     right: -7px;
+  }
+  .possibilities__container .possibilities__content {
+    aspect-ratio: unset;
+  }
+  .possibilities__container .possibilities__content .card h3 {
+    margin-top: 50px;
+    max-width: 250px;
+  }
+  .possibilities__container .possibilities__content .card p {
+    margin-bottom: 50px;
+    max-width: 250px;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(7)::before {
+    display: none;
   }
   .contactForm {
     padding-top: 60px;
@@ -2783,10 +2961,7 @@ textarea:active {
     line-height: 100%;
     font-weight: 500;
     color: #ffffff;
-    transition:
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out,
-      border-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     outline: none;
     text-transform: uppercase;
   }
@@ -2816,6 +2991,64 @@ textarea:active {
   }
   .social__container .social__info {
     margin-bottom: 30px;
+  }
+  .possibilities {
+    padding: 30px 0;
+    margin-bottom: 40px;
+  }
+  .possibilities__container .possibilities__info {
+    margin-bottom: 30px;
+  }
+  .possibilities__container .possibilities__info p {
+    font-size: 16px;
+  }
+  .possibilities__container .possibilities__content {
+    aspect-ratio: unset;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
+  }
+  .possibilities__container .possibilities__content .card {
+    aspect-ratio: unset !important;
+    grid-column: unset !important;
+    border-radius: unset !important;
+    max-height: 480px;
+    min-height: 250px;
+  }
+  .possibilities__container .possibilities__content .card h3 {
+    max-width: unset;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+  .possibilities__container .possibilities__content .card p {
+    max-width: unset;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  .possibilities__container .possibilities__content .card:first-child {
+    order: 1;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(2) {
+    order: 2;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(3) {
+    order: 4;
+    background-color: #f8f8f8;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(4) {
+    order: 5;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(5) {
+    order: 3;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(6) {
+    order: 6;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(7) {
+    order: 7;
+  }
+  .possibilities__container .possibilities__content .card:nth-child(8) {
+    order: 8;
   }
   .contactForm {
     padding-top: 30px;
@@ -2911,10 +3144,7 @@ textarea:active {
     line-height: 100%;
     font-weight: 500;
     color: #ffffff;
-    transition:
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out,
-      border-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     outline: none;
     text-transform: uppercase;
   }
@@ -3067,7 +3297,7 @@ textarea:active {
   .modal-form form .form-table {
     width: 100%;
   }
-  .modal-form form .form-table input[type='submit'] {
+  .modal-form form .form-table input[type=submit] {
     width: 100%;
   }
   .breadcrumbs {
@@ -3151,6 +3381,30 @@ textarea:active {
   .social__container .social__content .telegram {
     max-width: 300px;
   }
+  .possibilities {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+  .possibilities__container .possibilities__info {
+    margin-bottom: 18px;
+  }
+  .possibilities__container .possibilities__info h2 {
+    margin-bottom: 16px;
+  }
+  .possibilities__container .possibilities__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .possibilities__container .possibilities__content .card {
+    max-height: 350px;
+  }
+  .possibilities__container .possibilities__content .card h3 {
+    margin-top: 30px;
+  }
+  .possibilities__container .possibilities__content .card p {
+    margin-bottom: 30px;
+  }
   .contactForm__container {
     display: flex;
     flex-direction: column;
@@ -3185,7 +3439,7 @@ textarea:active {
   .contactForm__container form .form-table {
     width: 100%;
   }
-  .contactForm__container form .form-table input[type='submit'] {
+  .contactForm__container form .form-table input[type=submit] {
     width: 100%;
   }
   .contactForm img {
@@ -3350,4 +3604,4 @@ textarea:active {
   .footer__container .contacts__links {
     justify-content: center;
   }
-} /*# sourceMappingURL=style-general.css.map */
+}/*# sourceMappingURL=style-general.css.map */

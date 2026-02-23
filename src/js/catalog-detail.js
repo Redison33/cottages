@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   $('.layout__slider').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: createArrow('next'),

@@ -62,10 +62,6 @@ body {
 .banner__container {
   max-width: 1600px;
   margin: 0 auto;
-  width: 100%;
-  padding-top: 110px;
-  position: relative;
-  z-index: 20;
 }
 @media (max-width: 1760px) {
   .banner__container {
@@ -87,15 +83,17 @@ body {
     margin: 0 20px;
   }
 }
+.banner__container {
+  width: 100%;
+  padding-top: 110px;
+  position: relative;
+  z-index: 20;
+}
 .banner__container h1 {
   font-size: 70px;
   font-weight: 500;
   line-height: 100%;
   text-transform: uppercase;
-  line-height: 120%;
-  max-width: 1200px;
-  color: #ffffff;
-  margin-bottom: 48px;
 }
 @media (max-width: 1760px) {
   .banner__container h1 {
@@ -117,6 +115,12 @@ body {
     font-size: 30px;
   }
 }
+.banner__container h1 {
+  line-height: 120%;
+  max-width: 1200px;
+  color: #ffffff;
+  margin-bottom: 48px;
+}
 .banner__container .banner__wrap {
   display: flex;
   align-items: start;
@@ -134,9 +138,6 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  overflow: hidden;
-  position: relative;
-  place-items: center;
 }
 .banner__container .banner__wrap button:hover {
   background-color: #000101;
@@ -150,6 +151,11 @@ body {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.banner__container .banner__wrap button {
+  overflow: hidden;
+  position: relative;
+  place-items: center;
 }
 .banner__container .banner__wrap button::before {
   content: "";
@@ -222,8 +228,6 @@ body {
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 60px;
 }
 @media (max-width: 1760px) {
   .filter__container h2 {
@@ -249,6 +253,10 @@ body {
   .filter__container h2 {
     font-size: 24px;
   }
+}
+.filter__container h2 {
+  color: #ffffff;
+  margin-bottom: 60px;
 }
 .filter__container .filter__form {
   display: flex;
@@ -349,7 +357,6 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  text-wrap: nowrap;
 }
 .filter__container .filter__form button:hover {
   background-color: #000101;
@@ -363,6 +370,9 @@ body {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.filter__container .filter__form button {
+  text-wrap: nowrap;
 }
 
 .projects {
@@ -380,11 +390,6 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  background-color: #28282c;
-  border-color: #28282c;
-  width: 270px;
-  text-align: center;
-  display: none;
 }
 .projects__container .projects__link:hover {
   background-color: #000101;
@@ -399,18 +404,22 @@ body {
     font-size: 16px;
   }
 }
+.projects__container .projects__link {
+  background-color: #28282c;
+  border-color: #28282c;
+}
 .projects__container .projects__link:hover {
   background-color: #b1a489;
   border-color: #b1a489;
 }
+.projects__container .projects__link {
+  width: 270px;
+  text-align: center;
+  display: none;
+}
 .projects__container .projects__info {
   max-width: 1600px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 40px;
-  margin-bottom: 100px;
 }
 @media (max-width: 1760px) {
   .projects__container .projects__info {
@@ -432,12 +441,18 @@ body {
     margin: 0 20px;
   }
 }
+.projects__container .projects__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 100px;
+}
 .projects__container .projects__info .projects__wrap h2 {
   font-size: 56px;
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 @media (max-width: 1760px) {
   .projects__container .projects__info .projects__wrap h2 {
@@ -463,6 +478,9 @@ body {
   .projects__container .projects__info .projects__wrap h2 {
     font-size: 24px;
   }
+}
+.projects__container .projects__info .projects__wrap h2 {
+  margin-bottom: 24px;
 }
 .projects__container .projects__info .projects__wrap p {
   max-width: 900px;
@@ -550,11 +568,6 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  background-color: #28282c;
-  border-color: #28282c;
-  width: 270px;
-  text-align: center;
-  display: none;
 }
 .services__container .services__link:hover {
   background-color: #000101;
@@ -569,9 +582,18 @@ body {
     font-size: 16px;
   }
 }
+.services__container .services__link {
+  background-color: #28282c;
+  border-color: #28282c;
+}
 .services__container .services__link:hover {
   background-color: #b1a489;
   border-color: #b1a489;
+}
+.services__container .services__link {
+  width: 270px;
+  text-align: center;
+  display: none;
 }
 .services__container .services__info {
   display: flex;
@@ -585,7 +607,6 @@ body {
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 @media (max-width: 1760px) {
   .services__container .services__info .services__wrap h2 {
@@ -611,6 +632,9 @@ body {
   .services__container .services__info .services__wrap h2 {
     font-size: 24px;
   }
+}
+.services__container .services__info .services__wrap h2 {
+  margin-bottom: 24px;
 }
 .services__container .services__info .services__wrap p {
   max-width: 900px;
@@ -646,19 +670,6 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  width: 100%;
-  border-radius: 0;
-  padding: 34px 60px;
-  background-color: #f8f8f8;
-  font-size: 20px;
-  font-weight: 500;
-  color: #000101;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: none;
-  text-transform: none;
-  text-wrap: nowrap;
 }
 .services__container .services__content .services__tabs .tab:hover {
   background-color: #000101;
@@ -672,6 +683,21 @@ body {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.services__container .services__content .services__tabs .tab {
+  width: 100%;
+  border-radius: 0;
+  padding: 34px 60px;
+  background-color: #f8f8f8;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000101;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  text-transform: none;
+  text-wrap: nowrap;
 }
 .services__container .services__content .services__tabs .tab span {
   position: relative;
@@ -819,8 +845,6 @@ body {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 24px;
-  transition: color 0.3s ease-in-out;
 }
 @media (max-width: 1600px) {
   .achievement__container .achievement__content .card h3 {
@@ -837,6 +861,10 @@ body {
     font-size: 20px;
   }
 }
+.achievement__container .achievement__content .card h3 {
+  margin-bottom: 24px;
+  transition: color 0.3s ease-in-out;
+}
 .achievement__container .achievement__content .card p {
   font-size: 20px;
   font-weight: 400;
@@ -848,146 +876,6 @@ body {
 }
 .achievement__container .achievement__content .card--active h3,
 .achievement__container .achievement__content .card--active p {
-  color: #ffffff;
-}
-
-.possibilities {
-  padding-top: 100px;
-  background-color: #f8f8f8;
-  padding-bottom: 100px;
-  margin-bottom: 100px;
-}
-.possibilities__container .possibilities__info {
-  max-width: 1600px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-@media (max-width: 1760px) {
-  .possibilities__container .possibilities__info {
-    margin: 0 100px;
-  }
-}
-@media (max-width: 1360px) {
-  .possibilities__container .possibilities__info {
-    margin: 0 60px;
-  }
-}
-@media (max-width: 960px) {
-  .possibilities__container .possibilities__info {
-    margin: 0 40px;
-  }
-}
-@media (max-width: 700px) {
-  .possibilities__container .possibilities__info {
-    margin: 0 20px;
-  }
-}
-.possibilities__container .possibilities__info h2 {
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-@media (max-width: 1760px) {
-  .possibilities__container .possibilities__info h2 {
-    font-size: 46px;
-  }
-}
-@media (max-width: 1600px) {
-  .possibilities__container .possibilities__info h2 {
-    font-size: 36px;
-  }
-}
-@media (max-width: 1360px) {
-  .possibilities__container .possibilities__info h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 960px) {
-  .possibilities__container .possibilities__info h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 580px) {
-  .possibilities__container .possibilities__info h2 {
-    font-size: 24px;
-  }
-}
-.possibilities__container .possibilities__info p {
-  max-width: 900px;
-  color: #454545;
-  font-size: 20px;
-}
-.possibilities__container .possibilities__content {
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 1920px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 1/1;
-}
-.possibilities__container .possibilities__content .card {
-  overflow: hidden;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-}
-.possibilities__container .possibilities__content .card img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.possibilities__container .possibilities__content .card h3 {
-  max-width: 390px;
-  width: 100%;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 100%;
-  color: #000000;
-}
-.possibilities__container .possibilities__content .card p {
-  max-width: 390px;
-  color: #454545;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0%;
-}
-.possibilities__container .possibilities__content .card:first-child {
-  aspect-ratio: 2/1;
-  grid-column: span 2;
-  border-bottom-right-radius: 15px;
-}
-.possibilities__container .possibilities__content .card:nth-child(4) {
-  border-radius: 15px;
-  background-color: #f8f8f8;
-}
-.possibilities__container .possibilities__content .card:nth-child(5) {
-  border-radius: 15px 0 0 15px;
-}
-.possibilities__container .possibilities__content .card:nth-child(6) {
-  border-bottom-left-radius: 15px;
-}
-.possibilities__container .possibilities__content .card:nth-child(7) {
-  background-color: #b1a489;
-  border-radius: 0 15px 15px 0;
-  position: relative;
-}
-.possibilities__container .possibilities__content .card:nth-child(7)::before {
-  position: absolute;
-  bottom: -74px;
-  right: -155px;
-  content: url("../../assets/img/possibilities-decor.svg");
-  opacity: 0.45;
-}
-.possibilities__container .possibilities__content .card:nth-child(7) h3,
-.possibilities__container .possibilities__content .card:nth-child(7) p {
   color: #ffffff;
 }
 
@@ -1117,23 +1005,6 @@ body {
   .achievement__container .achievement__content .card p {
     font-size: 18px;
   }
-  .possibilities {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-bottom: 60px;
-  }
-  .possibilities__container .possibilities__info {
-    margin-bottom: 40px;
-  }
-  .possibilities__container .possibilities__info p {
-    font-size: 18px;
-  }
-  .possibilities__container .possibilities__content .card p {
-    font-size: 18px;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(7)::before {
-    display: none;
-  }
   .comfort {
     padding: 60px 0;
   }
@@ -1200,20 +1071,6 @@ body {
   }
   .achievement__container .achievement__content .card {
     padding: 30px;
-  }
-  .possibilities__container .possibilities__content {
-    aspect-ratio: unset;
-  }
-  .possibilities__container .possibilities__content .card h3 {
-    margin-top: 50px;
-    max-width: 250px;
-  }
-  .possibilities__container .possibilities__content .card p {
-    margin-bottom: 50px;
-    max-width: 250px;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(7)::before {
-    display: none;
   }
   .comfort {
     padding: 60px 0;
@@ -1335,64 +1192,6 @@ body {
   }
   .achievement__container .achievement__content .card p {
     font-size: 16px;
-  }
-  .possibilities {
-    padding: 30px 0;
-    margin-bottom: 40px;
-  }
-  .possibilities__container .possibilities__info {
-    margin-bottom: 30px;
-  }
-  .possibilities__container .possibilities__info p {
-    font-size: 16px;
-  }
-  .possibilities__container .possibilities__content {
-    aspect-ratio: unset;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 300px);
-  }
-  .possibilities__container .possibilities__content .card {
-    aspect-ratio: unset !important;
-    grid-column: unset !important;
-    border-radius: unset !important;
-    max-height: 480px;
-    min-height: 250px;
-  }
-  .possibilities__container .possibilities__content .card h3 {
-    max-width: unset;
-    padding: 0 20px;
-    margin-top: 40px;
-  }
-  .possibilities__container .possibilities__content .card p {
-    max-width: unset;
-    padding: 0 20px;
-    margin-bottom: 40px;
-    font-size: 16px;
-  }
-  .possibilities__container .possibilities__content .card:first-child {
-    order: 1;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(2) {
-    order: 2;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(3) {
-    order: 4;
-    background-color: #f8f8f8;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(4) {
-    order: 5;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(5) {
-    order: 3;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(6) {
-    order: 6;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(7) {
-    order: 7;
-  }
-  .possibilities__container .possibilities__content .card:nth-child(8) {
-    order: 8;
   }
   .comfort {
     padding: 30px 0;
@@ -1551,30 +1350,6 @@ body {
   }
   .achievement__container .achievement__content .card p {
     font-size: 14px;
-  }
-  .possibilities {
-    padding-bottom: 0;
-    margin-bottom: 30px;
-    padding-top: 30px;
-  }
-  .possibilities__container .possibilities__info {
-    margin-bottom: 18px;
-  }
-  .possibilities__container .possibilities__info h2 {
-    margin-bottom: 16px;
-  }
-  .possibilities__container .possibilities__content {
-    display: flex;
-    flex-direction: column;
-  }
-  .possibilities__container .possibilities__content .card {
-    max-height: 350px;
-  }
-  .possibilities__container .possibilities__content .card h3 {
-    margin-top: 30px;
-  }
-  .possibilities__container .possibilities__content .card p {
-    margin-bottom: 30px;
   }
   .comfort {
     padding: 30px 0;

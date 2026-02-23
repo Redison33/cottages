@@ -54,7 +54,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1760px) {
   .catalog-detail__container h1 {
@@ -80,6 +79,9 @@
   .catalog-detail__container h1 {
     font-size: 24px;
   }
+}
+.catalog-detail__container h1 {
+  margin-bottom: 40px;
 }
 .catalog-detail__container .catalog-detail__wrap {
   margin-bottom: 70px;
@@ -193,8 +195,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  background-color: #28282c;
-  border-color: #28282c;
 }
 .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark:hover {
   background-color: #000101;
@@ -208,6 +208,10 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark {
+  background-color: #28282c;
+  border-color: #28282c;
 }
 .catalog-detail__container .catalog-detail__wrap .catalog-detail__base .catalog-detail__content .catalog-detail__button-dark:hover {
   background-color: #b1a489;
@@ -293,8 +297,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .layout h3 {
@@ -310,6 +312,10 @@
   .catalog-detail__container .layout h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .layout h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .layout .slider {
   margin: 0 -15px;
@@ -352,10 +358,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 24px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .banner__container h3 {
@@ -371,6 +373,12 @@
   .catalog-detail__container .banner__container h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .banner__container h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 24px;
 }
 .catalog-detail__container .banner__container p {
   font-size: 20px;
@@ -411,8 +419,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .equipment h3 {
@@ -428,6 +434,10 @@
   .catalog-detail__container .equipment h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .equipment h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .equipment__buttons {
   display: flex;
@@ -515,8 +525,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .gift h3 {
@@ -532,6 +540,10 @@
   .catalog-detail__container .gift h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .gift h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .gift .gift__content {
   display: grid;
@@ -573,8 +585,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .description h3 {
@@ -590,6 +600,10 @@
   .catalog-detail__container .description h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .description h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .description p {
   font-size: 20px;
@@ -608,8 +622,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .material__container h3 {
@@ -625,6 +637,10 @@
   .catalog-detail__container .material__container h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .material__container h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .material__container .material__wrap {
   display: grid;
@@ -676,8 +692,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1600px) {
   .catalog-detail__container .design h3 {
@@ -693,6 +707,10 @@
   .catalog-detail__container .design h3 {
     font-size: 20px;
   }
+}
+.catalog-detail__container .design h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .catalog-detail__container .design .swiper-wrapper .swiper-slide {
   width: 1000px;
@@ -719,7 +737,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  transition: opacity 0.3s ease-in-out;
 }
 .catalog-detail__container .design .swiper-wrapper .swiper-slide button:hover {
   background-color: #000101;
@@ -733,6 +750,9 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog-detail__container .design .swiper-wrapper .swiper-slide button {
+  transition: opacity 0.3s ease-in-out;
 }
 .catalog-detail__container .design .swiper-wrapper .swiper-slide .swiper-slide-shadow-left,
 .catalog-detail__container .design .swiper-wrapper .swiper-slide .swiper-slide-shadow-right {

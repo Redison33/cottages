@@ -28,11 +28,6 @@
 .services__container h1 {
   max-width: 1600px;
   margin: 0 auto;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 30px;
 }
 @media (max-width: 1760px) {
   .services__container h1 {
@@ -53,6 +48,12 @@
   .services__container h1 {
     margin: 0 20px;
   }
+}
+.services__container h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 @media (max-width: 1760px) {
   .services__container h1 {
@@ -78,6 +79,9 @@
   .services__container h1 {
     font-size: 24px;
   }
+}
+.services__container h1 {
+  margin-bottom: 30px;
 }
 .services__container .services__content {
   max-width: 1920px;
@@ -149,7 +153,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 50px;
 }
 @media (max-width: 1600px) {
   .finishProject__container h2 {
@@ -165,6 +168,9 @@
   .finishProject__container h2 {
     font-size: 20px;
   }
+}
+.finishProject__container h2 {
+  margin-bottom: 50px;
 }
 .finishProject__container .swiper-wrapper .swiper-slide {
   width: 1000px;
@@ -204,7 +210,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  transition: opacity 0.3s ease-in-out;
 }
 .finishProject__container .swiper-wrapper .swiper-slide .slide__content a:hover {
   background-color: #000101;
@@ -218,6 +223,9 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content a {
+  transition: opacity 0.3s ease-in-out;
 }
 .finishProject__container .swiper-wrapper .swiper-slide .swiper-slide-shadow-left,
 .finishProject__container .swiper-wrapper .swiper-slide .swiper-slide-shadow-right {

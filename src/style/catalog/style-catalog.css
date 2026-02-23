@@ -54,7 +54,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1760px) {
   .catalog__container h1 {
@@ -81,6 +80,9 @@
     font-size: 24px;
   }
 }
+.catalog__container h1 {
+  margin-bottom: 40px;
+}
 .catalog__container .catalog__tabs {
   margin-bottom: 20px;
 }
@@ -104,15 +106,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  text-wrap: nowrap;
-  text-transform: none;
-  display: block;
-  border-radius: 0;
-  padding: 25px 50px;
-  color: #454545;
-  background-color: #ffffff;
-  border-width: 1px;
-  border-color: rgba(0, 1, 1, 0.1098039216);
 }
 .catalog__container .catalog__tabs ul li a:hover {
   background-color: #000101;
@@ -126,6 +119,17 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog__container .catalog__tabs ul li a {
+  text-wrap: nowrap;
+  text-transform: none;
+  display: block;
+  border-radius: 0;
+  padding: 25px 50px;
+  color: #454545;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-color: rgba(0, 1, 1, 0.1098039216);
 }
 .catalog__container .catalog__tabs ul li a:hover {
   color: #ffffff;
@@ -203,11 +207,6 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  height: 18px;
-  padding-left: 30px;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
 }
 .catalog__container .catalog__wrap .catalog__filter .checkbox-wrap .checkbox input {
   position: absolute;
@@ -243,6 +242,13 @@
 }
 .catalog__container .catalog__wrap .catalog__filter .checkbox-wrap .checkbox input:checked ~ .checkmark:after {
   display: block;
+}
+.catalog__container .catalog__wrap .catalog__filter .checkbox-wrap .checkbox {
+  height: 18px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 .catalog__container .catalog__wrap .catalog__filter .checkbox-wrap .checkbox .checkmark {
   position: absolute;
@@ -373,7 +379,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  width: 100%;
 }
 .catalog__container .catalog__wrap .catalog__filter .form__buttons button:hover {
   background-color: #000101;
@@ -388,6 +393,9 @@
     font-size: 16px;
   }
 }
+.catalog__container .catalog__wrap .catalog__filter .form__buttons button {
+  width: 100%;
+}
 .catalog__container .catalog__wrap .catalog__filter .form__buttons .dark {
   border-radius: 10px;
   padding: 14px 20px;
@@ -400,8 +408,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  background-color: #28282c;
-  border-color: #28282c;
 }
 .catalog__container .catalog__wrap .catalog__filter .form__buttons .dark:hover {
   background-color: #000101;
@@ -415,6 +421,10 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog__container .catalog__wrap .catalog__filter .form__buttons .dark {
+  background-color: #28282c;
+  border-color: #28282c;
 }
 .catalog__container .catalog__wrap .catalog__filter .form__buttons .dark:hover {
   background-color: #b1a489;
@@ -452,12 +462,14 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: block;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul li a:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
+}
+.catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul li a {
+  display: block;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul li .filter--active {
   color: #ffffff;
@@ -479,15 +491,17 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+}
+.catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
 }
-.catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button:hover {
+.catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
@@ -523,11 +537,6 @@
   color: #ffffff;
   transition: color 0.3s ease-in-out;
   text-decoration: underline;
-  color: #000101;
-  text-decoration: none;
-  text-transform: lowercase;
-  text-wrap: nowrap;
-  font-weight: 400;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list__content ul li a:hover {
   color: #b1a489;
@@ -536,6 +545,13 @@
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list__content ul li a {
     font-size: 16px;
   }
+}
+.catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list__content ul li a {
+  color: #000101;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+  font-weight: 400;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list__content--active {
   visibility: visible;
@@ -564,16 +580,18 @@
   border: 1px solid rgba(0, 1, 1, 0.1098039216);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-wrap: nowrap;
-  display: block;
-  font-size: 16px;
-  border-color: #000101;
-  padding: 8px 34px 8px 12px;
-  position: relative;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__tags ul li a:hover {
   background-color: #28282c;
   border-color: #28282c;
   color: #ffffff;
+}
+.catalog__container .catalog__wrap .catalog__content .catalog__tags ul li a {
+  display: block;
+  font-size: 16px;
+  border-color: #000101;
+  padding: 8px 34px 8px 12px;
+  position: relative;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__tags ul li a::after {
   content: url("../../assets/img/tag-cross.svg");
@@ -602,9 +620,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  width: 100%;
-  margin-bottom: 20px;
-  display: none;
 }
 .catalog__container .catalog__wrap .catalog__content .filter-open:hover {
   background-color: #000101;
@@ -618,6 +633,11 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog__container .catalog__wrap .catalog__content .filter-open {
+  width: 100%;
+  margin-bottom: 20px;
+  display: none;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__cards {
   display: flex;
@@ -746,8 +766,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  display: block;
-  text-align: center;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .card a:hover {
   background-color: #000101;
@@ -762,6 +780,10 @@
     font-size: 16px;
   }
 }
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .card a {
+  display: block;
+  text-align: center;
+}
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner {
   padding: 70px;
   border-radius: 10px;
@@ -774,8 +796,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 @media (max-width: 1600px) {
   .catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner h3 {
@@ -792,6 +812,10 @@
     font-size: 20px;
   }
 }
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner a {
   border-radius: 10px;
   padding: 14px 20px;
@@ -804,7 +828,6 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   outline: none;
   text-transform: uppercase;
-  text-wrap: nowrap;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner a:hover {
   background-color: #000101;
@@ -818,6 +841,9 @@
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .catalog__banner a {
+  text-wrap: nowrap;
 }
 
 .info {
@@ -852,8 +878,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-  text-transform: uppercase;
-  margin-bottom: 40px;
 }
 @media (max-width: 1760px) {
   .info__container h2 {
@@ -879,6 +903,10 @@
   .info__container h2 {
     font-size: 24px;
   }
+}
+.info__container h2 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .info__container p,
 .info__container ul {
@@ -988,6 +1016,9 @@
   }
 }
 @media (max-width: 960px) {
+  .tooltip .tooltiptext {
+    right: 24px;
+  }
   .catalog {
     margin-bottom: 40px;
   }
@@ -1095,24 +1126,35 @@
   }
   .catalog__container .catalog__wrap .catalog__content {
     width: 100%;
-  }
-  .catalog__container .catalog__wrap .catalog__content .catalog__actions {
-    gap: 20px;
+    display: flex;
     flex-direction: column;
   }
+  .catalog__container .catalog__wrap .catalog__content .catalog__actions {
+    display: contents;
+  }
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links {
-    order: 2;
+    order: 1;
+  }
+  .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul {
+    gap: 10px;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list {
+    order: 3;
     width: 100%;
+    margin-bottom: 8px;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list button {
     width: 100%;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__tags {
+    order: 2;
     margin-bottom: 18px;
   }
+  .catalog__container .catalog__wrap .catalog__content .filter-open {
+    order: 4;
+  }
   .catalog__container .catalog__wrap .catalog__content .catalog__cards {
+    order: 5;
     margin-bottom: 30px;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__cards .card {
@@ -1153,6 +1195,9 @@
     gap: 20px;
     flex-direction: column;
     align-items: start;
+  }
+  .catalog__container .catalog__wrap .catalog__content .pagination {
+    order: 7;
   }
   .info {
     margin-bottom: 30px;

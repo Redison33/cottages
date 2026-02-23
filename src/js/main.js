@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log(window.screen.width, window.screen.height);
 
-  Fancybox.bind('[data-fancybox]', {});
+  Fancybox.bind('[data-fancybox]', {
+    Carousel: {
+      Toolbar: {
+        display: {
+          left: ['counter'],
+          middle: ['zoomIn', 'zoomOut'],
+          right: ['autoplay', 'thumbs', 'close'],
+        },
+      },
+    },
+  });
 
   if (document.querySelector('#map')) {
     ymaps.ready(init);

@@ -339,6 +339,42 @@
     }
   }
 
+  .possibilities {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    &__container {
+      .possibilities__info {
+        margin-bottom: 18px;
+        h2 {
+          margin-bottom: 16px;
+        }
+
+        p {
+        }
+      }
+
+      .possibilities__content {
+        display: flex;
+        flex-direction: column;
+
+        .card {
+          max-height: 350px;
+          img {
+          }
+
+          h3 {
+            margin-top: 30px;
+          }
+
+          p {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
   .contactForm {
     &__container {
       display: flex;
