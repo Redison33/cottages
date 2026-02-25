@@ -545,6 +545,110 @@ textarea:active {
   color: #b1a489;
 }
 
+.video {
+  margin-bottom: 100px;
+}
+.video__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .video__container {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 1360px) {
+  .video__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .video__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .video__container {
+    margin: 0 20px;
+  }
+}
+.video__container h2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+@media (max-width: 1760px) {
+  .video__container h2 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1600px) {
+  .video__container h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1360px) {
+  .video__container h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .video__container h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 580px) {
+  .video__container h2 {
+    font-size: 24px;
+  }
+}
+.video__container h2 {
+  margin-bottom: 24px;
+}
+.video__container p {
+  font-size: 20px;
+  color: #454545;
+  margin-bottom: 24px;
+}
+.video__container .video {
+  position: relative;
+}
+.video__container .video video {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 800;
+  filter: brightness(30%);
+}
+.video__container .video button {
+  position: absolute;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  z-index: 1;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+.video__container .video button span {
+  margin-left: 20px;
+  display: block;
+  border: 15px solid transparent;
+  border-left: 25px solid #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+.video__container .video button:hover {
+  border-color: #b1a489;
+}
+.video__container .video button:hover span {
+  border-left-color: #b1a489;
+}
+
 .popular {
   margin-bottom: 100px;
 }
@@ -572,28 +676,52 @@ textarea:active {
     margin: 0 20px;
   }
 }
-.popular__container h2 {
+.popular__container .popular__header {
+  margin-bottom: 50px;
+  display: flex;
+  gap: 30px;
+  align-items: end;
+}
+.popular__container .popular__header h2 {
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
 }
 @media (max-width: 1600px) {
-  .popular__container h2 {
+  .popular__container .popular__header h2 {
     font-size: 26px;
   }
 }
 @media (max-width: 960px) {
-  .popular__container h2 {
+  .popular__container .popular__header h2 {
     font-size: 22px;
   }
 }
 @media (max-width: 580px) {
-  .popular__container h2 {
+  .popular__container .popular__header h2 {
     font-size: 20px;
   }
 }
-.popular__container h2 {
-  margin-bottom: 50px;
+.popular__container .popular__header a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
+}
+.popular__container .popular__header a:hover {
+  color: #b1a489;
+}
+@media (max-width: 960px) {
+  .popular__container .popular__header a {
+    font-size: 16px;
+  }
+}
+.popular__container .popular__header a {
+  color: #000101;
+  text-wrap: nowrap;
 }
 .popular__container .popular__slider {
   margin: 0 -15px;
@@ -710,6 +838,7 @@ textarea:active {
   font-weight: 700;
   color: #454545;
 }
+.popular__container .popular__slider .slide a,
 .popular__container .popular__slider .slide .open-modal {
   border-radius: 10px;
   padding: 14px 20px;
@@ -723,18 +852,25 @@ textarea:active {
   outline: none;
   text-transform: uppercase;
 }
+.popular__container .popular__slider .slide a:hover,
 .popular__container .popular__slider .slide .open-modal:hover {
   background-color: #000101;
   border-color: #000101;
 }
+.popular__container .popular__slider .slide a:focus-visible,
 .popular__container .popular__slider .slide .open-modal:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
+  .popular__container .popular__slider .slide a,
   .popular__container .popular__slider .slide .open-modal {
     padding: 12px 16px;
     font-size: 16px;
   }
+}
+.popular__container .popular__slider .slide a,
+.popular__container .popular__slider .slide .open-modal {
+  text-align: center;
 }
 .popular__container .popular__slider .slick-prev {
   left: -50px;
@@ -2481,7 +2617,7 @@ textarea:active {
   .popular {
     margin-bottom: 60px;
   }
-  .popular__container h2 {
+  .popular__container .popular__header {
     margin-bottom: 30px;
   }
   .popular__container .popular__slider .slide .slider img {
@@ -2727,10 +2863,23 @@ textarea:active {
     z-index: 10;
     display: block;
   }
+  .video {
+    margin-bottom: 60px;
+  }
+  .video__container h2 {
+    margin-bottom: 24px;
+  }
+  .video__container p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .video__container .video video {
+    max-height: 600px;
+  }
   .popular {
     margin-bottom: 60px;
   }
-  .popular__container h2 {
+  .popular__container .popular__header {
     margin-bottom: 40px;
   }
   .popular__container .popular__slider .slide .open-modal {
@@ -2920,10 +3069,20 @@ textarea:active {
   .slider .slick-next {
     right: 20px;
   }
+  .video {
+    margin-bottom: 40px;
+  }
+  .video__container h2 {
+    margin-bottom: 24px;
+  }
+  .video__container p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
   .popular {
     margin-bottom: 40px;
   }
-  .popular__container h2 {
+  .popular__container .popular__header {
     margin-bottom: 24px;
   }
   .popular__container .popular__slider {
@@ -3331,10 +3490,20 @@ textarea:active {
   .universal__container ul {
     margin-bottom: 16px;
   }
+  .video {
+    margin-bottom: 30px;
+  }
+  .video__container h2 {
+    margin-bottom: 18px;
+  }
+  .video__container p {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
   .popular {
     margin-bottom: 30px;
   }
-  .popular__container h2 {
+  .popular__container .popular__header {
     margin-bottom: 18px;
   }
   .popular__container .popular__slider {

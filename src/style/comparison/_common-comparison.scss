@@ -1,0 +1,237 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.comparison {
+  margin-bottom: 100px;
+  &__container {
+    @include container;
+
+    .comparison__header {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 45px;
+
+      h1 {
+        @include title2;
+      }
+
+      .comparison__buttons {
+        display: flex;
+        gap: 20px;
+
+        a,
+        button {
+          @include base-tab;
+        }
+
+        a {
+          background-color: $secondary-background;
+          border-color: $secondary-background;
+          color: $button-tag-text-active;
+
+          &:hover {
+            background-color: $actions-text;
+            border-color: $actions-text;
+          }
+        }
+      }
+    }
+
+    .comparison__body {
+      .table {
+        width: 100%;
+        // overflow-x: auto;
+        overflow-x: hidden;
+        position: relative;
+
+        .tr {
+          display: flex;
+          width: 100%;
+          position: relative;
+
+          .tf,
+          .tc,
+          .th,
+          .td {
+            width: 330px;
+            min-width: 330px;
+          }
+
+          .tf {
+            margin-right: 50px;
+            margin-top: 15px;
+            background-color: $secondary-section-background;
+            z-index: 100;
+            h3 {
+              font-size: $font-size-text;
+              font-weight: 500;
+              color: $actions-text;
+              margin-bottom: 20px;
+            }
+
+            .filters-tabs {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+
+              a {
+                @include base-tab;
+              }
+
+              .filter-active {
+                background-color: $button-background-primary;
+                border-color: $button-background-primary;
+                color: $button-text-primary;
+              }
+            }
+          }
+
+          .tc {
+            padding: 0 10px 25px 10px;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+
+            img {
+              height: 230px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+
+            .link-detail {
+              @include base-button;
+              text-align: center;
+            }
+
+            .delete {
+              @include base-button;
+              padding: 0;
+              position: absolute;
+              width: 36px;
+              height: 36px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              top: -8px;
+              right: -8px;
+
+              svg {
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+
+          .th {
+            padding: 16px 30px;
+            margin-right: 50px;
+
+            p {
+              display: flex;
+              align-items: center;
+              color: $actions-text;
+              font-size: 18px;
+              line-height: 125%;
+              color: $actions-text;
+              font-weight: 600;
+            }
+          }
+
+          .td {
+            padding: 18px 30px;
+            p {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $actions-text;
+              font-size: 16px;
+              line-height: 125%;
+              color: $actions-text;
+              text-align: center;
+            }
+          }
+
+          .th,
+          .tf {
+            position: sticky;
+            left: 0;
+            background-color: $secondary-section-background;
+          }
+
+          &:nth-child(2n + 3) {
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 1;
+              border-top: 1px solid #0000001c;
+              border-bottom: 1px solid #0000001c;
+              background-color: $primary-background;
+              border-radius: 10px 0 0 10px;
+            }
+            .td,
+            .th {
+              position: relative;
+              z-index: 10;
+              border-top: 1px solid #0000001c;
+              border-bottom: 1px solid #0000001c;
+              background-color: $primary-background;
+
+              &:first-child {
+                border-radius: 10px 0 0 10px;
+              }
+
+              &:last-child {
+                border-radius: 0 10px 10px 0;
+              }
+            }
+
+            .th {
+              position: sticky;
+              left: 0;
+              z-index: 100;
+              background-color: $primary-background;
+            }
+          }
+        }
+      }
+
+      .scrollbar {
+        position: relative;
+        height: 16px;
+        margin-top: 8px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #00000033;
+          transform: translateY(-50%);
+        }
+        .thumb {
+          position: absolute;
+          top: 50%;
+          width: 16px;
+          height: 16px;
+          background: #b1a489;
+          border-radius: 50%;
+          transform: translateY(-50%);
+          border: 2px solid $secondary-section-background;
+
+          cursor: pointer;
+          touch-action: none;
+        }
+      }
+    }
+  }
+}

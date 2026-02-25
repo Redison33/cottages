@@ -449,14 +449,87 @@ textarea {
   }
 }
 
+.video {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h2 {
+      @include title2;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: $font-size-text;
+      color: $actions-text;
+      margin-bottom: 24px;
+    }
+
+    .video {
+      position: relative;
+
+      video {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 800;
+        filter: brightness(30%);
+      }
+
+      button {
+        position: absolute;
+        top: calc(50% - 45px);
+        left: calc(50% - 45px);
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #fff;
+        z-index: 1;
+        border-radius: 50%;
+        transition: border-color 0.3s ease-in-out;
+
+        span {
+          margin-left: 20px;
+          display: block;
+          border: 15px solid transparent;
+          border-left: 25px solid #fff;
+          transition: border-color 0.3s ease-in-out;
+        }
+
+        &:hover {
+          border-color: #b1a489;
+
+          span {
+            border-left-color: #b1a489;
+          }
+        }
+      }
+    }
+  }
+}
+
 .popular {
   margin-bottom: 100px;
   &__container {
     @include container;
 
-    h2 {
-      @include title3;
+    .popular__header {
       margin-bottom: 50px;
+      display: flex;
+      gap: 30px;
+      align-items: end;
+
+      h2 {
+        @include title3;
+      }
+
+      a {
+        @include link-black;
+        text-wrap: nowrap;
+      }
     }
 
     .popular__slider {
@@ -594,8 +667,10 @@ textarea {
           }
         }
 
+        a,
         .open-modal {
           @include base-button;
+          text-align: center;
         }
       }
 

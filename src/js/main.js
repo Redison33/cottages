@@ -193,45 +193,44 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('.popular__slider'))
-    for (const [index, card] of document
-      .querySelector('.popular__slider')
-      .querySelectorAll('.slide')
-      .entries()) {
-      $(card).find('.slide__slider').slick({
-        dots: true,
-        draggable: false,
-        arrows: false,
-        // autoplay: true,
-        // autoplaySpeed: 2000 + 500 * (index + 1),
-      });
-
-      let hoverInterval = null;
-
-      $(card)
-        .find('.slide__slider')
-        .on('mouseenter', () => {
-          if (hoverInterval) return;
-
-          hoverInterval = setInterval(() => {
-            $(card).find('.slide__slider').slick('slickNext');
-          }, 2500);
+    for (const sliderPopular of document.querySelectorAll('.popular__slider')) {
+      for (const [index, card] of sliderPopular.querySelectorAll('.slide').entries()) {
+        $(card).find('.slide__slider').slick({
+          dots: true,
+          draggable: false,
+          arrows: false,
+          // autoplay: true,
+          // autoplaySpeed: 2000 + 500 * (index + 1),
         });
 
-      $(card)
-        .find('.slide__slider')
-        .on('mouseleave', () => {
-          clearInterval(hoverInterval);
-          hoverInterval = null;
-        });
+        let hoverInterval = null;
 
-      card.querySelector('.open-modal').addEventListener('click', () => {
-        const modal = document.createElement('div');
-        const overlay = document.createElement('div');
+        $(card)
+          .find('.slide__slider')
+          .on('mouseenter', () => {
+            if (hoverInterval) return;
 
-        modal.classList.add('modal');
-        modal.classList.add('modal-object');
-        overlay.classList.add('overlay');
-        modal.innerHTML = `
+            hoverInterval = setInterval(() => {
+              $(card).find('.slide__slider').slick('slickNext');
+            }, 2500);
+          });
+
+        $(card)
+          .find('.slide__slider')
+          .on('mouseleave', () => {
+            clearInterval(hoverInterval);
+            hoverInterval = null;
+          });
+
+        if (card.querySelector('.open-modal')) {
+          card.querySelector('.open-modal').addEventListener('click', () => {
+            const modal = document.createElement('div');
+            const overlay = document.createElement('div');
+
+            modal.classList.add('modal');
+            modal.classList.add('modal-object');
+            overlay.classList.add('overlay');
+            modal.innerHTML = `
       <button class="modal-close">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.3333 1.645L14.6883 0L8.16667 6.52167L1.645 0L0 1.645L6.52167 8.16667L0 14.6883L1.645 16.3333L8.16667 9.81167L14.6883 16.3333L16.3333 14.6883L9.81167 8.16667L16.3333 1.645Z" fill="white"/>
@@ -319,25 +318,27 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
       `;
 
-        // <a href="${card.getAttribute("link")}">Перейти</a>
+            // <a href="${card.getAttribute("link")}">Перейти</a>
 
-        modal.querySelector('.modal-close').addEventListener('click', () => {
-          $('.modal__slider').slick('unslick');
-          modal.remove();
-          overlay.remove();
-          document.body.removeAttribute('style');
-        });
+            modal.querySelector('.modal-close').addEventListener('click', () => {
+              $('.modal__slider').slick('unslick');
+              modal.remove();
+              overlay.remove();
+              document.body.removeAttribute('style');
+            });
 
-        document.body.appendChild(modal);
-        document.body.appendChild(overlay);
-        document.body.style.overflow = 'hidden';
+            document.body.appendChild(modal);
+            document.body.appendChild(overlay);
+            document.body.style.overflow = 'hidden';
 
-        $('.modal__slider').slick({
-          dots: true,
-          nextArrow: createArrow('next'),
-          prevArrow: createArrow('prev'),
-        });
-      });
+            $('.modal__slider').slick({
+              dots: true,
+              nextArrow: createArrow('next'),
+              prevArrow: createArrow('prev'),
+            });
+          });
+        }
+      }
     }
 
   function createArrow(direction) {

@@ -1116,6 +1116,9 @@
   .catalog__container h1 {
     margin-bottom: 18px;
   }
+  .catalog__container .catalog__tabs ul li a {
+    padding: 16px 24px;
+  }
   .catalog__container .catalog__wrap {
     display: flex;
     gap: 40px;

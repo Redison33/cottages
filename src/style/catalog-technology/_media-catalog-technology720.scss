@@ -1,11 +1,5 @@
 @media (max-width: 960px) {
-  .tooltip {
-    .tooltiptext {
-      right: 24px;
-    }
-  }
-
-  .catalog {
+  .catalog-technology {
     margin-bottom: 40px;
 
     &__container {
@@ -13,106 +7,42 @@
         margin-bottom: 24px;
       }
 
-      .catalog__wrap {
+      .catalog-technology__tabs {
+      }
+
+      .catalog-technology__сontent {
+        border-radius: 0 15px 15px 15px;
+        padding: 24px;
         display: flex;
-        gap: 40px;
-        align-items: start;
+        flex-direction: column;
+        gap: 70px;
 
-        .catalog__filter {
-          width: 400px;
-          opacity: 0;
-          transform: translateX(-100vw);
-          position: fixed;
-          z-index: 1000;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          border-radius: 0;
-          padding: 50px 20px 30px 40px;
-          transition:
-            opacity 0.3s ease-in-out,
-            transform 0.3s ease-in-out;
+        .catalog-technology__block {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
 
-          .filter-close {
-            display: block;
+          h2 {
+            @include title2;
           }
 
-          form {
-            height: 100%;
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding-right: 20px;
-          }
+          .catalog-technology__wrap {
+            display: grid;
+            grid-template-columns: 200px minmax(300px, 1500px);
+            row-gap: 30px;
+            column-gap: 20px;
 
-          &--active {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .catalog__content {
-          width: 100%;
-          .catalog__actions {
-            .catalog__links {
-              // margin-bottom: 20px;
-            }
-          }
-
-          .catalog__tags {
-            margin-bottom: 24px;
-          }
-
-          .filter-open {
-            display: block;
-          }
-
-          .catalog__cards {
-            // gap: 30px;
-            margin-bottom: 30px;
-
-            .card {
-              .slider {
-                img {
-                  height: 240px;
-                }
-
-                .slick-dots {
-                  li {
-                  }
-                }
-              }
-
-              &__wrap {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-
-                h3 {
-                  font-size: $font-size-text;
-                  font-weight: $font-weight-bold;
-                  color: $actions-text;
-                }
-              }
-
-              &__info {
-                display: flex;
-                padding: 15px;
-                gap: 20px;
-
-                &-wrap {
-                  gap: 5px;
-                  img {
-                    width: 30px;
-                  }
-                }
-              }
+            h3 {
             }
 
-            .catalog__banner {
-              padding: 30px;
-              gap: 20px;
-              flex-direction: column;
-              align-items: start;
+            p {
+              font-size: 16px;
+            }
+
+            &-imgs {
+              img {
+                max-height: 350px;
+              }
             }
           }
         }
@@ -120,20 +50,43 @@
     }
   }
 
-  .info {
+  .material {
     margin-bottom: 40px;
 
     &__container {
-      h2 {
+      padding: 40px;
+
+      h3 {
         margin-bottom: 24px;
       }
 
-      p,
-      ul {
-        font-size: 16px;
-      }
+      .material__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
 
-      ul {
+        .material__content {
+          order: 2;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+
+          .card {
+            padding-left: 40px;
+            gap: 5px;
+
+            h4,
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+
+        img {
+          object-fit: contain;
+          height: 250px;
+        }
       }
     }
   }

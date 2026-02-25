@@ -85,7 +85,7 @@
   .popular {
     margin-bottom: 60px;
     &__container {
-      h2 {
+      .popular__header {
         margin-bottom: 30px;
       }
 
@@ -617,10 +617,36 @@
     }
   }
 
+  .video {
+    margin-bottom: 60px;
+
+    &__container {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      .video {
+        video {
+          max-height: 600px;
+        }
+
+        button {
+          span {
+          }
+        }
+      }
+    }
+  }
+
   .popular {
     margin-bottom: 60px;
     &__container {
-      h2 {
+      .popular__header {
         margin-bottom: 40px;
       }
 

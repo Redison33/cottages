@@ -108,10 +108,35 @@
     }
   }
 
+  .video {
+    margin-bottom: 40px;
+
+    &__container {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      .video {
+        video {
+        }
+
+        button {
+          span {
+          }
+        }
+      }
+    }
+  }
+
   .popular {
     margin-bottom: 40px;
     &__container {
-      h2 {
+      .popular__header {
         margin-bottom: 24px;
       }
 

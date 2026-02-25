@@ -7,6 +7,16 @@
         margin-bottom: 18px;
       }
 
+      .catalog__tabs {
+        ul {
+          li {
+            a {
+              padding: 16px 24px;
+            }
+          }
+        }
+      }
+
       .catalog__wrap {
         display: flex;
         gap: 40px;

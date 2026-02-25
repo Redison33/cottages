@@ -1,0 +1,65 @@
+@media (max-width: 1760px) {
+  .comparison {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 1480px) {
+}
+
+@media (max-width: 1360px) {
+  .comparison {
+    margin-bottom: 60px;
+    &__container {
+      .comparison__header {
+        gap: 40px;
+        margin-bottom: 25px;
+
+        .comparison__buttons {
+        }
+      }
+
+      .comparison__body {
+        .table {
+          .tr {
+            .tf,
+            .tc,
+            .th,
+            .td {
+              width: 300px;
+              min-width: 300px;
+            }
+
+            .tf {
+              h3 {
+              }
+
+              .filters-tabs {
+              }
+            }
+
+            .tc {
+              img {
+                height: 230px;
+              }
+            }
+
+            .th {
+              p {
+              }
+            }
+
+            .td {
+              p {
+              }
+            }
+
+            .th,
+            .tf {
+            }
+          }
+        }
+      }
+    }
+  }
+}
