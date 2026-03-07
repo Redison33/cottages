@@ -199,6 +199,10 @@
   font-weight: 700;
   color: #454545;
   margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .projects__container .projects__cards .card__status {
   font-size: 20px;

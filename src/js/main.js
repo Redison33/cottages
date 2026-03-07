@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(window.screen.width, window.screen.height);
-
   Fancybox.bind('[data-fancybox]', {
     Carousel: {
       Toolbar: {
@@ -166,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.querySelector('.popular__slider')) {
     $('.popular__slider').slick({
-      infinite: true,
+      infinite: false,
       slidesToShow: 3,
       slidesToScroll: 1,
       nextArrow: createArrow('next'),
@@ -256,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div class="modal__info">
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/square.svg" alt="Общая площадь" />
+          <img src="/local/templates/main/assets/img/square.svg" alt="Общая площадь" />
 
           <p>
           Общая площадь
@@ -266,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/square.svg" alt="Жилая площадь" />
+          <img src="/local/templates/main/assets/img/square.svg" alt="Жилая площадь" />
 
           <p>
           Жилая площадь
@@ -276,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/stair.svg" alt="Этаж" />
+          <img src="/local/templates/main/assets/img/stair.svg" alt="Этаж" />
 
           <p>
           Этажи
@@ -286,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/bedroom.svg" alt="Размеры" />
+          <img src="/local/templates/main/assets/img/bedroom.svg" alt="Размеры" />
 
           <p>
           Размеры
@@ -296,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/bedroom.svg" alt="Спальня" />
+          <img src="/local/templates/main/assets/img/bedroom.svg" alt="Спальня" />
 
           <p>
           Спальни
@@ -306,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal__info-wrap">
-          <img src="./src/assets/img/toilet.svg" alt="Тулает" />
+          <img src="/local/templates/main/assets/img/toilet.svg" alt="Тулает" />
 
           <p>
           Санузел
@@ -405,4 +403,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.overlay').remove();
     document.body.removeAttribute('style');
   });
+
+  $('[type="tel"]').mask('+7 (000) 000-00-00');
 });

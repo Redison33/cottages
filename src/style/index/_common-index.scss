@@ -115,6 +115,10 @@ body {
         .choices {
           @include filter-select;
         }
+
+        .dropdown {
+          @include filter-select;
+        }
       }
 
       button {
@@ -435,6 +439,27 @@ body {
         font-size: $font-size-text;
         font-weight: $font-weight-regular;
       }
+    }
+  }
+}
+
+.popup-window {
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1px solid $nested-list-border;
+  background-color: $input-background;
+  padding: 20px 0;
+
+  ul {
+    padding: 0;
+    font-size: $font-size-input;
+    font-weight: $font-weight-regular;
+    list-style: none;
+    li {
+      padding: 5px 20px;
+      font-size: $font-size-input;
+      font-weight: $font-weight-regular;
+      list-style: none;
     }
   }
 }

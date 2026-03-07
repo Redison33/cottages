@@ -270,6 +270,7 @@ body {
 }
 .filter__container .filter__form .form__wrap .choices {
   margin: 0;
+  position: relative;
 }
 .filter__container .filter__form .form__wrap .choices__inner {
   padding: 16px 26px;
@@ -278,17 +279,24 @@ body {
   color: #454545;
   border-radius: 10px;
   transition: border-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
 }
 .filter__container .filter__form .form__wrap .choices__list {
   padding: 0;
   font-size: 18px;
   font-weight: 400;
+  list-style: none;
 }
 .filter__container .filter__form .form__wrap .choices__item {
   font-size: 18px;
   font-weight: 400;
+  list-style: none;
 }
 .filter__container .filter__form .form__wrap .choices__list--dropdown {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
   background-color: #f9f9f9;
   border: 1px solid rgba(0, 0, 0, 0.0509803922);
   border-top: none;
@@ -308,6 +316,10 @@ body {
   display: none;
 }
 .filter__container .filter__form .form__wrap .choices::after {
+  content: "";
+  position: absolute;
+  right: 11.5px;
+  top: 50%;
   width: 13px;
   height: 13px;
   border: none;
@@ -343,6 +355,95 @@ body {
   padding: 20px 0;
 }
 .filter__container .filter__form .form__wrap .choices.is-open .choices__inner {
+  border-radius: 10px;
+}
+.filter__container .filter__form .form__wrap .dropdown {
+  margin: 0;
+  position: relative;
+}
+.filter__container .filter__form .form__wrap .dropdown__inner {
+  padding: 16px 26px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  color: #454545;
+  border-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 400;
+}
+.filter__container .filter__form .form__wrap .dropdown__list {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+}
+.filter__container .filter__form .form__wrap .dropdown__item {
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+}
+.filter__container .filter__form .form__wrap .dropdown__list--dropdown {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.0509803922);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 20px;
+}
+.filter__container .filter__form .form__wrap .dropdown__item--choice {
+  padding: 5px 20px;
+}
+.filter__container .filter__form .form__wrap .dropdown__item--choice[aria-selected=true] {
+  position: relative;
+  background-color: #777777;
+  color: #ffffff;
+  font-weight: 700;
+}
+.filter__container .filter__form .form__wrap .dropdown__item--choice:first-child {
+  display: none;
+}
+.filter__container .filter__form .form__wrap .dropdown::after {
+  content: "";
+  position: absolute;
+  right: 11.5px;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  border: none;
+  background-image: url("../../assets/img/select-arrow.svg");
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+.filter__container .filter__form .form__wrap .dropdown.is-open::after {
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center;
+}
+.filter__container .filter__form .form__wrap .dropdown.is-open .choices__inner {
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+@media (max-width: 960px) {
+  .filter__container .filter__form .form__wrap .dropdown__inner {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .filter__container .filter__form .form__wrap .dropdown__list {
+    font-size: 16px;
+  }
+  .filter__container .filter__form .form__wrap .dropdown__item {
+    font-size: 16px;
+  }
+}
+.filter__container .filter__form .form__wrap .dropdown__list--dropdown {
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.0705882353);
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+.filter__container .filter__form .form__wrap .dropdown.is-open .choices__inner {
   border-radius: 10px;
 }
 .filter__container .filter__form button {
@@ -945,6 +1046,26 @@ body {
   color: #454545;
   font-size: 20px;
   font-weight: 400;
+}
+
+.popup-window {
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.0705882353);
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+.popup-window ul {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+}
+.popup-window ul li {
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
 }
 
 @media (max-width: 1760px) {

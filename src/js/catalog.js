@@ -27,25 +27,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const rangeSlider = document.getElementById('rangeSlider');
+  const input1 = document.querySelector('.min-price-square');
+  const input2 = document.querySelector('.max-price-square');
+  const inputs = [input1, input2];
+
+  let startValue1 = Number(input1.getAttribute('min'));
+
+  if (input1.getAttribute('value') !== '') {
+    startValue1 = Number(input1.getAttribute('value'));
+  }
+
+  let startValue2 = Number(input2.getAttribute('max'));
+
+  if (input2.getAttribute('value') !== '') {
+    startValue2 = Number(input2.getAttribute('value'));
+  }
+
   if (rangeSlider) {
     noUiSlider.create(rangeSlider, {
-      start: [50, 500],
+      start: [startValue1, startValue2],
       margin: 10,
       connect: true,
       step: 1,
       range: {
-        min: [0],
-        max: [560],
+        min: [Number(input1.getAttribute('min'))],
+        max: [Number(input2.getAttribute('max'))],
       },
     });
   }
 
-  const input1 = document.getElementById('range-input-1');
-  const input2 = document.getElementById('range-input-2');
-  const inputs = [input1, input2];
-
   rangeSlider.noUiSlider.on('update', function (values, handle) {
     inputs[handle].value = Math.round(values[handle]);
+
+    if (typeof smartFilter !== 'undefined' && smartFilter.keyup) {
+      smartFilter.keyup(inputs[handle]);
+    }
   });
   const setRangeSlider = (i, value) => {
     let arr = [null, null];
@@ -59,14 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (document.querySelector('.filter-list')) {
-    if (document.querySelector('.filter-list active'))
-      document.querySelector('.filter-list button').textContent = document.querySelector('.filter-list active').textContent;
+    if (document.querySelector('.filter-list .active'))
+      document.querySelector('.filter-list button').textContent =
+        document.querySelector('.filter-list .active').textContent;
 
     document.querySelector('.filter-list button').addEventListener('click', () => {
-      if (document.querySelector('.filter-list__content').classList.contains('filter-list__content--active')) {
-        document.querySelector('.filter-list__content').classList.remove('filter-list__content--active');
+      if (
+        document
+          .querySelector('.filter-list__content')
+          .classList.contains('filter-list__content--active')
+      ) {
+        document
+          .querySelector('.filter-list__content')
+          .classList.remove('filter-list__content--active');
       } else {
-        document.querySelector('.filter-list__content').classList.add('filter-list__content--active');
+        document
+          .querySelector('.filter-list__content')
+          .classList.add('filter-list__content--active');
       }
     });
   }

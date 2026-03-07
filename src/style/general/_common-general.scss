@@ -48,7 +48,7 @@ textarea {
 .header {
   @include container;
   width: 100%;
-  z-index: 100;
+  z-index: 101;
   margin-top: 42px;
   border-radius: 15px;
   background-color: $primary-background;
@@ -266,15 +266,15 @@ textarea {
             }
           }
         }
+      }
 
-        .link--active {
-          background-color: $link-text-hover;
-          border: 3px solid transparent;
+      .link--active {
+        background-color: $link-text-hover;
+        border: 3px solid transparent;
 
-          svg {
-            path {
-              fill: $link-text-hover;
-            }
+        svg {
+          path {
+            fill: $primary-title;
           }
         }
       }
@@ -631,6 +631,10 @@ textarea {
             font-size: $font-size-text;
             font-weight: $font-weight-bold;
             color: $actions-text;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
 
           p {
@@ -690,6 +694,10 @@ textarea {
             stroke: #ffffff;
           }
         }
+      }
+
+      .slick-disabled {
+        background-color: $button-text-disabled;
       }
     }
   }
@@ -1123,6 +1131,10 @@ textarea {
             font-size: $font-size-text;
             font-weight: $font-weight-bold;
             color: $actions-text;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
 
           p {
@@ -1560,7 +1572,7 @@ textarea {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 200px;
-      grid-column-gap: 40px;
+      grid-row-gap: 40px;
 
       &__wrap {
         display: flex;

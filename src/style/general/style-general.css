@@ -159,7 +159,7 @@ textarea:active {
 }
 .header {
   width: 100%;
-  z-index: 100;
+  z-index: 101;
   margin-top: 42px;
   border-radius: 15px;
   background-color: #ffffff;
@@ -359,14 +359,12 @@ textarea:active {
 .header__container .header__links button:hover svg path {
   fill: #b1a489;
 }
-.header__container .header__links a .link--active,
-.header__container .header__links button .link--active {
+.header__container .header__links .link--active {
   background-color: #b1a489;
   border: 3px solid transparent;
 }
-.header__container .header__links a .link--active svg path,
-.header__container .header__links button .link--active svg path {
-  fill: #b1a489;
+.header__container .header__links .link--active svg path {
+  fill: #ffffff;
 }
 .header__container .header__burger {
   background-color: #b1a489;
@@ -809,6 +807,10 @@ textarea:active {
   font-size: 20px;
   font-weight: 700;
   color: #454545;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .popular__container .popular__slider .slide__wrap p {
   font-size: 20px;
@@ -883,6 +885,9 @@ textarea:active {
 }
 .popular__container .popular__slider .slick-arrow svg path {
   stroke: #ffffff;
+}
+.popular__container .popular__slider .slick-disabled {
+  background-color: #9d9d9d;
 }
 
 .modal {
@@ -1626,6 +1631,10 @@ textarea:active {
   font-size: 20px;
   font-weight: 700;
   color: #454545;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .similar__container .similar__cards .card__wrap p {
   font-size: 20px;
@@ -2404,7 +2413,7 @@ textarea:active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 200px;
-  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 .footer__container .nav__wrap {
   display: flex;

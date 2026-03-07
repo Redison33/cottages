@@ -340,6 +340,7 @@
 
 @mixin base-select {
   margin: 0;
+  position: relative;
 
   &__inner {
     padding: 16px 26px;
@@ -348,20 +349,27 @@
     color: $input-text;
     border-radius: 10px;
     transition: border-color 0.3s ease-in-out;
+    font-size: $font-size-input;
+    font-weight: $font-weight-regular;
   }
 
   &__list {
     padding: 0;
     font-size: $font-size-input;
     font-weight: $font-weight-regular;
+    list-style: none;
   }
 
   &__item {
     font-size: $font-size-input;
     font-weight: $font-weight-regular;
+    list-style: none;
   }
 
   &__list--dropdown {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
     background-color: $input-background;
     border: 1px solid $input-border;
     border-top: none;
@@ -385,6 +393,10 @@
   }
 
   &::after {
+    content: '';
+    position: absolute;
+    right: 11.5px;
+    top: 50%;
     width: 13px;
     height: 13px;
     border: none;
@@ -637,7 +649,7 @@
 
 @mixin filter-primary-checkbox {
   @include base-checkbox;
-  height: 18px;
+  // height: 18px;
   padding-left: 30px;
   font-size: 16px;
   line-height: 20px;

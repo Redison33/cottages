@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+    <title>ЧаВо</title>
     <!-- Общий -->
     <link rel="stylesheet" href="./src/style/reset.css" />
     <!-- Общий -->
@@ -11,17 +11,23 @@
     <!-- Общий -->
     <link rel="stylesheet" href="./src/libs/fancybox.css" />
     <!-- Общий -->
+    <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+    <!-- Общий -->
     <link rel="stylesheet" href="./src/style/general/style-general.css" />
     <!-- Индивидуалка -->
-    <link rel="stylesheet" href="./src/style/index/style-index.css" />
-    <!-- Общий -->
-    <script src="./src/libs/choices.min.js" defer></script>
+    <link rel="stylesheet" href="./src/style/services/style-services.css" />
     <!-- Общий -->
     <script src="./src/libs/fancybox.umd.js" defer></script>
     <!-- Общий -->
+    <script src="./src/libs/jquery-3.6.4.min.js" defer></script>
+    <!-- Общий -->
+    <script src="./src/libs/swiper-bundle.min.js" defer></script>
+    <!-- Общий -->
+    <script src="./src/libs/jquery.mask.min.js" defer></script>
+    <!-- Общий -->
     <script src="./src/js/main.js" defer></script>
     <!-- Индивидуалка -->
-    <script src="./src/js/index.js" defer></script>
+    <script src="./src/js/services.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -346,435 +352,141 @@
     </header>
 
     <main>
-      <!-- спешал фор ю, инлайн ор амыге, как надо, мне лично похуй. По СЕО энд лоджик нужен бг, но повторюсь, мне лично поебать -->
-      <section class="banner">
-        <img src="./src/assets/img/banner.webp" alt="Крутое описание картинки" />
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Главная</a></li>
+          <li aria-current="page"><a href="services.html">Реализованные проекты</a></li>
+        </ol>
+      </nav>
 
-        <video muted="true" autoplay loop src="./src/assets/videos/заставка.webm"></video>
-        <div class="banner__container">
-          <h1>Дома из дерева и камня с гарантией под ключ в Москве</h1>
+      <section class="services-detail">
+        <div class="services-detail__container">
+          <h1>Комплексное строительство</h1>
+        </div>
+      </section>
 
-          <div class="banner__wrap">
-            <button class="open-form">Узнать стоимость будущего дома</button>
+      <section class="material">
+        <div class="material__container">
+          <h2></h2>
 
-            <ul class="banner__list">
-              <li>Технадзор каждого этапа</li>
+          <div class="material__content">
+            <div class="material__card">
+              <h3>ПРИЕМУЩЕСТА СТРОИТЕЛЬСТВА ИЗ КЛЕЕНОГО БРУСА</h3>
 
-              <li>Видеонаблюдение на объектах</li>
+              <div class="material__wrap">
+                <div class="material__content">
+                  <div class="material__card card">
+                    <h4>Минимальные трещины и усадка</h4>
+                    <p>
+                      Почти не дает усадки и редко трескается. Трещины — мелкие и неглубокие, не
+                      влияющие на теплоизоляцию. Многослойная структура предотвращает
+                      растрескивание.
+                    </p>
+                  </div>
 
-              <li>Гарантия по договору</li>
-            </ul>
+                  <div class="material__card card">
+                    <h4>Быстрая отделка</h4>
+                    <p>
+                      Идеально ровная поверхность упрощает отделку — достаточно шлифовки и окраски
+                      для красивого и долговечного внешнего вида.
+                    </p>
+                  </div>
+
+                  <div class="material__card card">
+                    <h4>Экологичность</h4>
+                    <p>
+                      Клей в составе проходит обязательную сертификацию и безопасен после
+                      полимеризации. Материал соответствует экологическим нормам.
+                    </p>
+                  </div>
+
+                  <div class="material__card card">
+                    <h4>Высокая несущая способность</h4>
+                    <p>
+                      выдерживает большие нагрузки, позволяя создавать просторные помещения без
+                      лишних опор и столбов, сохраняя эстетику интерьера.
+                    </p>
+                  </div>
+
+                  <div class="material__card card">
+                    <h4>Комфортный микроклимат</h4>
+                    <p>
+                      Натуральная древесина поддерживает здоровую атмосферу в доме и обеспечивает
+                      естественную вентиляцию, наполняя помещения свежим воздухом.
+                    </p>
+                  </div>
+
+                  <div class="material__card card">
+                    <h4>Энергоэффективность</h4>
+                    <p>
+                      Технология «тёплый дом» делает постройку на 30% теплее обычного дома из
+                      клееного бруса благодаря контролируемой усадке и герметизации углов.
+                    </p>
+                  </div>
+                </div>
+
+                <img src="./src/assets/img/material-gazobeton.webp" alt="Газобетон" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="filter">
-        <div class="filter__container">
-          <h2>Быстрый фильтр</h2>
+      <section class="finishProject">
+        <div class="finishProject__container">
+          <h2>ГАЛЕРЕЯ КОМПЛЕКСНЫХ ПРОЕКТОВ</h2>
 
-          <!-- Не ебу, надо тебе тут форм, не надо, ну всегда можно поменять на див, я один хуй по классу смотрю -->
-          <form class="filter__form form">
-            <div class="form__wrap">
-              <!-- <select name="" id="" data-placeholder="Площадь">
-                <option value="" hidden></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select> -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/assets/img/popular.webp" alt="i love bitrix" />
 
-              <div class="dropdown" onclick="smartFilter.showDropDownPopup(this, '4')">
-                <div class="dropdown__inner" data-role="currentOption">Все</div>
-                <input style="display: none" type="radio" name="" id="all_" value="" />
-                <input
-                  style="display: none"
-                  type="radio"
-                  name="arrFilter_4"
-                  id="arrFilter_4_2498237483"
-                  value="2498237483"
-                />
-                <input
-                  style="display: none"
-                  type="radio"
-                  name="arrFilter_4"
-                  id="arrFilter_4_2022871883"
-                  value="2022871883"
-                />
-                <input
-                  style="display: none"
-                  type="radio"
-                  name="arrFilter_4"
-                  id="arrFilter_4_3282452773"
-                  value="3282452773"
-                />
-                <input
-                  style="display: none"
-                  type="radio"
-                  name="arrFilter_4"
-                  id="arrFilter_4_3428068202"
-                  value="3428068202"
-                />
-                <input
-                  style="display: none"
-                  type="radio"
-                  name="arrFilter_4"
-                  id="arrFilter_4_774572645"
-                  value="774572645"
-                />
-                <div
-                  class="dropdown__list--dropdown"
-                  data-role="dropdownContent"
-                  style="display: none"
-                >
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="all_"
-                        class="bx-filter-param-label"
-                        data-role="label_all_"
-                        onclick="smartFilter.selectDropDownItem(this, 'all_')"
-                      >
-                        Все
-                      </label>
-                    </li>
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="arrFilter_4_2498237483"
-                        class="bx-filter-param-label"
-                        data-role="label_arrFilter_4_2498237483"
-                        onclick="smartFilter.selectDropDownItem(this, 'arrFilter_4_2498237483')"
-                        >До 150 м²</label
-                      >
-                    </li>
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="arrFilter_4_2022871883"
-                        class="bx-filter-param-label"
-                        data-role="label_arrFilter_4_2022871883"
-                        onclick="smartFilter.selectDropDownItem(this, 'arrFilter_4_2022871883')"
-                        >150-250 м²</label
-                      >
-                    </li>
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="arrFilter_4_3282452773"
-                        class="bx-filter-param-label"
-                        data-role="label_arrFilter_4_3282452773"
-                        onclick="smartFilter.selectDropDownItem(this, 'arrFilter_4_3282452773')"
-                        >250-350 м²</label
-                      >
-                    </li>
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="arrFilter_4_3428068202"
-                        class="bx-filter-param-label"
-                        data-role="label_arrFilter_4_3428068202"
-                        onclick="smartFilter.selectDropDownItem(this, 'arrFilter_4_3428068202')"
-                        >350-500 м²</label
-                      >
-                    </li>
-                    <li class="dropdown__item--choice dropdown__item">
-                      <label
-                        for="arrFilter_4_774572645"
-                        class="bx-filter-param-label"
-                        data-role="label_arrFilter_4_774572645"
-                        onclick="smartFilter.selectDropDownItem(this, 'arrFilter_4_774572645')"
-                        >500 и более м²</label
-                      >
-                    </li>
-                  </ul>
+                <div class="slide__content">
+                  <h3>Проект каменного дома Арнем</h3>
+
+                  <a href="">Подробнее</a>
                 </div>
               </div>
 
-              <select name="" id="" data-placeholder="Этажность">
-                <option value="" hidden></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+              <div class="swiper-slide">
+                <img src="./src/assets/img/popular.webp" alt="i love bitrix" />
 
-              <select name="" id="" data-placeholder="Бюджет">
-                <option value="" hidden></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+                <div class="slide__content">
+                  <h3>Проект каменного дома Арнем</h3>
 
-              <select name="" id="" data-placeholder="Материал">
-                <option value="" hidden></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+                  <a href="">Подробнее</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="./src/assets/img/popular.webp" alt="i love bitrix" />
+
+                <div class="slide__content">
+                  <h3>Проект каменного дома Арнем</h3>
+
+                  <a href="">Подробнее</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="./src/assets/img/popular.webp" alt="i love bitrix" />
+
+                <div class="slide__content">
+                  <h3>Проект каменного дома Арнем</h3>
+
+                  <a href="">Подробнее</a>
+                </div>
+              </div>
             </div>
-
-            <button>Найти проекты</button>
-          </form>
-        </div>
-      </section>
-
-      <section class="projects">
-        <div class="projects__container">
-          <div class="projects__info">
-            <div class="projects__wrap">
-              <h2>Наши проекты</h2>
-
-              <p>
-                Создаем современные дома под ключ: реализуем проект любой сложности и берем на себя
-                все этапы — от архитектурного проектирования до чистовой отделки. 
-              </p>
+            <div class="swiper-button-next">
+              <svg width="7" height="15" viewBox="0 0 7 15" fill="none">
+                <path d="M0.398438 0.302734L5.89844 7.52496L0.398438 14.3027" stroke="black" />
+              </svg>
             </div>
-
-            <a class="projects__link" href="">Смотреть проекты</a>
-          </div>
-
-          <div class="projects__content">
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project1.webp" alt="Дома из клееного бруса" />
-              <p class="card__tag">Дома из клееного бруса</p>
-            </a>
-
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project2.webp" alt="Каменые дома" />
-              <p class="card__tag">Каменые дома</p>
-            </a>
-
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project3.webp" alt="Авторские дома" />
-              <p class="card__tag">Авторские дома</p>
-            </a>
-
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project4.webp" alt="Гостиницы" />
-              <p class="card__tag">Гостиницы</p>
-            </a>
-
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project5.webp" alt="Гаражи" />
-              <p class="card__tag">Гаражи</p>
-            </a>
-
-            <a href="" class="project__card card">
-              <img src="./src/assets/img/project6.webp" alt="Бани" />
-              <p class="card__tag">Бани</p>
-            </a>
-          </div>
-
-          <a class="projects__link" href="">Смотреть проекты</a>
-        </div>
-      </section>
-
-      <section class="services">
-        <div class="services__container">
-          <div class="services__info">
-            <div class="services__wrap">
-              <h2>СПЕКТР НАШИХ УСЛУГ</h2>
-
-              <p>
-                Мы берем на себя все этапы создания вашего дома — от разработки концепции до
-                финальных штрихов в интерьере. Наша цель — ваше спокойствие и безупречный результат.
-              </p>
-            </div>
-
-            <a class="services__link" href="">Смотреть все</a>
-          </div>
-
-          <div class="services__content">
-            <ul class="services__tabs">
-              <li>
-                <button class="tab tab--active">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Комплексное строительство</span>
-                </button>
-              </li>
-
-              <li>
-                <button class="tab">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Дизайн интерьера</span>
-                </button>
-              </li>
-
-              <li>
-                <button class="tab">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Индивидуальное проектирование</span>
-                </button>
-              </li>
-
-              <li>
-                <button class="tab">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Зимнее строительство</span>
-                </button>
-              </li>
-
-              <li>
-                <button class="tab">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Ландшафтный дизайн</span>
-                </button>
-              </li>
-
-              <li>
-                <button class="tab">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.3457 0C14.4786 0 17.3153 1.27941 19.3684 3.34765C21.4214 5.4159 22.6914 8.27369 22.6914 11.4297C22.6914 14.5858 21.4214 17.4436 19.3684 19.5118C17.3153 21.5801 14.4786 22.8595 11.3457 22.8595C8.21285 22.8595 5.37608 21.5801 3.32304 19.5118C1.27 17.4436 0 14.5858 0 11.4297C0 8.27369 1.27 5.4159 3.32304 3.34765C5.37608 1.27941 8.21285 0 11.3457 0ZM6.12846 11.1153C5.89996 10.8739 5.90971 10.4907 6.14936 10.2605C6.38971 10.0303 6.76938 10.0402 6.99789 10.2816L10.2659 13.757L16.7775 7.41116C17.0151 7.17956 17.3941 7.18658 17.6239 7.42519C17.8538 7.66451 17.8469 8.0463 17.61 8.27719L10.6964 15.0146C10.6853 15.0279 10.6734 15.0399 10.6609 15.0525C10.4212 15.2827 10.0409 15.2729 9.81237 15.0315L6.12916 11.1153H6.12846ZM18.5178 4.20457C16.6828 2.35529 14.1469 1.21203 11.3464 1.21203C8.54585 1.21203 6.01003 2.35599 4.17505 4.20457C2.33936 6.05315 1.20451 8.60775 1.20451 11.429C1.20451 14.2503 2.34006 16.8049 4.17505 18.6535C6.01003 20.5028 8.54585 21.6461 11.3464 21.6461C14.1469 21.6461 16.6828 20.5021 18.5178 18.6535C20.3534 16.8049 21.4883 14.2503 21.4883 11.429C21.4883 8.60775 20.3527 6.05315 18.5178 4.20457Z"
-                      fill="#000101"
-                    />
-                  </svg>
-
-                  <span>Ипотека кредитование</span>
-                </button>
-              </li>
-            </ul>
-
-            <div class="services__imgs">
-              <img
-                class="tab-content tab-content--active"
-                src="./src/assets/img/services1.webp"
-                alt="Комплексное строительство"
-              />
-              <img
-                class="tab-content"
-                src="./src/assets/img/services2.webp"
-                alt="Дизайн интерьера"
-              />
-              <img
-                class="tab-content"
-                src="./src/assets/img/services3.webp"
-                alt="Индивидуальное проектирование"
-              />
-              <img
-                class="tab-content"
-                src="./src/assets/img/services4.webp"
-                alt="Зимнее строительство"
-              />
-              <img
-                class="tab-content"
-                src="./src/assets/img/services5.webp"
-                alt="Ландшафтный дизайн"
-              />
-              <img
-                class="tab-content"
-                src="./src/assets/img/services6.webp"
-                alt="Ипотека кредитование"
-              />
-            </div>
-          </div>
-
-          <a class="services__link" href="">Смотреть все</a>
-        </div>
-      </section>
-
-      <section class="achievement">
-        <div class="achievement__container">
-          <div class="achievement__info">
-            <h2>ГК "Строй Коттедж" это:</h2>
-          </div>
-
-          <div class="achievement__content">
-            <div class="achievement__card card card--active">
-              <h3>
-                2700+ <br />
-                реализованных проектов
-              </h3>
-
-              <p>
-                Цифра, которая говорит сама за себя. Мы превратили мечты о идеальном доме в
-                реальность для тысяч семей.
-              </p>
-            </div>
-
-            <div class="achievement__card card">
-              <h3>
-                до 15 лет <br />
-                гарантии на услуги
-              </h3>
-
-              <p>
-                Мы предоставляем расширенную гарантию на все виды строительных и отделочных работ. 
-              </p>
-            </div>
-
-            <div class="achievement__card card">
-              <h3>
-                15+ лет <br />
-                опыта на рынке
-              </h3>
-
-              <p>Доказательство нашей стабильности и надежности. Мы прошли проверку временем.</p>
-            </div>
-
-            <div class="achievement__card card">
-              <h3>
-                1500 + <br />
-                готовых решений
-              </h3>
-
-              <p>От стиля и планировки до инженерных решений. Ваш дом будет особенным.</p>
+            <div class="swiper-button-prev">
+              <svg width="7" height="15" viewBox="0 0 7 15" fill="none">
+                <path d="M6.13672 14.3154L0.636719 7.09321L6.13672 0.31543" stroke="black" />
+              </svg>
             </div>
           </div>
         </div>
@@ -1194,32 +906,6 @@
               </tfoot>
             </table>
           </form>
-        </div>
-
-        <img src="./src/assets/img/comfort-bg.webp" alt="красивый задник" />
-      </section>
-
-      <section class="comfort">
-        <div class="comfort__container">
-          <div class="comfort__info">
-            <h2>Проекты продуманные до мелочей</h2>
-          </div>
-
-          <div class="comfort__content">
-            <p>
-              Мы создаем не просто архитектурные объекты, а тщательно спроектированные пространства
-              для жизни. Наша философия строится на принципе: настоящий комфорт складывается из
-              мелочей, которые большинство подрядчиков упускают из виду.
-              <br />
-              Наша цель — создать дом, в котором вам не придется подстраиваться под неудобства,
-              мириться с плохой акустикой или страдать от недостатка места для хранения. Мы
-              проектируем пространства, где каждая деталь служит вашему комфорту сегодня и завтра.
-              <br />
-              <br />
-              Результат нашей работы — дом, в котором приятно находиться, которым удобно
-              пользоваться и где хочется возвращаться снова и снова.
-            </p>
-          </div>
         </div>
       </section>
 

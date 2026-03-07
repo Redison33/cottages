@@ -204,7 +204,8 @@
           flex-direction: column;
           gap: 10px;
 
-          button {
+          button,
+          input[type='submit'] {
             @include base-button;
             width: 100%;
           }
@@ -305,6 +306,10 @@
 
         .catalog__tags {
           margin-bottom: 80px;
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+
           ul {
             display: flex;
             gap: 12px;
@@ -337,6 +342,61 @@
                   display: none;
                 }
               }
+            }
+          }
+
+          &-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 0;
+
+            label {
+              @include base-tab;
+              display: block;
+              font-size: 16px;
+              border-color: #000101;
+              padding: 8px 34px 8px 12px;
+              position: relative;
+
+              input {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+              }
+
+              &::after {
+                content: url('../../assets/img/tag-cross.svg');
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: filter 0.3s ease-in-out;
+              }
+
+              &:hover {
+                &::after {
+                  filter: brightness(0) invert(1);
+                }
+              }
+            }
+          }
+
+          button {
+            @include base-tab;
+            display: block;
+            font-size: 16px;
+            border-color: #000101;
+            padding: 8px 34px 8px 12px;
+            position: relative;
+            background-color: #000101;
+            color: $primary-title;
+            padding: 8px 12px;
+            &::after {
+              display: none;
             }
           }
         }
@@ -447,6 +507,10 @@
                 font-size: $font-size-text;
                 font-weight: $font-weight-bold;
                 color: $actions-text;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
               }
 
               p {
