@@ -615,6 +615,38 @@
     }
   }
 
+  .finishProject {
+    margin-bottom: 40px;
+
+    &__container {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 100%;
+            max-width: 100%;
+            img {
+              height: 350px;
+            }
+
+            .slide__content {
+              flex-direction: column;
+            }
+          }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: flex;
+          top: 175px;
+        }
+      }
+    }
+  }
+
   .footer {
     &__container {
       grid-column-gap: 100px;

@@ -1189,7 +1189,7 @@ textarea:active {
 }
 
 .overlay {
-  z-index: 100;
+  z-index: 105;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -2367,6 +2367,143 @@ textarea:active {
   margin-bottom: 30px;
 }
 
+.finishProject {
+  margin-bottom: 100px;
+}
+.finishProject__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media (max-width: 1760px) {
+  .finishProject__container {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 1360px) {
+  .finishProject__container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 960px) {
+  .finishProject__container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 700px) {
+  .finishProject__container {
+    margin: 0 20px;
+  }
+}
+.finishProject__container h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+}
+@media (max-width: 1600px) {
+  .finishProject__container h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 960px) {
+  .finishProject__container h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 580px) {
+  .finishProject__container h2 {
+    font-size: 20px;
+  }
+}
+.finishProject__container h2 {
+  margin-bottom: 50px;
+}
+.finishProject__container .swiper-wrapper .swiper-slide {
+  width: 1000px;
+}
+.finishProject__container .swiper-wrapper .swiper-slide img {
+  height: 540px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: filter 0.3s ease-in-out;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content h3 {
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #454545;
+  transition: opacity 0.3s ease-in-out;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content a {
+  opacity: 0;
+  border-radius: 10px;
+  padding: 14px 20px;
+  background-color: #b1a489;
+  border: 2px solid #b1a489;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content a:hover {
+  background-color: #000101;
+  border-color: #000101;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content a:focus-visible {
+  border-color: rgba(145, 134, 111, 0.4);
+}
+@media (max-width: 960px) {
+  .finishProject__container .swiper-wrapper .swiper-slide .slide__content a {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+.finishProject__container .swiper-wrapper .swiper-slide .slide__content a {
+  transition: opacity 0.3s ease-in-out;
+}
+.finishProject__container .swiper-wrapper .swiper-slide .swiper-slide-shadow-left,
+.finishProject__container .swiper-wrapper .swiper-slide .swiper-slide-shadow-right {
+  height: 540px;
+}
+.finishProject__container .swiper-wrapper .swiper-slide-active .slide__content h3 {
+  opacity: 1;
+}
+.finishProject__container .swiper-wrapper .swiper-slide-active .slide__content a {
+  opacity: 1;
+}
+.finishProject__container .swiper-wrapper .swiper-slide-prev img, .finishProject__container .swiper-wrapper .swiper-slide-next img {
+  filter: brightness(60%);
+}
+.finishProject__container .swiper .swiper-button-next,
+.finishProject__container .swiper .swiper-button-prev {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.finishProject__container .swiper .swiper-button-next svg,
+.finishProject__container .swiper .swiper-button-prev svg {
+  fill: transparent;
+  width: 6px;
+  height: 14px;
+}
+.finishProject__container .swiper .swiper-button-next {
+  right: 35px;
+}
+.finishProject__container .swiper .swiper-button-prev {
+  left: 35px;
+}
+
 .footer {
   margin-top: auto;
   border-radius: 15px 15px 0 0;
@@ -2798,6 +2935,18 @@ textarea:active {
   .universal__container ul {
     margin-bottom: 30px;
   }
+  .finishProject {
+    margin-bottom: 60px;
+  }
+  .finishProject__container h2 {
+    margin-bottom: 30px;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide {
+    width: 700px;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide img {
+    height: 400px;
+  }
   .footer__container .nav {
     grid-column-gap: 150px;
     grid-row-gap: 40px;
@@ -2988,6 +3137,12 @@ textarea:active {
   }
   .similar__container .similar__cards .card {
     width: calc(50% - 16px);
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide {
+    width: 620px;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide img {
+    height: 400px;
   }
   .modal .modal__container {
     padding: 30px;
@@ -3372,6 +3527,27 @@ textarea:active {
   .also__container .also__info {
     margin-bottom: 30px;
   }
+  .finishProject {
+    margin-bottom: 40px;
+  }
+  .finishProject__container h2 {
+    margin-bottom: 24px;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    max-width: 100%;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide img {
+    height: 350px;
+  }
+  .finishProject__container .swiper .swiper-wrapper .swiper-slide .slide__content {
+    flex-direction: column;
+  }
+  .finishProject__container .swiper .swiper-button-next,
+  .finishProject__container .swiper .swiper-button-prev {
+    display: flex;
+    top: 175px;
+  }
   .footer__container {
     grid-column-gap: 100px;
     grid-row-gap: 40px;
@@ -3731,6 +3907,22 @@ textarea:active {
   .also__container .also__content ul li a {
     text-align: center;
     font-size: 16px;
+  }
+  .finishProject {
+    margin-bottom: 30px;
+  }
+  .finishProject__container {
+    margin: 0;
+  }
+  .finishProject__container h2 {
+    margin: 0 20px;
+    margin-bottom: 18px;
+  }
+  .finishProject__container .swiper .swiper-button-next {
+    right: 20px;
+  }
+  .finishProject__container .swiper .swiper-button-prev {
+    left: 20px;
   }
   .footer__container {
     grid-column-gap: 40px;

@@ -449,6 +449,27 @@
     }
   }
 
+  .finishProject {
+    margin-bottom: 60px;
+
+    &__container {
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 700px;
+            img {
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .footer {
     &__container {
       h3 {
@@ -879,6 +900,21 @@
 
         .card {
           width: calc(50% - 16px);
+        }
+      }
+    }
+  }
+
+  .finishProject {
+    &__container {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 620px;
+            img {
+              height: 400px;
+            }
+          }
         }
       }
     }

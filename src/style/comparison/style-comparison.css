@@ -140,6 +140,7 @@
   margin-top: 15px;
   background-color: #f8f8f8;
   z-index: 100;
+  min-height: 200px;
 }
 .comparison__container .comparison__body .table .tr .tf h3 {
   font-size: 20px;

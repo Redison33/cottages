@@ -405,4 +405,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   $('[type="tel"]').mask('+7 (000) 000-00-00');
+
+  if (document.querySelector('.finishProject .swiper')) {
+    const swiper = new Swiper('.finishProject .swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 100,
+        depth: 150,
+        modifier: 1.2,
+        slideShadows: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 });

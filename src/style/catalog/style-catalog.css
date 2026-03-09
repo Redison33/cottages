@@ -448,7 +448,7 @@
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   padding: 0;
 }
@@ -1229,7 +1229,7 @@
     order: 1;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .catalog__links ul {
-    gap: 10px;
+    gap: 5px;
   }
   .catalog__container .catalog__wrap .catalog__content .catalog__actions .filter-list {
     order: 3;
