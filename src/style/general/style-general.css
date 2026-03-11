@@ -773,9 +773,6 @@ textarea:active {
 .popular__container .popular__slider .slide .add-comparison--active svg path {
   fill: #ffffff;
 }
-.popular__container .popular__slider .slide .slider {
-  cursor: e-resize;
-}
 .popular__container .popular__slider .slide .slider img {
   height: 380px;
   border-radius: 10px;
@@ -1599,7 +1596,6 @@ textarea:active {
 }
 .similar__container .similar__cards .card .slider {
   width: 100%;
-  cursor: e-resize;
 }
 .similar__container .similar__cards .card .slider img {
   height: 380px;

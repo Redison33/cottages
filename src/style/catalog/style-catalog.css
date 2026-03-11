@@ -779,7 +779,6 @@
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .card .slider {
   width: 100%;
-  cursor: e-resize;
 }
 .catalog__container .catalog__wrap .catalog__content .catalog__cards .card .slider img {
   height: 380px;

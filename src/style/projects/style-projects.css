@@ -172,7 +172,6 @@
 }
 .projects__container .projects__cards .card .slider {
   margin-bottom: 25px;
-  cursor: e-resize;
 }
 .projects__container .projects__cards .card .slider img {
   width: 100%;
