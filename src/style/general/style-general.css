@@ -892,7 +892,7 @@ textarea:active {
 
 .modal {
   display: none;
-  z-index: 110;
+  z-index: 1010;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1189,7 +1189,7 @@ textarea:active {
 }
 
 .overlay {
-  z-index: 105;
+  z-index: 1005;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
