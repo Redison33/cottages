@@ -843,7 +843,7 @@
   font-weight: 700;
   color: #454545;
 }
-.catalog__container .catalog__wrap .catalog__content .catalog__cards .card a {
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .card .catalog__link {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -856,20 +856,20 @@
   outline: none;
   text-transform: uppercase;
 }
-.catalog__container .catalog__wrap .catalog__content .catalog__cards .card a:hover {
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .card .catalog__link:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.catalog__container .catalog__wrap .catalog__content .catalog__cards .card a:focus-visible {
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .card .catalog__link:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
-  .catalog__container .catalog__wrap .catalog__content .catalog__cards .card a {
+  .catalog__container .catalog__wrap .catalog__content .catalog__cards .card .catalog__link {
     padding: 12px 16px;
     font-size: 16px;
   }
 }
-.catalog__container .catalog__wrap .catalog__content .catalog__cards .card a {
+.catalog__container .catalog__wrap .catalog__content .catalog__cards .card .catalog__link {
   display: block;
   text-align: center;
 }
