@@ -130,6 +130,8 @@
   max-width: calc(33% - 16px);
   position: relative;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .projects__container .projects__cards .card .add-comparison {
   border: none;
@@ -259,6 +261,7 @@
   }
 }
 .projects__container .projects__cards .card .card__link {
+  margin-top: auto;
   display: block;
   text-align: center;
 }

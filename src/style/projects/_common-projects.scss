@@ -47,6 +47,9 @@
         max-width: calc(33% - 16px);
         position: relative;
         margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+
         .add-comparison {
           border: none;
           padding: 0;
@@ -161,6 +164,7 @@
 
         .card__link {
           @include base-button;
+          margin-top: auto;
           display: block;
           text-align: center;
         }
