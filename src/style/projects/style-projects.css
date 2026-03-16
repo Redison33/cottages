@@ -233,7 +233,7 @@
   border: 1px solid #000101;
   text-transform: lowercase;
 }
-.projects__container .projects__cards .card a {
+.projects__container .projects__cards .card .card__link {
   border-radius: 10px;
   padding: 14px 20px;
   background-color: #b1a489;
@@ -246,20 +246,20 @@
   outline: none;
   text-transform: uppercase;
 }
-.projects__container .projects__cards .card a:hover {
+.projects__container .projects__cards .card .card__link:hover {
   background-color: #000101;
   border-color: #000101;
 }
-.projects__container .projects__cards .card a:focus-visible {
+.projects__container .projects__cards .card .card__link:focus-visible {
   border-color: rgba(145, 134, 111, 0.4);
 }
 @media (max-width: 960px) {
-  .projects__container .projects__cards .card a {
+  .projects__container .projects__cards .card .card__link {
     padding: 12px 16px;
     font-size: 16px;
   }
 }
-.projects__container .projects__cards .card a {
+.projects__container .projects__cards .card .card__link {
   display: block;
   text-align: center;
 }

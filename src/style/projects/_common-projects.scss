@@ -159,7 +159,7 @@
           }
         }
 
-        a {
+        .card__link {
           @include base-button;
           display: block;
           text-align: center;

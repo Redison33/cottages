@@ -671,7 +671,7 @@ textarea {
           }
         }
 
-        a,
+        .card__link,
         .open-modal {
           @include base-button;
           text-align: center;
@@ -1171,7 +1171,7 @@ textarea {
           }
         }
 
-        a {
+        .card__link {
           @include base-button;
           display: block;
           text-align: center;
