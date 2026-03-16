@@ -596,7 +596,7 @@ textarea {
         }
 
         .slider {
-          cursor: e-resize;
+          // cursor: e-resize;
           img {
             height: 380px;
             border-radius: 10px;
@@ -705,7 +705,7 @@ textarea {
 
 .modal {
   display: none;
-  z-index: 110;
+  z-index: 1010;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -855,7 +855,7 @@ textarea {
 }
 
 .overlay {
-  z-index: 105;
+  z-index: 1005;
   background-color: rgba($color: #000000, $alpha: 0.4);
   position: fixed;
   top: 0;
@@ -1097,7 +1097,7 @@ textarea {
 
         .slider {
           width: 100%;
-          cursor: e-resize;
+          // cursor: e-resize;
           img {
             height: 380px;
             border-radius: 10px;

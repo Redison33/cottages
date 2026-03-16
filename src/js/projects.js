@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       $slider.slick({
         dots: true,
-        draggable: false,
+        // draggable: false,
         arrows: false,
       });
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hoverInterval = setInterval(() => {
           $slider.slick('slickNext');
-        }, 2500);
+        }, 2000);
       });
 
       $($slider).on('mouseleave', () => {
