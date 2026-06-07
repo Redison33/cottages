@@ -236,6 +236,34 @@ textarea {
       }
     }
 
+    .search-container {
+      position: absolute;
+      background-color: $primary-background;
+      top: 28px;
+      left: 45px;
+      right: 90px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+
+      display: flex;
+      gap: 16px;
+
+      input {
+        width: 100%;
+        padding: 14px 12px;
+      }
+
+      input[type='submit'] {
+        @include base-button;
+        width: unset;
+      }
+
+      &--active {
+        transform: scaleX(1);
+      }
+    }
+
     .header__links {
       display: flex;
       gap: 20px;
@@ -257,6 +285,12 @@ textarea {
           }
         }
 
+        span {
+          font-weight: $font-weight-bold;
+          display: none;
+          transition: color 0.3s ease-in-out;
+        }
+
         &:hover {
           border-color: $link-text-hover;
 
@@ -264,6 +298,10 @@ textarea {
             path {
               fill: $link-text-hover;
             }
+          }
+
+          span {
+            color: $link-text-hover;
           }
         }
       }
@@ -276,6 +314,13 @@ textarea {
           path {
             fill: $primary-title;
           }
+        }
+        span {
+          color: $primary-title;
+        }
+
+        &:hover {
+          background-color: $primary-background;
         }
       }
     }

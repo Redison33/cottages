@@ -1,0 +1,67 @@
+@media (max-width: 960px) {
+  .tooltip {
+    .tooltiptext {
+      right: 24px;
+    }
+  }
+
+  .search {
+    margin-bottom: 40px;
+
+    &__container {
+      h1 {
+        margin-bottom: 24px;
+      }
+
+      .search__cards {
+        // gap: 30px;
+        margin-bottom: 30px;
+
+        .card {
+          .slider {
+            img {
+              height: 240px;
+            }
+
+            .slick-dots {
+              li {
+              }
+            }
+          }
+
+          &__wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            h3 {
+              font-size: $font-size-text;
+              font-weight: $font-weight-bold;
+              color: $actions-text;
+            }
+          }
+
+          &__info {
+            display: flex;
+            padding: 15px;
+            gap: 20px;
+
+            &-wrap {
+              gap: 5px;
+              img {
+                width: 30px;
+              }
+            }
+          }
+        }
+
+        .search__banner {
+          padding: 30px;
+          gap: 20px;
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    }
+  }
+}

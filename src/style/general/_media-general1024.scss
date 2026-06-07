@@ -47,6 +47,18 @@
         }
       }
 
+      .search-container {
+        top: 18px;
+        left: 24px;
+        right: 70px;
+        gap: 16px;
+
+        input {
+          width: 100%;
+          padding: 14px 12px;
+        }
+      }
+
       .header__links {
         gap: 12px;
 
@@ -620,6 +632,18 @@
         }
 
         .header__feedback {
+        }
+      }
+
+      .search-container {
+        top: 18px;
+        left: 24px;
+        right: 35%;
+        gap: 16px;
+
+        input {
+          width: 100%;
+          padding: 14px 12px;
         }
       }
 

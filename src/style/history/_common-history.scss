@@ -1,0 +1,42 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+.history {
+  margin-bottom: 100px;
+
+  &__container {
+    @include container;
+
+    h1 {
+      @include title2;
+      margin-bottom: 30px;
+    }
+
+    .history__list {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      li {
+        list-style: none;
+        // display: flex;
+        display: flex;
+        // grid-template-columns: 1fr 50px 1fr;
+
+        .history__card {
+          width: calc(50% - 25px);
+        }
+
+        .history__decor {
+          width: 50px;
+        }
+
+        &:nth-child(2n + 1) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}

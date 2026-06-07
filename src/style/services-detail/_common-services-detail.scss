@@ -37,6 +37,19 @@
       }
     }
 
+    .services-detail__info {
+      color: $actions-text;
+      font-size: $font-size-text;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+
     h3 {
       @include title3;
       margin-bottom: 40px;

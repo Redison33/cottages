@@ -77,6 +77,24 @@
         }
       }
 
+      .search-container {
+        top: 14px;
+        left: 18px;
+        right: 130px;
+        gap: 16px;
+        align-items: center;
+
+        input {
+          width: 100%;
+          padding: 16px 12px;
+        }
+
+        input[type='submit'] {
+          font-size: 10px;
+          padding: 12px 8px;
+        }
+      }
+
       .header__links {
         gap: 15px;
 

@@ -90,6 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.querySelector('.search-button').addEventListener('click', () => {
+    if (document.querySelector('.search-button').classList.contains('link--active')) {
+      document.querySelector('.search-button').classList.remove('link--active');
+      document.querySelector('.search-button span').style.display = 'none';
+      document.querySelector('.search-button svg').style.display = 'block';
+      document.querySelector('.search-container').classList.remove('search-container--active');
+    } else {
+      document.querySelector('.search-button').classList.add('link--active');
+      document.querySelector('.search-button span').style.display = 'block';
+      document.querySelector('.search-button svg').style.display = 'none';
+      document.querySelector('.search-container').classList.add('search-container--active');
+    }
+  });
+
   const headerMQ = window.matchMedia('(max-width: 1360px)');
   const footerMQ = window.matchMedia('(max-width: 560px)');
 
